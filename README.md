@@ -7,6 +7,10 @@ retrier2.ahk is now available at github!
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
+NOTE:
+<br>- Script can be used at ANY QUEST, but some MAY end up being STUCK in a loop (Venti's quest is just an example)
+<br>- Script can break, so press Home then F2 again if it escalates during Questing
+
 ### FAQ
 Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
