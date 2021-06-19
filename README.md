@@ -2,8 +2,8 @@
 
 retrier2.ahk is now available at github!
 ### retrier2.ahk SETUP
-Video: https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
-How to maintain: https://www.youtube.com/watch?v=q0eT1Qar_nY
+Video: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
+How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
 Textual Guide:<br>
 1. Go to Settings then Graphics
