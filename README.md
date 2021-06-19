@@ -7,6 +7,11 @@ retrier2.ahk is now available at github!
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
+### FAQ
+Q: What's center of mouse?
+Q: What's center of the mouse cursor?
+A: Look at [this picture](https://github.com/SlowsieNT/genshin/blob/main/center-of-cursor.png)
+
 [TEXT] FOR pre-made script:<br>
 1. Go to Settings then Graphics
 2. Set Quality to: Medium
