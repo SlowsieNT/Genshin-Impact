@@ -9,6 +9,7 @@ __Script will trigger when you are casually watching youtube videos, or just bro
 This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
 I have tested it on other accounts and it should be working for you as well<br>
 #### ALL SERVERS
+(Junior Developers may freak out because they'll see error in console, but in the contrary script actually works because request is sent, but the response cannot arrive due CORS)
 
 
 ## retrier2.ahk SETUP
