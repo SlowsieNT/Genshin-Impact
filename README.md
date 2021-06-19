@@ -2,7 +2,7 @@
 
 retrier2.ahk is now available at github!
 ### retrier2.ahk SETUP
-The SETUP for pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
+SETUP for pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
 Textual Guide:<br>
