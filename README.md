@@ -3,6 +3,8 @@
 retrier2.ahk is now available at github!
 ### retrier2.ahk SETUP
 Video: https://www.youtube.com/watch?v=7YDn-NKuO7A
+
+
 Textual Guide:
 1. Go to Settings then Graphics
 2. Set Quality to: Medium
