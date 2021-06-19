@@ -5,7 +5,7 @@ retrier2.ahk is now available at github!
 SETUP for pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
-Textual Guide:<br>
+[TEXT] SETUP for pre-made script:<br>
 1. Go to Settings then Graphics
 2. Set Quality to: Medium
 3. Set Display Mode to: 1440x900 Windowed
