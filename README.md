@@ -30,6 +30,7 @@ A: Not by the author, but there MAY be a change during period before October of 
 5. Select Subtitles to: English
 
 ## genshin-checkin-redeem.js
+NOTE: Only the account that is currently logged in, I may make a script for quick multi-account in few lines(C#) in the future!<br>
 Every 3h script will try to check-in<br>
 __Script will trigger when you are casually watching youtube videos, or just browsing__<br>
 This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
