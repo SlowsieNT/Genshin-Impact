@@ -26,7 +26,6 @@ A: Not by the author, but there MAY be a change during period before October of 
 4. Go to Settings then Language
 5. Select Subtitles to: English
 
-<br>
 ## genshin-checkin-redeem.js
 Every 3h script will try to check-in<br>
 __Script will trigger when you are casually watching youtube videos, or just browsing__<br>
