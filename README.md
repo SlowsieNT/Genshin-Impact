@@ -2,10 +2,10 @@
 ### Contribute to the project so the people have fresh scripts!
 
 
-__retrier2.ahk__ is now available at GitHub!
-(Not a bot, it is Helper for questing)
-__genshin-checkin-redeem.js__ is now available at GitHub!
-(Used for auto redeem check-in reward)
+__retrier2.ahk__ is now available at GitHub!<br>
+(Not a bot, it is Helper for questing)<br>
+__genshin-checkin-redeem.js__ is now available at GitHub!<br>
+(Used for auto redeem check-in reward)<br>
 
 ## retrier2.ahk SETUP
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
