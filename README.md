@@ -8,8 +8,8 @@ FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
 ### FAQ
-Q: What's center of mouse?<br>
-Q: What's center of the mouse cursor?<br>
+Q: What's center of the mouse?<br>
+Q: What's center of the cursor?<br>
 A: Look at [this picture](https://github.com/SlowsieNT/genshin/blob/main/center-of-cursor.png)
 
 [TEXT] FOR pre-made script:<br>
