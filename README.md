@@ -6,7 +6,7 @@ retrier2.ahk is now available at github!
 ## genshin-checkin-redeem.js
 This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
 I have tested it on other accounts and it should be working for you as well<br>
-### ALL SERVERS
+#### ALL SERVERS
 
 
 ## retrier2.ahk SETUP
