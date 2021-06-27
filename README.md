@@ -7,6 +7,7 @@ __retrier2.ahk__ is now available at GitHub!<br>
 __genshin-checkin-redeem.js__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
 __quickfmg.js__ is now available at GitHub!<br>
+(Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## retrier2.ahk SETUP
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
