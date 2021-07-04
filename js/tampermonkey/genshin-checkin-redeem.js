@@ -12,17 +12,17 @@
 
 (function () {
 	'use strict';
-	var vScrPrefix = "dasadsnuf_2021_date", vInterval = 3 * 3600e3;
+	var vScrPrefix = "scr_J202104_date", vInterval = 3 * 3600e3;
 	var vLastDate = GM_getValue(vScrPrefix);
 	var vDiff = Date.now() - vLastDate;
 	var vACT_ID = "e202102251931481";
 	// try fix if failure occurs
 	if (!vDiff && 0 == vLastDate >> 0)
-		GM_setValue(vScrPrefix, Date.now()), send_signin();
-	// if diff is greater than 8h, then try signin
+		GM_setValue(vScrPrefix, Date.now()), Checkin();
+	// if diff is greater than (x)h, then try signin
 	if (vDiff > vInterval)
-		GM_setValue(vScrPrefix, Date.now()), send_signin()
-	function send_signin() {
+		GM_setValue(vScrPrefix, Date.now()), Checkin();
+	function Checkin() {
 		// THIS PART of the code claims daily reward for GAME
 		fetch("https://hk4e-api-os.mihoyo.com/event/sol/sign?lang=en-us", {
 			"headers": {
