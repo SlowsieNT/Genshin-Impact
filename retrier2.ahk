@@ -121,6 +121,8 @@ GenshinOpeningBypassRevoke(aStandaloneWindows64Path) {
 	FileMove, %vFile3%.bak, %vFile3%
 }
 
+; currently testing old script
+
 ; YOU MAY NEED to change "D:\" to which partition your game is installed
 ; required for skip cutscene
 vStandaloneWindows64Path := "D:\Program Files\Genshin Impact\Genshin Impact Game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64\"
@@ -130,11 +132,11 @@ matcher := new PixelMatcher(cwnd_id)
 matcher.AddColors("startgame", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ])
 matcher.AddColors("clicktobegin", [ [648, 877, "0xFFFFFF"], [66, 845, "0x222222"] ])
 matcher.AddColors("selecttwin", [ [661, 880, "0xECE5D8"], [734, 881, "0xECE5D8"], [789, 881, "0xECE5D8"] ])
-matcher.AddColors("undiscoveredkeywaypoint", [ [570, 766, "0x9F9FA1"],[559, 762, "0x8E8E8F"] ])
+matcher.AddColors("undiscoveredkeywaypoint", [ [612, 681, "0x555656"], [615, 683, "0xB1B1B2"] ])
 matcher.AddColors("dialogueoptions", [ [977, 674, "0xF6F6F6"], [967, 661, "0xFFFFFF"] ])
 matcher.AddColors("dialogueoption", [ [976, 728, "0xFFFFFF"], [982, 731, "0xF1F1F1"] ])
 matcher.AddColors("journalrequest", [ [578, 216, "0x3D3D3D"], [578, 215, "0x3E3E3E"] ])
-matcher.AddColors("journalopened", [ [334, 255, "0x76726C"],[254, 242, "0x424348"] ])
+matcher.AddColors("journalopened", [ [310, 192, "0x151920"], [331, 248, "0x76726D"] ])
 matcher.AddColors("passwordreg", [ [570, 420, "0xC2C2C2"], [657, 417, "0xEDEDED"] ])
 matcher.AddColors("nameinput", [ [648, 854, "0xCACACC"], [642, 852, "0xD0D0D1"] ])
 matcher.AddColors("confirmname", [ [1206, 847, "0x313131"], [854, 852, "0xF5F2EE"] ])
@@ -147,7 +149,7 @@ matcher.AddColors("verifycode", [      [549, 352, "0xCFCFCF"],[579, 354, "0xE6E6
 matcher.AddColors("emailtextbox", [   [549, 284, "0xFDFDFD"], [594, 280, "0xFFFFFF"]   ])
 ; old stuff below again
 matcher.AddColors("eulachecked", [ [523, 542, "0xF1F8FC"], [509, 464, "0xFFFFFF"] ])
-matcher.AddColors("hasauto", [ [77, 61, "0x3B4354"], [83, 69, "0xECE5D8"] ])
+matcher.AddColors("hasauto", [ [82, 74, "0xECE5D8"], [77, 61, "0x3B4353"] ])
 matcher.AddColors("paimnonshittalker", [ [ 896, 440, "0xFFFFFF" ], [896, 446, "0xE2E4E5"], [ 896, 440+56, "0xFFFFFF" ] ])
 matcher.AddColors("teleportreq0", [ [978, 672, "0xFFFFFF"], [979, 664, "0x299BDB"] ])
 matcher.AddColors("teleportreq1", [ [1215, 866, "0x4A5366"],[1228, 867, "0x6D727E"] ])
@@ -162,8 +164,8 @@ matcher.AddColors("registertextdetect", [   [633, 207, "0x4EA4DC"], [593, 244, "
 matcher.AddColors("startgame", [  ])
 sawDvalin := 0
 canClickRegister := 0
-doneScript := 0
 
+; set char name and password here
 charName := "A"
 textPassword := "A1400xSceret32114"
 
@@ -193,9 +195,6 @@ Loop {
 	
 	
 	EmptyMem()
-	if doneScript {
-		break
-	}
 	y1 := 190 + offsettop
 	y2 := 189 + offsettop
 	;c1 := PixelColor(896, 446, cwnd_id)
@@ -269,10 +268,11 @@ Loop {
 	}
 
 	if HasTeleport1 {
-		EmitMouseLMB(cwnd_id, 978, 672, WX, WY)
 		if sawDvalin {
-			doneScript := 1
+			break
 		}
+		msgbox sawDvalin=%sawDvalin%
+		EmitMouseLMB(cwnd_id, 978, 672, WX, WY)
 	}
 	if (HasTeleport2 || HasTeleport3)
 		EmitMouseLMB(cwnd_id, 1215, 866, WX, WY)
