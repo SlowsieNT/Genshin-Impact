@@ -101,7 +101,6 @@ SendClick(x, y) {
 	EmitMouseLMB(cwnd_id, x, y, WX, WY)
 }
 
-
 GenshinOpeningAssets(aStandaloneWindows64Path, byref aFile1, byref aFile2, byref aFile3) {
 	vFile1 = %aStandaloneWindows64Path%\MDAQ001_OPNew_Part1.usm
 	vFile2 = %aStandaloneWindows64Path%\MDAQ001_OPNew_Part2_PlayerBoy.usm
