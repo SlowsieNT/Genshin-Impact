@@ -425,7 +425,7 @@ F1::
 	StringRight, OutputVar, OutputVar, 8 ; Intercepts the 8 characters to the right of OutputVar (the second OutputVar) because the value obtained is this: 0x000000. Assign the intercepted value to OutputVar (the first OutputVar).
 	Clipboard = [%OutputVarX%, %OutputVarY%, "%OutputVar%"]
 	; Send the value of OutputVarX OutputVarY OutputVar to the clipboard
-	ToolTip, Coordinates: %OutputVarX%、%OutputVarY% `nHexColor: %OutputVar% ; Tooltip OutputVarX OutputVarY OutputVar
+	ToolTip, Coordinates: %OutputVarX% %OutputVarY% `nHexColor: %OutputVar% ; Tooltip OutputVarX OutputVarY OutputVar
 	SetTimer, RemoveToolTip, -5000 ; Let the tooltip disappear after a while
 Return
 ;----------------------------------------------------------------------------
