@@ -21,8 +21,8 @@ NOTE:
 Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
 A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/center-of-cursor.png)<br><br>
-Q: Will the script be updated in the future?<bR>
-A: Not by the author, but there MAY be a change during period before October of this year (2021).
+Q: Will the script be updated in the future?<br>
+A: Little, after 2022 expect no updates
 
 [TEXT] FOR pre-made script:<br>
 1. Go to Settings then Graphics
