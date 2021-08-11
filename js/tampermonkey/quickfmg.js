@@ -41,10 +41,10 @@
 		vDomain.slice(1) + '/' + vUsername + '/';
 	}).css("background-color", "green").attr("href", "#");
 	// check if mail received every 255ms
-	setInterval(function () {
+	var vTmrChk1 = setInterval(function () {
 		var vParagraph = $("p:contains(verifi)");
 		if (vParagraph.length)
-			GM_setClipboard(vParagraph.text().split(" ")[0]);
+			GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
 	}, 255);
     // Your code here...
 })();
