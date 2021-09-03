@@ -49,7 +49,7 @@
 	// check if mail received every 255ms
 	// and then after copying stop the script
 	var vTmrChk1 = setInterval(function () {
-		var vParagraph = $("p:contains(verifi)");
+		var vParagraph = $(".left-align p:contains(ifica)");
 		if (vParagraph.length)
 			GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
 	}, 255);
