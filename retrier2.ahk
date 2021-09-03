@@ -167,7 +167,6 @@ canClickRegister := 0
 ; set char name and password here
 charName := "A"
 textPassword := "A1400xSceret32114"
-vPixelMatchTolerance := 8 ; lower means less "bugs"
 
 /*
 for people who want to skip those things:
@@ -499,7 +498,7 @@ class PixelMatcher {
 				x := pixels[i][1], y := pixels[i][2]
 				a := this.GetPixel(pc_hCDC, x, y)
 				b := pixels[i][3]
-				c := IsSimilarColor(a, b, vPixelMatchTolerance)
+				c := IsSimilarColor(a, b, 8)
 				pval.Push([c, a])
 			}
 			cret.Push(pval)
