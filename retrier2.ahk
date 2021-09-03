@@ -132,8 +132,8 @@ matcher.AddColors("startgame", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ]
 matcher.AddColors("clicktobegin", [ [648, 877, "0xFFFFFF"], [66, 845, "0x222222"] ])
 matcher.AddColors("selecttwin", [ [661, 880, "0xECE5D8"], [734, 881, "0xECE5D8"], [789, 881, "0xECE5D8"] ])
 matcher.AddColors("undiscoveredkeywaypoint", [ [612, 681, "0x555656"], [615, 683, "0xB1B1B2"] ])
-matcher.AddColors("dialogueoptions", [ [977, 674, "0xF6F6F6"], [967, 661, "0xFFFFFF"] ])
-matcher.AddColors("dialogueoption", [ [976, 728, "0xFFFFFF"], [982, 731, "0xF1F1F1"] ])
+matcher.AddColors("dialogueoptions", [ [970, 654, "0xFFFFFF"], [968, 661, "0xF8F8F9"], [983, 664, "0xF1F2F3"] ])
+matcher.AddColors("dialogueoption", [ [966, 717, "0xFFFFFF"], [964, 719, "0xF2F3F3"], [982, 719, "0xCED0D3"] ])
 matcher.AddColors("journalrequest", [ [578, 216, "0x3D3D3D"], [578, 215, "0x3E3E3E"] ])
 matcher.AddColors("journalopened", [ [310, 192, "0x151920"], [331, 248, "0x76726D"] ])
 matcher.AddColors("passwordreg", [ [570, 420, "0xC2C2C2"], [657, 417, "0xEDEDED"] ])
@@ -148,7 +148,7 @@ matcher.AddColors("verifycode", [      [549, 352, "0xCFCFCF"],[579, 354, "0xE6E6
 matcher.AddColors("emailtextbox", [   [549, 284, "0xFDFDFD"], [594, 280, "0xFFFFFF"]   ])
 ; old stuff below again
 matcher.AddColors("eulachecked", [ [523, 542, "0xF1F8FC"], [509, 464, "0xFFFFFF"] ])
-matcher.AddColors("hasauto", [ [82, 74, "0xECE5D8"], [77, 61, "0x3B4353"] ])
+matcher.AddColors("hasauto", [ [76, 63, "0x3B4354"], [84, 71, "0xECE5D8"] ])
 matcher.AddColors("paimnonshittalker", [ [ 896, 440, "0xFFFFFF" ], [896, 446, "0xE2E4E5"], [ 896, 440+56, "0xFFFFFF" ] ])
 matcher.AddColors("teleportreq0", [ [978, 672, "0xFFFFFF"], [979, 664, "0x299BDB"] ])
 matcher.AddColors("teleportreq1", [ [1215, 866, "0x4A5366"],[1228, 867, "0x6D727E"] ])
@@ -167,6 +167,7 @@ canClickRegister := 0
 ; set char name and password here
 charName := "A"
 textPassword := "A1400xSceret32114"
+vPixelMatchTolerance := 8 ; lower means less "bugs"
 
 /*
 for people who want to skip those things:
@@ -270,7 +271,7 @@ Loop {
 		if sawDvalin {
 			break
 		}
-		msgbox sawDvalin=%sawDvalin%
+		;msgbox sawDvalin=%sawDvalin%
 		EmitMouseLMB(cwnd_id, 978, 672, WX, WY)
 	}
 	if (HasTeleport2 || HasTeleport3)
@@ -342,10 +343,13 @@ Loop {
 		GenshinOpeningBypassRevoke(vStandaloneWindows64Path)
 	}
 	
-	if HasDialogueOptions
+	if HasDialogueOptions {
 		EmitMouseLMB(cwnd_id, 1024, 650, WX, WY)
+	}
 	else {
 		if HasDialogueOption {
+			EmitMouseLMB(cwnd_id, 1024, 650, WX, WY)
+			Sleep 4
 			EmitMouseLMB(cwnd_id, 1024, 725, WX, WY)
 			Sleep 4
 			EmitMouseLMB(cwnd_id, 1024, 725-64, WX, WY)
@@ -389,6 +393,17 @@ Loop {
 		Sleep 50
 	}
 }
+IsSimilarColor(aColorA, aColorB, aTolerance) {
+    vR0 := aColorA & 0xFF
+    vG0 := (aColorA & 0xFF00) >> 8
+    vB0 := (aColorA & 0xFF0000) >> 16
+    vR1 := aColorB & 0xFF
+    vG1 := (aColorB & 0xFF00) >> 8
+    vB1 := (aColorB & 0xFF0000) >> 16,
+    vDist := (vR0 - vR1)**2 + (vG0 - vG1)**2 + (vB1 - vB0)**2
+    return vDist < aTolerance
+}
+
 ; ahk sucks, here's the polyfill for: get unix timestamp 
 
 gettime(aYear=1970, aMonth=1, aDay=1, aHour=0, aMinute=0, aSeconds=0, aMilli=0) {
@@ -484,7 +499,7 @@ class PixelMatcher {
 				x := pixels[i][1], y := pixels[i][2]
 				a := this.GetPixel(pc_hCDC, x, y)
 				b := pixels[i][3]
-				c := a == b
+				c := IsSimilarColor(a, b, vPixelMatchTolerance)
 				pval.Push([c, a])
 			}
 			cret.Push(pval)
