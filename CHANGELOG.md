@@ -6,7 +6,7 @@ NOTE: **retrier2.ahk is approaching phase EOL (End of Life), support by author w
   - Revoked usage of `IsSimilarColor` *(left to remain in codebase?)*
   - Reapplied **exact** pixel hooks for:
     - dialogueoption, dialogueoptions
-- [**04-Sep-2021**]
+- [**03-Sep-2021**]
   - Added `IsSimilarColor`
   - Reapplied pixel hooks for:
     - dialogueoption, dialogueoptions *(detects clickable dialogue options)*
