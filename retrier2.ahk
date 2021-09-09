@@ -132,8 +132,9 @@ matcher.AddColors("startgame", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ]
 matcher.AddColors("clicktobegin", [ [648, 877, "0xFFFFFF"], [66, 845, "0x222222"] ])
 matcher.AddColors("selecttwin", [ [661, 880, "0xECE5D8"], [734, 881, "0xECE5D8"], [789, 881, "0xECE5D8"] ])
 matcher.AddColors("undiscoveredkeywaypoint", [ [612, 681, "0x555656"], [615, 683, "0xB1B1B2"] ])
-matcher.AddColors("dialogueoptions", [ [970, 654, "0xFFFFFF"], [968, 661, "0xF8F8F9"], [983, 664, "0xF1F2F3"] ])
-matcher.AddColors("dialogueoption", [ [966, 717, "0xFFFFFF"], [964, 719, "0xF2F3F3"], [982, 719, "0xCED0D3"] ])
+; [v2.1] it was harder to readjust: dialogueoption, dialogueoptions
+matcher.AddColors("dialogueoptions", [  [977, 658, "0xFFFFFF"],[970, 670, "0xF2F2F2"],[970, 669, "0xFBFBFB"],[971, 726, "0xF2F2F2"]   ])
+matcher.AddColors("dialogueoption", [  [966, 717, "0xFFFFFF"], [964, 718, "0xFCFCFC"], [968, 710, "0xFDFDFD"]  ])
 matcher.AddColors("journalrequest", [ [578, 216, "0x3D3D3D"], [578, 215, "0x3E3E3E"] ])
 matcher.AddColors("journalopened", [ [310, 192, "0x151920"], [331, 248, "0x76726D"] ])
 matcher.AddColors("passwordreg", [ [570, 420, "0xC2C2C2"], [657, 417, "0xEDEDED"] ])
@@ -392,6 +393,9 @@ Loop {
 		Sleep 50
 	}
 }
+IsSame(aColorA, aColorB) {
+	return aColorA == aColorB
+}
 IsSimilarColor(aColorA, aColorB, aTolerance) {
     vR0 := aColorA & 0xFF
     vG0 := (aColorA & 0xFF00) >> 8
@@ -498,7 +502,7 @@ class PixelMatcher {
 				x := pixels[i][1], y := pixels[i][2]
 				a := this.GetPixel(pc_hCDC, x, y)
 				b := pixels[i][3]
-				c := IsSimilarColor(a, b, 8)
+				c := IsSame(a, b)
 				pval.Push([c, a])
 			}
 			cret.Push(pval)
