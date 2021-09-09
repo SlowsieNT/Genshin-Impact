@@ -1,5 +1,5 @@
 ## retrier2.ahk
-NOTE: retrier2.ahk is based Legacy code, never intended to ever be polished but adjusted to work properly.
+NOTE: retrier2.ahk is based Legacy code, never intended to ever be polished but adjusted to work properly.<br>
 NOTE: **retrier2.ahk is approaching EOL (End of Life) by March 2022.**
 [Game: v2.1]
 - [09-Sep-2021]
