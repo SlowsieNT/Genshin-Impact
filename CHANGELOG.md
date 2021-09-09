@@ -4,7 +4,7 @@ NOTE: **retrier2.ahk is approaching EOL (End of Life) by March 2022.**<br>
 [Game: **v2.1**]
 - [**09-Sep-2021**]
   - Revoked usage of `IsSimilarColor` *(left to remain in codebase?)*
-  - Added exact pixel hooks for:
+  - Reapplied **exact** pixel hooks for:
     - dialogueoption, dialogueoptions
 - [**04-Sep-2021**]
   - Added `IsSimilarColor`
