@@ -1,6 +1,6 @@
 ## retrier2.ahk
 NOTE: retrier2.ahk is based on Legacy code, never intended to ever be polished but adjusted to work properly.<br>
-NOTE: **retrier2.ahk is approaching EOL (End of Life) by March 2022.**<br>
+NOTE: **retrier2.ahk is approaching phase EOL (End of Life), support by author will cease in due time**<br>
 [Game: **v2.1**]
 - [**09-Sep-2021**]
   - Revoked usage of `IsSimilarColor` *(left to remain in codebase?)*
