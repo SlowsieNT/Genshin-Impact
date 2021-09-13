@@ -1,5 +1,5 @@
 ## Repository
-- Renamed to Genshin-Impact
+- Renamed to `Genshin-Impact` from `genshin`
 
 ## retrier2.ahk
 NOTE: retrier2.ahk is based on Legacy code, never intended to ever be polished but adjusted to work properly.<br>
