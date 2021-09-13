@@ -1,3 +1,6 @@
+## Repository
+- Renamed to Genshin-Impact
+
 ## retrier2.ahk
 NOTE: retrier2.ahk is based on Legacy code, never intended to ever be polished but adjusted to work properly.<br>
 NOTE: **retrier2.ahk is approaching phase EOL (End of Life), support by author will cease in due time *(in 2022?)***<br>
