@@ -10,7 +10,6 @@ __quickfmg.js__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## retrier2.ahk SETUP
-(__BOTH videos are scheduled for 09-Oct-2021 - hidden__)<br>
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
