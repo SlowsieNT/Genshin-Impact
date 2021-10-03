@@ -1,6 +1,5 @@
 # Genshin Impact Script(s)
-### Contribute to the project so the people have fresh scripts!
-
+### License: The Unlicense (no copyright claim)
 
 __retrier2.ahk__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
