@@ -1,0 +1,19 @@
+## Features of retrier2
+- Auto click if "START GAME" shown on screen
+  - CAUTION: required for cutscene skip
+  - Game v2.2: Added support after logging in
+- Skips twin opening cutscene
+- Skips through dialogue rapidly
+- When at first statue of seven, macro Escape from it
+- Auto name a twin (Lumine, you can edit script if you hate Lumine)
+- Following tutorials are macro-ed:
+  - Waypoint tutorial
+  - Open Journal + Navigate + Close
+- Fend off dragon (don't need to touch mouse) 
+- Auto Teleport confirmation
+- Detect if register form, then paste mail if copied
+- Detect if register form, then paste verify code if copied
+- Detect if register form, then 'skip' EULA by macro
+- Detect if register form, then enter (same) password
+- Detect if register form, then submit registration after CAPTCHA 
+- Detect if login form, and fill password textbox, then click Login
