@@ -158,16 +158,22 @@ matcher.AddColors("tos1", [ [440, 245, "0x323232"], [730, 257, "0x323232"], [641
 matcher.AddColors("tos2", [ [1300, 143, "0xECE5D8"], [1228, 146, "0x454D5C"] ])
 matcher.AddColors("amberacquired", [ [444, 498, "0x5A2E27"],[760, 345, "0xC44016"] ])
 matcher.AddColors("waypointtutorial", [ [551, 479, "0xFFFFFF"], [523, 359, "0xB2A470"] ])
-; testing
+; testing [v2.2]
+matcher.AddColors("loginpassworddetect", [  [493, 445, "0xCCCCCC"], [557, 448, "0xFFFFFF"], [672, 436, "0xD8D8D8"], [492, 453, "0xD3D3D3"]    ])
+matcher.AddColors("loginbuttondetect", [ [528, 208, "0xFFFFFF"], [723, 571, "0x393B40"], [665, 596, "0xF0D4A6"]    ])
+matcher.AddColors("startgamedetect2", [ [670, 443, "0xFFFFFF"], [862, 435, "0xFFFFFF"], [1375, 864, "0x222222"], [1384, 854, "0xB5B5B5"]  ])
+; teting
 matcher.AddColors("registertextdetect", [   [633, 207, "0x4EA4DC"], [593, 244, "0xFFFFFF"], [662, 214, "0xCEE6F5"]    ])
 ; this line (one) below is just template
 matcher.AddColors("startgame", [  ])
 sawDvalin := 0
 canClickRegister := 0
+sawLoginButton := 0
 
 ; set char name and password here
 charName := "A"
 textPassword := "A1400xSceret32114"
+
 
 /*
 for people who want to skip those things:
@@ -205,7 +211,7 @@ Loop {
 	
 	matcher.match()
 
-	HasStartGame := matcher.GetIsAllPositive("startgame")
+	HasStartGame := matcher.GetIsAllPositive("startgame")||matcher.GetIsAllPositive("startgamedetect2")
 	CanBegin := matcher.GetIsAllPositive("clicktobegin")
 	CanChooseTwin := matcher.GetIsAllPositive("selecttwin")
 	CanCloseMap := matcher.GetIsAllPositive("undiscoveredkeywaypoint")
@@ -229,6 +235,9 @@ Loop {
 	HasTermsoShit2 := matcher.GetIsAllPositive("tos2")
 	HasShitOnscreen := matcher.GetIsAllPositive("paimnonshittalker")
 	HasWaypointTutorial := matcher.GetIsAllPositive("waypointtutorial")
+	; [v2.2] requires re-enter of password?
+	HasReenterPassword := matcher.GetIsAllPositive("loginpassworddetect")
+	HasLoginButton := matcher.GetIsAllPositive("loginbuttondetect")
 
 	; [debug below]
 	;result := matcher.GetResult("dialogueoption")
@@ -248,6 +257,18 @@ Loop {
 			sendinput %vHaystack%
 			sleep 150
 		}
+	}
+
+	if (!sawLoginButton && HasLoginButton) {
+		; [718, 584, "0x393B40"]
+		sawLoginButton := 1
+		EmitMouseLMB(cwnd_id, 718, 584, WX, WY)
+		sleep 500
+	}
+	if HasReenterPassword {
+		EmitMouseLMB(cwnd_id, 946, 447, WX, WY)
+		sleep 10
+		sendinput %textPassword%
 	}
 
 	if HasVerifyBox {
