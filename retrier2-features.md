@@ -2,7 +2,7 @@
 - Auto click if "START GAME" shown on screen
   - CAUTION: required for cutscene skip
   - Game v2.2: Added support after logging in
-- Skips twin opening cutscene
+- Skips twin opening cutscene (Saves ~50seconds or more)
 - Skips through dialogue rapidly
 - When at first statue of seven, macro Escape from it
 - Auto name a twin (Lumine, you can edit script if you hate Lumine)
