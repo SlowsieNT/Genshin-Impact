@@ -1,19 +1,21 @@
 ## Features of retrier2
-- Auto click if "START GAME" shown on screen
-  - CAUTION: required for cutscene skip
-  - Game v2.2: Added support after logging in
-- Skips twin opening cutscene (Saves ~50seconds or more)
-- Skips through dialogue rapidly
-- When at first statue of seven, macro Escape from it
-- Auto name a twin (Lumine, you can edit script if you hate Lumine)
-- Following tutorials are macro-ed:
-  - Waypoint tutorial
-  - Open Journal + Navigate + Close
-- Fend off dragon (don't need to touch mouse) 
-- Auto Teleport confirmation
-- Detect if register form, then paste mail if copied
-- Detect if register form, then paste verify code if copied
-- Detect if register form, then 'skip' EULA by macro
-- Detect if register form, then enter (same) password
-- Detect if register form, then submit registration after CAPTCHA 
-- Detect if login form, and fill password textbox, then click Login
+NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
+- Cutscene skip REQUIRES NO user interaction AFTER logging in
+  - You can interact after game is loaded
+- Registration & Login is **almost** automated; requires CAPTCHA
+  - Since 2.2, seems to require re-entering password, feature has been implemented (the day finally came)
+- Auto click anywhere on "START GAME" screen
+- Opening cutscene skip (twins)
+  - (Saves around 50 seconds)
+- Female twin will be selected, named & lastly confirmed
+- Skips through dialogue by LClick
+- Mini Waypoint Tutorial is 'skipped' by LClick
+- When at first statue of the Seven, spams Escape key to exit map
+- After red bow girl splash screen, 'skip' by LClick then swap to red girl by pressing 2
+  - May not work at times, seems to work during every update of the script
+- At Monstadt entrance, tutorial for navigation will be 'skipped' by macro
+- Fend off Dragon DOES NOT NEED user interaction; for now
+- Once Fend Dragon off is done, and talk is done, door blocked by Paimon is handled by the Script
+  - You can now rest in **piece**
+- Teleport confirmation is automated by default
+  - **You ARE NOT SUPPOSED to open map UNLESS reroll is complete**
