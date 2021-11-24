@@ -13,6 +13,77 @@ Menu, Tray, Icon, Shell32.dll, 172
 ~$*!k::KeyHistory ; Displays script information and history of recent keystrokes and mouse clicks.
 ;----------------------------------------------------------------------------
 
+; USER SETTINGS
+Retrier2_GetSettings() {
+	; OLD script pw was A1400xSceret32114
+	; YOU MAY EDIT THESE 3 LINES BELOW
+	vCustomName := "Lumine"
+	vPassword := "A1400x!Sceret32114"
+	; Usually partition letter may need change:
+	vStandaloneWindows64Path := "D:\Program Files\Genshin Impact\Genshin Impact Game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64\"
+	; DO NOT EDIT BELOW, UNLESS YOU KNOW WHAT ARE YOU DOING
+	return {"PlayerName":vCustomName, "Password": vPassword, "SW64P": vStandaloneWindows64Path}
+}
+; DEVELOPER SETTINGS
+Retrier2_AllocateMatcherPData(aM) {
+	; aM.AddColors("Name", [ [1, 1, "0x0"] ])
+	; === REGISTRATION FORM ===
+	; Pixel Detect TextBox(es)
+	aM.Set("Register_Detect", [ [476, 203, "0x4EA4DC"], [662, 223, "0x4EA4DC"], [514, 235, "0xFFFFFF"] ])
+	aM.Set("Register_TBoxEmail", [ [545, 286, "0xFAFAFA"], [555, 287, "0xEEEEEE"], [575, 287, "0xFFFFFF"] ])
+	aM.Set("Register_TBoxVerify", [ [551, 350, "0xD3D3D3"], [567, 352, "0xEBEBEB"], [570, 352, "0xFFFFFF"] ])
+	aM.Set("Register_TBoxPass", [ [544, 416, "0xF9F9F9"], [556, 416, "0xDDDDDD"], [593, 416, "0xFFFFFF"] ])
+	; Pixel Detect CheckBox(es)
+	aM.Set("Register_CBoxTOSPP", [ [526, 517, "0xD7D7D7"], [531, 527, "0xF4F4F4"], [528, 521, "0xFFFFFF"] ])
+	; Pixel Detect LinkLabel(s)
+	; Verify Send Code, coordinates: 841, 351
+	aM.Set("Register_LLnkCode", [ [835, 351, "0x8DC4E8"], [839, 352, "0xE7F3FA"], [836, 349, "0xFFFFFF"] ])
+	aM.Set("Register_LLnkCodeBugged", [ [835, 375, "0x6EB5E2"], [845, 379, "0xAED6EF"], [836, 377, "0xFFFFFF"] ])
+	; ===/ REGISTRATION FORM ===
+	; === LOGIN FORM ===
+	; Pixel Detect TextBox(es)
+	aM.Set("Login_Detect", [ [653, 247, "0x666666"], [685, 236, "0x808080"], [72, 857, "0x7F7F7F"], [568, 246, "0xFFFFFF"] ])
+	aM.Set("Login_TBoxEmail", [ [493, 350, "0xCCCCCC"], [532, 354, "0xCECECE"], [592, 357, "0xE4E4E4"], [552, 354, "0xFFFFFF"] ])
+	aM.Set("Login_TBoxPass", [ [491, 438, "0xF9F9F9"], [522, 440, "0xE6E6E6"], [541, 447, "0xCCCCCC"], [519, 446, "0xFFFFFF"] ])
+	; Pixel Detect Labels
+	; Detect Terms of Service
+	aM.Set("Login_TOSDetect", [ [459, 251, "0xEFEFEF"], [564, 244, "0x323232"], [435, 432, "0x383838"], [457, 487, "0x646464"], [442, 534, "0xCBCBCB"], [446, 251, "0xFFFFFF"] ])
+	; Detect StartGames
+	aM.Set("Login_StartGame2.1", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ])
+	aM.Set("Login_StartGameLogin", [ [584, 445, "0xFFFFFF"], [1368, 778, "0x222222"], [690, 466, "0xFFFFFF"], [79, 844, "0x909090"], [1378, 851, "0x3C3C3C"] ])
+	; ===/ LOGIN FORM ===
+	; === INGAME ===
+	; Start of opening cutscene pixels
+	aM.Set("Ingame_SelectTwin", [ [660, 880, "0xECE5D8"], [700, 881, "0xECE5D8"], [701, 885, "0xECE5D8"] ])
+	aM.Set("Ingame_PlayerName", [ [648, 854, "0xCACACC"], [642, 852, "0xD0D0D1"] ])
+	aM.Set("Ingame_ConfirmName", [ [1228, 853, "0xECE5D8"], [1233, 840, "0xECE5D8"], [1197, 853, "0x313131"] ])
+	; End of opening cutscene pixels
+	; Start of regular pixels
+	aM.Set("Ingame_DialogueOptions", [ [977, 658, "0xFFFFFF"], [970, 670, "0xF2F2F2"], [970, 669, "0xFBFBFB"], [971, 726, "0xF2F2F2"] ])
+	aM.Set("Ingame_DialogueOption", [ [966, 717, "0xFFFFFF"], [964, 718, "0xFCFCFC"], [968, 710, "0xFDFDFD"] ])
+	aM.Set("Ingame_ReqOpenJournal", [ [578, 216, "0x3D3D3D"], [578, 215, "0x3E3E3E"] ])
+	aM.Set("Ingame_JournalOpen", [ [382, 247, "0x76726D"], [339, 192, "0x151920"] ])
+	aM.Set("Ingame_ConvDetect", [ [76, 63, "0x3B4354"], [84, 71, "0xECE5D8"] ])
+	aM.Set("Ingame_PaimonGuardsDoor", [ [ 896, 440, "0xFFFFFF" ], [896, 446, "0xE2E4E5"], [ 896, 440+56, "0xFFFFFF" ] ])
+	aM.Set("Ingame_RedGirl2BowAcquired", [ [444, 498, "0x5A2E27"],[760, 345, "0xC44016"] ])
+	aM.Set("Ingame_WaypointTutorial", [ [551, 479, "0xFFFFFF"], [523, 359, "0xB2A470"] ])
+	aM.Set("Ingame_BigHPBar", [ [543, 91, "0xFF5A5A"], [543, 92, "0xFF5A5A"] ])
+	aM.Set("Ingame_UndiscoveredWaypoint", [ [609, 688, "0xB0B0B1"], [614, 681, "0x9F9FA0"] ])
+	aM.Set("Ingame_ClickToBegin", [ [648, 877, "0xFFFFFF"], [66, 845, "0x222222"] ])
+	; Teleport Detections (abbreviations: D=Detect, C=Component)
+	aM.Set("Ingame_DTeleportC1", [ [1215, 866, "0x4A5366"], [1228, 867, "0x6D727E"] ])
+	aM.Set("Ingame_DTeleportC2", [ [1214, 873, "0x4A5366"], [1171, 860, "0x4A5366"] ])
+	; Else
+	aM.Set("Ingame_BlackScreen", [ [714, 36, 0x0], [714, 35, 0x0], [712, 35, 0x0] ])
+	aM.Set("Ingame_", [  ])
+	; End of regular pixels
+	; ===/ INGAME ===
+}
+
+;----------------------------------------------------------------------------
+FocusWindow(aID) {
+	WinActivate, ahk_id %aID%
+}
 SendLMB(aID, aTimes=1) {
 	ControlClick, , ahk_id %aID%, , left, aTimes
 }
@@ -28,27 +99,29 @@ SendKey(aID, aKey) {
 MouseMoveEx(aX, aY) {
 	MouseMove, 0, 0, 80, R
 }
+SpamDialogueLMB(aID, aWX, aWY, aTimes=8, aDelay=25) {
+	Loop, %aTimes% {
+		SendLMB(aID, 3)
+		Sleep aDelay
+	}
+}
+SpamEscape(aTimes=7, aDelay=100) {
+	Loop, %aTimes% {
+		Send {Escape}
+		Sleep aDelay
+	}
+}
+EmitMouseLMB2(aID, aX, aY, aWX, aWY, aUseMove=1, aDelay=0) {
+	EmitMouseLMB(aID, aX, aY, aWX, aWY, aUseMove)
+	if aDelay
+		Sleep aDelay2
+}
 EmitMouseLMB(aID, aX, aY, aWX, aWY, aUseMove=1) {
 	if aUseMove
 		DllCall("SetCursorPos", "int", aWX + aX, "int", aWY + aY)
 	if aUseMove
 		MouseMoveEx(0, 0)
 	SendLMB2(aID, aX, aY)
-}
-SpamEscape() {
-	Send {Escape}
-		Sleep 100
-		Send {Escape}
-		Sleep 100
-		Send {Escape}
-		Sleep 100
-		Send {Escape}
-		Sleep 100
-		Send {Escape}
-		Sleep 100
-		Send {Escape}
-		Sleep 100
-		Send {Escape}
 }
 Check2(arr, x, y) {
 	return arr[x][0] && arr[y][0]
@@ -64,41 +137,52 @@ SendVK_Shift(aDelay=1) {
 	Send, {Shift up}
 }
 ;---
-LogStart(){
+LogStart(){ ; was used for measuring reroll time - all history
 	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	whr.Open("GET", "http://localhost:81/logdate.php", true)
 	whr.Send(Data)
 	whr.WaitForResponse()
 }
+ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, aMouseMove=1, aDelay=4, aDelay2=0){
+	EmitMouseLMB(aWinID, aX, aY, aWinX, aWinY, aMouseMove)
+	Sleep aDelay
+	SendInput %aText%
+	Sleep aDelay2
+}
+ClickEnterText2(aText, aWinID, aX, aY, aWinX, aWinY, aDelay=4, aDelay2=24){
+	ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, 1, aDelay, aDelay2)
+}
 ;-----------------------------------------------------------------------------
-;MouseMoveGame(54, 0) ; 25
+F5::
+GenshinOpeningBypassRevoke(Retrier2_GetSettings()["SW64P"])
+msgbox Opening Cutscene bypass revoked
 return
+
 F2::
-cwnd_id := 0, OffsetTop := 26
+vCurrWndHnd := 0, OffsetTop := 26
 WX := 0, WY := 0, pixels := []
-if (cwnd_id < 1) {
-	WinGet, cwnd_id, ID, A ; A - active window
+if (vCurrWndHnd < 1) {
+	WinGet, vCurrWndHnd, ID, A ; A - active window
 	WinGetPos, WX, WY, , , A
-	matcher.gWID := cwnd_id
+	matcher.gWID := vCurrWndHnd
 }
 
 if (0) {
-	c1 := PixelColor(543, 91, cwnd_id)
-	c2 := PixelColor(543, 92, cwnd_id)
-	Clipboard = [543, 91, "%c1%"], [543, 92, "%c2%"]
+	c1 := PixelColor(x1:=626, y1:=848, vCurrWndHnd)
+	c2 := PixelColor(x2:=625, y2:=847, vCurrWndHnd)
+	Clipboard = [%x1%, %y1%, "%c1%"], [%x2%, %y2%, "%c2%"]
 	return
 }
 
-
-; SendLMB2(cwnd_id, 1346, 414)
-; PixelColor(1185, 530, cwnd_id)
-; MatchPixelColors(bar4, cwnd_id)
+; SendLMB2(vCurrWndHnd, 1346, 414)
+; PixelColor(1185, 530, vCurrWndHnd)
+; MatchPixelColors(bar4, vCurrWndHnd)
 
 MouseMoveGame(aX, aY) {
 	DllCall("mouse_event", uint, 1, int, aX, int, aY)
 }
 SendClick(x, y) {
-	EmitMouseLMB(cwnd_id, x, y, WX, WY)
+	EmitMouseLMB(vCurrWndHnd, x, y, WX, WY)
 }
 
 GenshinOpeningAssets(aStandaloneWindows64Path, byref aFile1, byref aFile2, byref aFile3) {
@@ -120,316 +204,262 @@ GenshinOpeningBypassRevoke(aStandaloneWindows64Path) {
 	FileMove, %vFile3%.bak, %vFile3%
 }
 
-; currently testing old script
+; NO TOUCHMENT!
+vUserEmail := ""
+vPMatch := new PixelMatcher(vCurrWndHnd)
+Retrier2_AllocateMatcherPData(vPMatch)
+vSettings := Retrier2_GetSettings()
 
-; YOU MAY NEED to change "D:\" to which partition your game is installed
-; required for skip cutscene
-vStandaloneWindows64Path := "D:\Program Files\Genshin Impact\Genshin Impact Game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64\"
-
-; do not edit this (one) line below
-matcher := new PixelMatcher(cwnd_id)
-matcher.AddColors("startgame", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ])
-matcher.AddColors("clicktobegin", [ [648, 877, "0xFFFFFF"], [66, 845, "0x222222"] ])
-matcher.AddColors("selecttwin", [ [661, 880, "0xECE5D8"], [734, 881, "0xECE5D8"], [789, 881, "0xECE5D8"] ])
-matcher.AddColors("undiscoveredkeywaypoint", [ [612, 681, "0x555656"], [615, 683, "0xB1B1B2"] ])
-; [v2.1] it was harder to readjust: dialogueoption, dialogueoptions
-matcher.AddColors("dialogueoptions", [  [977, 658, "0xFFFFFF"],[970, 670, "0xF2F2F2"],[970, 669, "0xFBFBFB"],[971, 726, "0xF2F2F2"]   ])
-matcher.AddColors("dialogueoption", [  [966, 717, "0xFFFFFF"], [964, 718, "0xFCFCFC"], [968, 710, "0xFDFDFD"]  ])
-matcher.AddColors("journalrequest", [ [578, 216, "0x3D3D3D"], [578, 215, "0x3E3E3E"] ])
-matcher.AddColors("journalopened", [ [310, 192, "0x151920"], [331, 248, "0x76726D"] ])
-matcher.AddColors("passwordreg", [ [570, 420, "0xC2C2C2"], [657, 417, "0xEDEDED"] ])
-matcher.AddColors("nameinput", [ [648, 854, "0xCACACC"], [642, 852, "0xD0D0D1"] ])
-matcher.AddColors("confirmname", [ [1206, 847, "0x313131"], [854, 852, "0xF5F2EE"] ])
-matcher.AddColors("dvalinhp", [ [543, 91, "0xFF5A5A"], [543, 92, "0xFF5A5A"] ])
-
-matcher.AddColors("verifycode", [      [549, 352, "0xCFCFCF"],[579, 354, "0xE6E6E6"],[599, 352, "0xFFFFFF"]      ])
-
-
-; also added feature to auto paste email
-matcher.AddColors("emailtextbox", [   [549, 284, "0xFDFDFD"], [594, 280, "0xFFFFFF"]   ])
-; old stuff below again
-matcher.AddColors("eulachecked", [ [523, 542, "0xF1F8FC"], [509, 464, "0xFFFFFF"] ])
-matcher.AddColors("hasauto", [ [76, 63, "0x3B4354"], [84, 71, "0xECE5D8"] ])
-matcher.AddColors("paimnonshittalker", [ [ 896, 440, "0xFFFFFF" ], [896, 446, "0xE2E4E5"], [ 896, 440+56, "0xFFFFFF" ] ])
-matcher.AddColors("teleportreq0", [ [978, 672, "0xFFFFFF"], [979, 664, "0x299BDB"] ])
-matcher.AddColors("teleportreq1", [ [1215, 866, "0x4A5366"],[1228, 867, "0x6D727E"] ])
-matcher.AddColors("teleportreq2", [ [1214, 873, "0x4A5366"], [1171, 860, "0x4A5366"] ])
-matcher.AddColors("tos1", [ [440, 245, "0x323232"], [730, 257, "0x323232"], [641, 204, "0xFFFFFF"] ])
-matcher.AddColors("tos2", [ [1300, 143, "0xECE5D8"], [1228, 146, "0x454D5C"] ])
-matcher.AddColors("amberacquired", [ [444, 498, "0x5A2E27"],[760, 345, "0xC44016"] ])
-matcher.AddColors("waypointtutorial", [ [551, 479, "0xFFFFFF"], [523, 359, "0xB2A470"] ])
-; testing [v2.2]
-matcher.AddColors("loginpassworddetect", [  [493, 445, "0xCCCCCC"], [557, 448, "0xFFFFFF"], [672, 436, "0xD8D8D8"], [492, 453, "0xD3D3D3"]    ])
-matcher.AddColors("loginbuttondetect", [ [528, 208, "0xFFFFFF"], [723, 571, "0x393B40"], [665, 596, "0xF0D4A6"]    ])
-matcher.AddColors("startgamedetect2", [ [670, 443, "0xFFFFFF"], [862, 435, "0xFFFFFF"], [1375, 864, "0x222222"], [1384, 854, "0xB5B5B5"]  ])
-; teting
-matcher.AddColors("registertextdetect", [   [633, 207, "0x4EA4DC"], [593, 244, "0xFFFFFF"], [662, 214, "0xCEE6F5"]    ])
-; this line (one) below is just template
-matcher.AddColors("startgame", [  ])
-sawDvalin := 0
-canClickRegister := 0
-sawLoginButton := 0
-
-; set char name and password here
-charName := "A"
-textPassword := "A1400xSceret32114"
-
-
-/*
-for people who want to skip those things:
-get colours for these coordinations
-how to: capture pixels when those tutorials appear on screen
-
-example: PixelColor(698, 339, cwnd_id)
-
-[shop]
-698, 339
-697, 475
-741, 487
-[wish]
-700, 349
-718, 374
-696, 480
-[dress]
-685, 341
-720, 320
-617, 478
-806, 473
-*/
+; Start of Zero value variables
+Ingame_SeenDragon := 0, Register_CanSubmit := 0, Login_SeenButton := 0, Register_MailEntered := 0, Register_UIGone := 0
+vOpeningBypassRevoked := 0, Register_CodeSent := 0
+; End of Zero value variables
 
 Loop {
-	
-	
 	EmptyMem()
-	y1 := 190 + offsettop
-	y2 := 189 + offsettop
-	;c1 := PixelColor(896, 446, cwnd_id)
-	;c2 := PixelColor(578, y2, cwnd_id)
-	;clipboard = [578, %y1%, %c1%], [578, %y2%, %c2%]
-	;msgbox %c1%
-
+	vPMatch.match()
+	; GenshinOpeningBypass(vStandaloneWindows64Path)
+	; GenshinOpeningBypassRevoke(vStandaloneWindows64Path)
+	; EmitMouseLMB(vCurrWndHnd, 668, 276, WX, WY)
+	; EmitMouseLMB2(vCurrWndHnd, 668, 276, WX, WY, 1, aDelay=0)
+	; sendinput %vHaystack%
+	; ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, aMouseMove=1, aDelay=4, aDelay2=0)
+	; ClickEnterText2(aText, aWinID, aX, aY, aWinX, aWinY, aDelay=4, aDelay2=0)
 	
-	matcher.match()
+	; vSettings[PlayerName, Password, SW64P]
+	
+	; Reminder: CODE ORDER MATTERS (unless you add more logic)
 
-	HasStartGame := matcher.GetIsAllPositive("startgame")||matcher.GetIsAllPositive("startgamedetect2")
-	CanBegin := matcher.GetIsAllPositive("clicktobegin")
-	CanChooseTwin := matcher.GetIsAllPositive("selecttwin")
-	CanCloseMap := matcher.GetIsAllPositive("undiscoveredkeywaypoint")
-	HasDialogueOption := matcher.GetIsAllPositive("dialogueoption")
-	HasDialogueOptions := matcher.GetIsAllPositive("dialogueoptions")
-	CanClickAcquired01 := matcher.GetIsAllPositive("amberacquired")
-	CanOpenJournal := matcher.GetIsAllPositive("journalrequest")
-	CanCloseJournal := matcher.GetIsAllPositive("journalopened") ; passwordreg
-	CanEnterPassword := matcher.GetIsAllPositive("passwordreg")
-	CanConfirmName := matcher.GetIsAllPositive("confirmname")
-	CanPasteEmail := matcher.GetIsAllPositive("emailtextbox")
-	HasNameInput := matcher.GetIsAllPositive("nameinput")
-	HasDvalin := matcher.GetIsAllPositive("dvalinhp")
-	HasVerifyBox := matcher.GetIsAllPositive("verifycode")
-	HasEulaChecked := matcher.GetIsAllPositive("eulachecked")
-	HasConvAuto := matcher.GetIsAllPositive("hasauto")
-	HasTeleport1 := matcher.GetIsAllPositive("teleportreq0")
-	HasTeleport2 := matcher.GetIsAllPositive("teleportreq1")
-	HasTeleport3 := matcher.GetIsAllPositive("teleportreq2")
-	HasTermsoShit := matcher.GetIsAllPositive("tos1")
-	HasTermsoShit2 := matcher.GetIsAllPositive("tos2")
-	HasShitOnscreen := matcher.GetIsAllPositive("paimnonshittalker")
-	HasWaypointTutorial := matcher.GetIsAllPositive("waypointtutorial")
-	; [v2.2] requires re-enter of password?
-	HasReenterPassword := matcher.GetIsAllPositive("loginpassworddetect")
-	HasLoginButton := matcher.GetIsAllPositive("loginbuttondetect")
-
-	; [debug below]
-	;result := matcher.GetResult("dialogueoption")
-	;a := result[2][1]
-	;msgbox %a%
-	;MouseMoveGame(26, -50)
-	;return
-	; 978, 672, [1215, 866
-	; [end of debug]
-
-	if CanPasteEmail {
-		vHaystack := clipboard
-		vFoundPos := InStr(vHaystack, "@")
-		if (vFoundPos > 1) {
-			EmitMouseLMB(cwnd_id, 668, 276, WX, WY)
-			sleep 35
-			sendinput %vHaystack%
-			sleep 150
+	; === LOGIN FORM ===    [Login_Detect, Login_TBoxEmail, Login_TBoxPass]
+	vLoginDetect := vPMatch["Login_Detect"]
+	vLoginTBoxPass := vPMatch["Login_TBoxPass"]
+	vLoginTBoxEmail := vPMatch["Login_TBoxEmail"]
+	; Reset Register_CanSubmit to 0 once register is done
+	if vLoginDetect {
+		Register_CanSubmit:=0
+	}
+	; Fill password textbox if empty
+	if vLoginTBoxPass {
+		; debugmsg
+		ClickEnterText2(vSettings["Password"], vCurrWndHnd, 550, 427, WX, WY, Delay:=2, Delay:=99)
+	}
+	; Fill email textbox if empty
+	if vLoginTBoxEmail
+		if vUserEmail {
+			; debugmsg
+			ClickEnterText2(vUserEmail, vCurrWndHnd, 540, 333, WX, WY, Delay:=2, Delay:=99)
 		}
+	; Before Clicking Login button, perform checks
+	if (!vLoginTBoxEmail && !vLoginTBoxPass && !Login_SeenButton && vLoginDetect) {
+		; debugmsg
+		Login_SeenButton := 2
+		;msgbox %Login_SeenButton%
+		EmitMouseLMB(vCurrWndHnd, 596, 610, WX, WY)
+		Sleep 2000
 	}
-
-	if (!sawLoginButton && HasLoginButton) {
-		; [718, 584, "0x393B40"]
-		sawLoginButton := 1
-		EmitMouseLMB(cwnd_id, 718, 584, WX, WY)
-		sleep 500
-	}
-	if HasReenterPassword {
-		EmitMouseLMB(cwnd_id, 946, 447, WX, WY)
-		sleep 10
-		sendinput %textPassword%
-	}
-
-	if HasVerifyBox {
-		clipboardsize := strlen(Clipboard)
-		if (6 == clipboardsize) {
-			WinActivate, ahk_id %cwnd_id% ; focus game window
-			if (0 == HasEulaChecked) ; 
-				EmitMouseLMB(cwnd_id, 531, 542, WX, WY) ; checkbox position
-			sleep 5
-			EmitMouseLMB(cwnd_id, 633, 351, WX, WY) ; textbox of code position
-			sendinput %Clipboard%
-			sleep 25
-		}
-	}
-	if (HasEulaChecked && 0 == HasVerifyBox) {
-		EmitMouseLMB(cwnd_id, 581, 587, WX, WY)
+	; Handle Terms of Service Agreement
+	if vPMatch["Login_TOSDetect"] {
+		; debugmsg
+		; Click 3x Checkbox
+		EmitMouseLMB2(vCurrWndHnd, 404, 434, WX, WY, 1, Delay:=32)
 		Sleep 250
+		; Click Accept
+		EmitMouseLMB2(vCurrWndHnd, 785, 686, WX, WY, 1, Delay:=250)
 	}
+	; ===/ LOGIN FORM ===
 
-	if HasTeleport1 {
-		if sawDvalin {
-			break
+	; === REGISTRATION FORM ===
+	if Register_CanSubmit { ; Happens when all register data is filled
+		; debugmsg
+		EmitMouseLMB2(vCurrWndHnd, 662, 597, WX, WY, 1, 480)
+	}
+	if vPMatch["Register_CBoxTOSPP"] { ; Check/click the unchecked checkbox
+		; debugmsg
+		EmitMouseLMB(vCurrWndHnd, 526, 517, WX, WY)
+		Sleep 32 ; 24ms seems to work too
+	}
+	if vPMatch["Register_TBoxPass"] { ; Fill both password fields
+		FocusWindow(vCurrWndHnd)
+		ClickEnterText2(vSettings["Password"], vCurrWndHnd, 572, 423, WX, WY, Delay:=4, Delay:=99)
+		ClickEnterText2(vSettings["Password"], vCurrWndHnd, 549, 490, WX, WY, Delay:=4, Delay:=99)
+	}
+	if vPMatch["Register_TBoxEmail"] { ; Fill email field with copied mail
+		vFoundPos := InStr(vHaystack := Clipboard, "@")
+		if (vFoundPos > 1) {
+			; debugmsg
+			vUserEmail := Clipboard
+			FocusWindow(vCurrWndHnd)
+			ClickEnterText2(vHaystack, vCurrWndHnd, 574, 287, WX, WY, Delay:=4, Delay:=150)
 		}
-		;msgbox sawDvalin=%sawDvalin%
-		EmitMouseLMB(cwnd_id, 978, 672, WX, WY)
-	}
-	if (HasTeleport2 || HasTeleport3)
-		EmitMouseLMB(cwnd_id, 1215, 866, WX, WY)
-	if HasTermsoShit {
-		EmitMouseLMB(cwnd_id, 402, 432, WX, WY)
-		sleep 50
-		EmitMouseLMB(cwnd_id, 803, 678, WX, WY)
-		sleep 300
-	}
-		
-	if CanEnterPassword {
-		EmitMouseLMB(cwnd_id, 599, 425, WX, WY)
-		sleep 5
-		sendinput %textPassword%
-		Sleep 180
-		EmitMouseLMB(cwnd_id, 654, 487, WX, WY)
-		sleep 5
-		sendinput %textPassword%
-		Sleep 180
-		; [530, 540, "0xFFFFFF"]
-		EmitMouseLMB(cwnd_id, 530, 540, WX, WY)
-		sleep 35
-	}
-	
-	if HasTermsoShit2 {
-		EmitMouseLMB(cwnd_id, 1317, 144, WX, WY)
-		sleep 700
-	}
-	if (HasShitOnscreen || HasWaypointTutorial) {
-		SendLMB(cwnd_id, 1)
+	} else Register_MailEntered := 1
+	; Report register ui being missing
+	if !vPMatch["Register_Detect"]
+		Register_UIGone = 1
+	vLLnkCodeUI := vPMatch["Register_LLnkCode"] || vPMatch["Register_LLnkCodeBugged"]
+	; Checks before clicking send code
+	if (Register_MailEntered && vLLnkCodeUI && !Register_CanSubmit) {
+		; debugmsg
+		if Register_UIGone
+			return
+		FocusWindow(vCurrWndHnd)
 		Sleep 100
-		Send f
+		EmitMouseLMB2(vCurrWndHnd, 841, 351, WX, WY, 1, 120)
+		EmitMouseLMB2(vCurrWndHnd, 841, 351, WX, WY, 1, 120)
+		Sleep 2400
+		Register_CodeSent:=1
 	}
-	if HasDvalin {
-		sawDvalin:=1
-		vTimeToKill := 8+18
-		vDragoningEpoch := utcnow()
-		while (utcnow()-vDragoningEpoch < vTimeToKill) {
-			SendLMB(cwnd_id, 4)
+	; Clipboard Checking for verify code fails - Uses While loop instead
+	while (Register_CodeSent && Register_CodeSent != 2) {
+		vCBL := StrLen(Clipboard)
+		if (!Register_CanSubmit && 6 == vCBL) {
+			FocusWindow(vCurrWndHnd)
+			sleep 100
+			ClickEnterText2(Clipboard, vCurrWndHnd, 552, 352, WX, WY, Delay:=2, Delay:=99)
+			Register_CanSubmit:=1
+			Register_CodeSent:=2
 		}
+		sleep 100
 	}
+	; ===/ REGISTRATION FORM ===
 
-	if CanConfirmName ; just in case, happens
-		EmitMouseLMB(cwnd_id, 1223, 844, WX, WY)
-
-	if CanCloseJournal {
-		Send {Escape}
-		Sleep 750
-		Send v
-		Sleep 500
-		Send v
+	; === INGAME ===
+	; Detect "Click To Begin"
+	if vPMatch["Ingame_ClickToBegin"] {
+		; debugmsg
+		; Remove Cutscene files
+		GenshinOpeningBypass(vSettings["SW64P"])
+		; Then Click anywhere to load game
+		EmitMouseLMB2(vCurrWndHnd, 456, 453, WX, WY, 1, Delay:=111)
 	}
-
-	if CanOpenJournal {
-		Send J
-		Sleep 50
+	; Detect any "Start Game"
+	vCanStartGame := vPMatch["Login_StartGame2.1"] || vPMatch["Login_StartGameLogin"]
+	; Checks, then click anywhere
+	if vCanStartGame {
+		; debugmsg
+		EmitMouseLMB2(vCurrWndHnd, 456, 453, WX, WY, 1, Delay:=111)
 	}
-
-	if HasNameInput {
-		EmitMouseLMB(cwnd_id, 613, 850, WX, WY)
-		Sleep 50
-		SendInput %charName%
-		Sleep 200
-		EmitMouseLMB(cwnd_id, 1234, 854, WX, WY)
-		sleep 150
-		EmitMouseLMB(cwnd_id, 1234, 854, WX, WY)
-		Sleep 7000
-		GenshinOpeningBypassRevoke(vStandaloneWindows64Path)
+	; Detect Twin Selection
+	if vPMatch["Ingame_SelectTwin"] {
+		; debugmsg
+		GenshinOpeningBypass(vSettings["SW64P"])
+		EmitMouseLMB2(vCurrWndHnd, 309, 515, WX, WY, 1, Delay:=48)
 	}
-	
-	if HasDialogueOptions {
-		EmitMouseLMB(cwnd_id, 1024, 650, WX, WY)
+	; Detect Twin Name Input Box
+	if vPMatch["Ingame_PlayerName"] {
+		; debugmsg
+		ClickEnterText2(vSettings["PlayerName"], vCurrWndHnd, 626, 853, WX, WY, Delay:=4, Delay:=32)
 	}
-	else {
-		if HasDialogueOption {
-			EmitMouseLMB(cwnd_id, 1024, 650, WX, WY)
-			Sleep 4
-			EmitMouseLMB(cwnd_id, 1024, 725, WX, WY)
-			Sleep 4
-			EmitMouseLMB(cwnd_id, 1024, 725-64, WX, WY)
-		}
+	; Detect Twin Confirm Name Button
+	if vPMatch["Ingame_ConfirmName"] {
+		; debugmsg
+		; Click Confirm Name
+		EmitMouseLMB2(vCurrWndHnd, 1223, 846, WX, WY, 1, 50)
 	}
-	
-	if CanCloseMap
-		SpamEscape()
-	if CanClickAcquired01 {
-		EmitMouseLMB(cwnd_id, 292, 495, WX, WY)
-		Sleep 500
-		EmitMouseLMB(cwnd_id, 292, 495, WX, WY)
-		Sleep 1000
+	; Detect if black screen is shown (when cutscene files corrupt)
+	if vPMatch["Ingame_BlackScreen"] {
+		; Restore cutscene files
+		GenshinOpeningBypassRevoke(vSettings["SW64P"])
+	}
+	; Handle one simple tutorial
+	if vPMatch["Ingame_WaypointTutorial"] {
+		; debugmsg
+		SendLMB(vCurrWndHnd, 1)
+	}
+	; We need to slay paimon the door guardsman
+	if vPMatch["Ingame_PaimonGuardsDoor"] {
+		; debugmsg
+		SendLMB(vCurrWndHnd, 1) ; First we kill him
+		Sleep 16 ; We wait...
+		Send F ; Then we press F to pay respects
+	}
+	; Detect Dialogue Option(s) and handle them
+	if vPMatch["Ingame_DialogueOptions"] {
+		; debugmsg
+		EmitMouseLMB(vCurrWndHnd, 1024, 650, WX, WY)
+	}
+	else if vPMatch["Ingame_DialogueOption"] {
+		; debugmsg
+		EmitMouseLMB2(vCurrWndHnd, 1024, 650, WX, WY, 1, Delay:=4)
+		EmitMouseLMB2(vCurrWndHnd, 1024, 725, WX, WY, 1, Delay:=4)
+		EmitMouseLMB2(vCurrWndHnd, 1024, 725-64, WX, WY, 1, Delay:=0)
+	}
+	; Detect if cutscene on first statue of 7 was shown the map
+	if vPMatch["Ingame_UndiscoveredWaypoint"] {
+		; debugmsg
+		SpamEscape() ; Spam out of map
+	}
+	; Detect if red bow girl is shown
+	if vPMatch["Ingame_RedGirl2BowAcquired"] {
+		; debugmsg
+		; Then try to exit and select her and aim
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=550)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=550)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=500)
 		Send 2
 		Sleep 320
 		Send r
 	}
-	if (HasConvAuto) {
-		SendLMB(cwnd_id, 3)
-		Sleep 15
-		SendLMB(cwnd_id, 3)
-		Sleep 10
-		SendLMB(cwnd_id, 3)
-		Sleep 8
-		SendLMB(cwnd_id, 4)
-		Sleep 5
-		SendLMB(cwnd_id, 4)
+	; Detect conversation, spam during conversation
+	if vPMatch["Ingame_ConvDetect"] {
+		; debugmsg
+		SpamDialogueLMB(vCurrWndHnd, WX, WY)
 	}
-	if (CanChooseTwin) {
-		EmitMouseLMB(cwnd_id, 292, 495, WX, WY)
-	}
-	if HasStartGame {
-		GenshinOpeningBypass(vStandaloneWindows64Path)
-		EmitMouseLMB(cwnd_id, 292, 347, WX, WY)
-	}
-	if CanBegin
-		EmitMouseLMB(cwnd_id, 292, 347, WX, WY)
-	if HasDvalin {
-		Sleep 10
-	} else {
+	; Handle Journaling
+	if vPMatch["Ingame_ReqOpenJournal"] {
+		; debugmsg
+		Send J
 		Sleep 50
 	}
+	if vPMatch["Ingame_JournalOpen"] {
+		; debugmsg
+		Send {Escape}
+		Sleep 800
+		Send v
+	}
+	; Teleport on any teleport component detection
+	if (vPMatch["Ingame_DTeleportC1"] || vPMatch["Ingame_DTeleportC2"]) {
+		; debugmsg
+		EmitMouseLMB(vCurrWndHnd, 1215, 866, WX, WY)
+		if Ingame_SeenDragon
+			break ; Break script if rerolling
+	}
+	; Detect Dragon dungeon, actually any big hp bar will trigger this
+	vHasDragon := vPMatch["Ingame_BigHPBar"]
+	if vHasDragon {
+		; debugmsg
+		Ingame_SeenDragon := 1
+		vTimeToKill := 8+18
+		vAttackingEpoch := utcnow()
+		while (utcnow()-vAttackingEpoch < vTimeToKill) {
+			SendLMB(vCurrWndHnd, 5)
+			SendLMB(vCurrWndHnd, 2)
+		}
+	}
+	; ===/ INGAME ===
+	; Detect if Dragon found
+	if vHasDragon {
+		; debugmsg
+		; Likely Dragon, uses "No delay"
+		Sleep 9
+	} else {
+		; Script delay should exist
+		; DON'T set above 30FPS, may break script, 23 default recommended
+		Sleep 1000/23
+	}
+	
 }
-IsSame(aColorA, aColorB) {
-	return aColorA == aColorB
-}
-IsSimilarColor(aColorA, aColorB, aTolerance) {
-    vR0 := aColorA & 0xFF
-    vG0 := (aColorA & 0xFF00) >> 8
-    vB0 := (aColorA & 0xFF0000) >> 16
-    vR1 := aColorB & 0xFF
-    vG1 := (aColorB & 0xFF00) >> 8
-    vB1 := (aColorB & 0xFF0000) >> 16,
-    vDist := (vR0 - vR1)**2 + (vG0 - vG1)**2 + (vB1 - vB0)**2
-    return vDist < aTolerance
-}
+/*
+	UPDATE [24-Nov-2021]
+		- Codebase cleaning
+		- Removed "IsSimilarColor"
+		- [For DEVs]
+			Improved PixelMatcher usage
+			- Now can use: PixelMatcher[Name]
+			- Alias "Set" for "AddColors"
+
+*/
 
 ; ahk sucks, here's the polyfill for: get unix timestamp 
-
 gettime(aYear=1970, aMonth=1, aDay=1, aHour=0, aMinute=0, aSeconds=0, aMilli=0) {
 	; this is correct way to calculate timestamp, noobs
 	vDaysToMonth := [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365]
@@ -446,17 +476,21 @@ gettime(aYear=1970, aMonth=1, aDay=1, aHour=0, aMinute=0, aSeconds=0, aMilli=0) 
 	; do -86400 for lulz' sake
 	return round(vTime - 86400, 3)
 }
-
+; Once upon a time I wish I could one-line things in AHK
 utcnow() {
+	; When adding 0 matters, be like:
 	return gettime(0 + A_YYYY, 0 + A_MM, 0 + A_DD, 0 + A_Hour, 0 + A_Min, 0 + A_Sec, 0 + A_MSec)
 }
-Join(strArray) {
+; Again, for lulz' sake kekw
+IsSame(aColorA, aColorB) {
+	return aColorA == aColorB ; kekw
+}
+Join(strArray) { ; This function has no literal purpose, debugging?
 	s := ""
 	for i, v in strArray
 		s .= ", " . v
 	return substr(s, 3)
 }
-Return
 ;----------------------------------------------------------------------------
 F1::
 	MouseGetPos, OutputVarX, OutputVarY ; Get the coordinates of the mouse, assign the X coordinate of the mouse to the variable OutputVarX, and the same OutputVarY
@@ -479,6 +513,9 @@ class PixelMatcher {
 		this.gArray := []
 		this.gResult := []
 	}
+	__Get(aName) {
+		return this.GetIsAllPositive(aName)
+	}
 	GetIsAllPositive(aName) {
 		result := this.GetResult(aName), c := 0
 		for i in result
@@ -487,7 +524,6 @@ class PixelMatcher {
 	}
 	; result[pixel index][1=get boolean, 2=get found color]
 	GetResult(aName) {
-		
 		zArr := this.gResult
 		for i in zArr {
 			item := zArr[i]
@@ -495,6 +531,9 @@ class PixelMatcher {
 				return item[2]
 		}
 		return 0
+	}
+	Set(aName, aColors) {
+		this.AddColors(aName, aColors)
 	}
 	AddColors(aName, aColors) {
 		this.gArray.Push([aColors, aName])
