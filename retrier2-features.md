@@ -14,7 +14,8 @@ NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of inter
 - After red bow girl splash screen, 'skip' by LClick then swap to red girl by pressing 2
   - May not work at times, seems to work during every update of the script
 - At Monstadt entrance, tutorial for navigation will be 'skipped' by macro
-- [OBSOLETE?] Fend off Dragon DOES NOT NEED user interaction; for now
+- Fend off Dragon DOES NOT NEED user interaction; for now
+  - Requires: Medium graphics setting or above 
 - Once Fend Dragon off is done, and talk is done, door blocked by Paimon is handled by the Script
   - You can now rest in **piece**
 - Teleport confirmation is automated by default
