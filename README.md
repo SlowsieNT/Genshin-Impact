@@ -13,6 +13,7 @@ FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
 NOTE:
+<br>- Don't press F2 like a madman during register/login, script will break
 <br>- Script can be used at ANY QUEST, but some MAY end up being STUCK in a loop (Venti's quest is just an example)
 <br>- Script can break, so press Home then F2 again if it escalates during Questing
 
