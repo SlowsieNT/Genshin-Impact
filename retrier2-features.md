@@ -1,4 +1,4 @@
-## Features of retrier2
+## Features of Retrier2
 NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
 
 ### As of November 24th, 2021, changes were made:
@@ -8,6 +8,9 @@ NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of inter
     - Added shorthand `aM.Set`, does the same as `aM.AddColors(aName, aColors[][])`
   - No longer needed to call `matcher.GetIsAllPositive(aName)`
     - Added shorthand `matcher[aName]`, yay!
+- Code has been polished
+- No new features are **ever** planned!
+  - Unless it's for v3.1 which has stable code, it does the same as 2.x version.
 
 ### For those who use pre-made script
 - You are not supposed to open map during reroll
