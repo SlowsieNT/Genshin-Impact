@@ -1,6 +1,6 @@
 ## Features of Retrier2
 NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
-[#list-of-features](#list-of-features)
+See features: [#list-of-features](#list-of-features)
 
 Retrier2 does not use `PixelGetColor`, which would screenshot everytime and surely cause high CPU usage
 - Uses custom code which prints screen ONCE and searches through provided data (from `Retrier2_AllocateMatcherPData`)
