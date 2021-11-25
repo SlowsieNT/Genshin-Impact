@@ -1,6 +1,7 @@
 ## Features of Retrier2
 NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
 
+
 Retrier2 does not use `PixelGetColor`, which would screenshot everytime and surely cause high CPU usage
 - Uses custom code which prints screen ONCE and searches through provided data (from `Retrier2_AllocateMatcherPData`)
 
@@ -15,7 +16,7 @@ Retrier2 does not use `PixelGetColor`, which would screenshot everytime and sure
 - No new features are **ever** planned!
   - Unless it's for v3.1 which has stable code, it does the same as 2.x version.
 
-### For those who use pre-made script
+### List of Features
 - You are not supposed to open map during reroll
   - Unless you are rank 4, or above
     - You may break something otherwise
