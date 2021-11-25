@@ -1,7 +1,20 @@
 ## Features of retrier2
 NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
+
+### As of November 24th, 2021, changes were made:
+- You may easily edit `Retrier2_GetSettings` (search within editor)
+- **For developers**
+  - You may easily edit `Retrier2_AllocateMatcherPData`
+    - Added shorthand `aM.Set`, does the same as `aM.AddColors(aName, Colors[][])`
+  - No longer needed to call `matcher.GetIsAllPositive(aName)`
+    - Added shorthand `matcher[aName]`, yay!
+
+### For those who use pre-made script
+- You are not supposed to open map during reroll
+  - Unless you are rank 4, or above
+    - You may break something otherwise
 - Cutscene skip REQUIRES NO user interaction AFTER logging in
-  - You can interact after game is loaded
+  - You can interact AFTER beach cutscene
 - Registration & Login is **almost** automated; requires CAPTCHA
   - Since 2.2, seems to require re-entering password, feature has been implemented (the day finally came)
 - Auto click anywhere on "START GAME" screen
@@ -12,7 +25,7 @@ NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of inter
 - Mini Waypoint Tutorial is 'skipped' by LClick
 - When at first statue of the Seven, spams Escape key to exit map
 - After red bow girl splash screen, 'skip' by LClick then swap to red girl by pressing 2
-  - May not work at times, seems to work during every update of the script
+  - May not work at times
 - At Monstadt entrance, tutorial for navigation will be 'skipped' by macro
 - Fend off Dragon DOES NOT NEED user interaction; for now
   - Requires: Medium graphics setting or above 
