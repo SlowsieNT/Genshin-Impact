@@ -5,7 +5,7 @@ NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of inter
 - You may easily edit `Retrier2_GetSettings` (search within editor)
 - **For developers**
   - You may easily edit `Retrier2_AllocateMatcherPData`
-    - Added shorthand `aM.Set`, does the same as `aM.AddColors(aName, Colors[][])`
+    - Added shorthand `aM.Set`, does the same as `aM.AddColors(aName, aColors[][])`
   - No longer needed to call `matcher.GetIsAllPositive(aName)`
     - Added shorthand `matcher[aName]`, yay!
 
