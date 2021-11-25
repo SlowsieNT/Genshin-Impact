@@ -1,6 +1,9 @@
 ## Features of Retrier2
 NOTE: Speaking of numbers, I did do math, and it turns out **around 60% of interaction** during AR5 reroll **is reduced**.<br>
 
+Retrier2 does not use `PixelGetColor`, which would screenshot everytime and surely cause high CPU usage
+- It prints screen ONCE and searches through all
+
 ### As of November 24th, 2021, changes were made:
 - You may easily edit `Retrier2_GetSettings` (search within editor)
 - **For developers**
