@@ -16,7 +16,7 @@ Menu, Tray, Icon, Shell32.dll, 172
 ; USER SETTINGS
 Retrier2_GetSettings() {
 	; OLD script pw was A1400xSceret32114
-	; YOU MAY EDIT THESE 3 LINES BELOW
+	; YOU MAY EDIT THESE 3 LINES(variables) BELOW
 	vCustomName := "Lumine"
 	vPassword := "A1400x!Sceret32114"
 	; Usually partition letter may need change:
@@ -26,7 +26,9 @@ Retrier2_GetSettings() {
 }
 ; DEVELOPER SETTINGS
 Retrier2_AllocateMatcherPData(aM) {
-	; aM.AddColors("Name", [ [1, 1, "0x0"] ])
+	; Caution: 3rd value (color) can be Integer, string not required!!!
+	; aM.AddColors("Name", [ [1, 1, 0x0] ])
+	;       aM.Set("Name", [ [1, 1, 0x0] ])
 	; === REGISTRATION FORM ===
 	; Pixel Detect TextBox(es)
 	aM.Set("Register_Detect", [ [476, 203, "0x4EA4DC"], [662, 223, "0x4EA4DC"], [514, 235, "0xFFFFFF"] ])
@@ -36,10 +38,11 @@ Retrier2_AllocateMatcherPData(aM) {
 	; Pixel Detect CheckBox(es)
 	aM.Set("Register_CBoxTOSPP", [ [526, 517, "0xD7D7D7"], [531, 527, "0xF4F4F4"], [528, 521, "0xFFFFFF"] ])
 	; Pixel Detect LinkLabel(s)
-	; Verify Send Code, coordinates: 841, 351
+	; Verify Send Code
 	aM.Set("Register_LLnkCode", [ [835, 351, "0x8DC4E8"], [839, 352, "0xE7F3FA"], [836, 349, "0xFFFFFF"] ])
 	aM.Set("Register_LLnkCodeBugged", [ [835, 375, "0x6EB5E2"], [845, 379, "0xAED6EF"], [836, 377, "0xFFFFFF"] ])
 	; ===/ REGISTRATION FORM ===
+
 	; === LOGIN FORM ===
 	; Pixel Detect TextBox(es)
 	aM.Set("Login_Detect", [ [653, 247, "0x666666"], [685, 236, "0x808080"], [72, 857, "0x7F7F7F"], [568, 246, "0xFFFFFF"] ])
@@ -52,6 +55,7 @@ Retrier2_AllocateMatcherPData(aM) {
 	aM.Set("Login_StartGame2.1", [ [593, 451, "0xFFFFFF"], [62, 850, "0xC5C5C5"] ])
 	aM.Set("Login_StartGameLogin", [ [584, 445, "0xFFFFFF"], [1368, 778, "0x222222"], [690, 466, "0xFFFFFF"], [79, 844, "0x909090"], [1378, 851, "0x3C3C3C"] ])
 	; ===/ LOGIN FORM ===
+
 	; === INGAME ===
 	; Start of opening cutscene pixels
 	aM.Set("Ingame_SelectTwin", [ [660, 880, "0xECE5D8"], [700, 881, "0xECE5D8"], [701, 885, "0xECE5D8"] ])
@@ -79,25 +83,24 @@ Retrier2_AllocateMatcherPData(aM) {
 	; End of regular pixels
 	; ===/ INGAME ===
 }
-
 ;----------------------------------------------------------------------------
+EmptyMem() {
+	Return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
+}
 FocusWindow(aID) {
-	WinActivate, ahk_id %aID%
+	WinActivate, ahk_id %aID% ; This will focus window by its id
 }
 SendLMB(aID, aTimes=1) {
-	ControlClick, , ahk_id %aID%, , left, aTimes
+	ControlClick, , ahk_id %aID%, , left, aTimes ; Send click to window by its id
 }
 SendLMB2(aID, aX, aY){
-	ControlClick, x%aX% y%aY%, ahk_id %aID%, , left, 1
+	ControlClick, x%aX% y%aY%, ahk_id %aID%, , left, 1 ; Send click to window by its id
 }
 SendRMB(aID) {
-	ControlClick, , ahk_id %aID%, , right, 1
+	ControlClick, , ahk_id %aID%, , right, 1 ; Send click to window by its id
 }
 SendKey(aID, aKey) {
-	ControlSend, , %aKey%, ahk_id %aID%
-}
-MouseMoveEx(aX, aY) {
-	MouseMove, 0, 0, 80, R
+	ControlSend, , %aKey%, ahk_id %aID% ; Send keystroke to window by its id
 }
 SpamDialogueLMB(aID, aWX, aWY, aTimes=8, aDelay=25) {
 	Loop, %aTimes% {
@@ -114,17 +117,22 @@ SpamEscape(aTimes=7, aDelay=100) {
 EmitMouseLMB2(aID, aX, aY, aWX, aWY, aUseMove=1, aDelay=0) {
 	EmitMouseLMB(aID, aX, aY, aWX, aWY, aUseMove)
 	if aDelay
-		Sleep aDelay2
+		Sleep aDelay
 }
 EmitMouseLMB(aID, aX, aY, aWX, aWY, aUseMove=1) {
 	if aUseMove
 		DllCall("SetCursorPos", "int", aWX + aX, "int", aWY + aY)
-	if aUseMove
-		MouseMoveEx(0, 0)
 	SendLMB2(aID, aX, aY)
 }
-Check2(arr, x, y) {
-	return arr[x][0] && arr[y][0]
+MouseMoveGame(aX, aY) {
+	; Moving cursor ingame (camera view?)
+	DllCall("mouse_event", uint, 1, int, aX, int, aY)
+}
+SendClick(aX, aY) {
+	EmitMouseLMB(vCurrWndHnd, aX, aY, WX, WY)
+}
+MouseMoveEx(aX=0, aY=0, aSpeed=80) {
+	MouseMove, aX, aY, aSpeed, R
 }
 SendVK_W(aDelay=1) {
 	Send, {w down}
@@ -136,55 +144,43 @@ SendVK_Shift(aDelay=1) {
 	Sleep %aDelay%
 	Send, {Shift up}
 }
-;---
-LogStart(){ ; was used for measuring reroll time - all history
+LogStart(aData=""){ ; was used for measuring reroll time - all history
 	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	whr.Open("GET", "http://localhost:81/logdate.php", true)
-	whr.Send(Data)
+	whr.Send(aData)
 	whr.WaitForResponse()
 }
 ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, aMouseMove=1, aDelay=4, aDelay2=0){
 	EmitMouseLMB(aWinID, aX, aY, aWinX, aWinY, aMouseMove)
 	Sleep aDelay
 	SendInput %aText%
-	Sleep aDelay2
+	if aDelay2
+		Sleep aDelay2
 }
 ClickEnterText2(aText, aWinID, aX, aY, aWinX, aWinY, aDelay=4, aDelay2=24){
 	ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, 1, aDelay, aDelay2)
 }
+PixelColor(byref aX, byref aY, aAtMouseCoords=0){
+	if aAtMouseCoords
+		MouseGetPos, aX, aY
+	PixelGetColor, vColor, %aX%, %aY%
+	return vColor
+}
 ;-----------------------------------------------------------------------------
-F5::
-GenshinOpeningBypassRevoke(Retrier2_GetSettings()["SW64P"])
-msgbox Opening Cutscene bypass revoked
-return
-
 F2::
 vCurrWndHnd := 0, OffsetTop := 26
-WX := 0, WY := 0, pixels := []
+WX := 0, WY := 0
 if (vCurrWndHnd < 1) {
 	WinGet, vCurrWndHnd, ID, A ; A - active window
 	WinGetPos, WX, WY, , , A
-	matcher.gWID := vCurrWndHnd
 }
-
+; used for debugging
 if (0) {
-	c1 := PixelColor(x1:=626, y1:=848, vCurrWndHnd)
-	c2 := PixelColor(x2:=625, y2:=847, vCurrWndHnd)
+	c1 := PixelColor(x1:=626, y1:=848)
+	c2 := PixelColor(x2:=625, y2:=847)
 	Clipboard = [%x1%, %y1%, "%c1%"], [%x2%, %y2%, "%c2%"]
 	return
 }
-
-; SendLMB2(vCurrWndHnd, 1346, 414)
-; PixelColor(1185, 530, vCurrWndHnd)
-; MatchPixelColors(bar4, vCurrWndHnd)
-
-MouseMoveGame(aX, aY) {
-	DllCall("mouse_event", uint, 1, int, aX, int, aY)
-}
-SendClick(x, y) {
-	EmitMouseLMB(vCurrWndHnd, x, y, WX, WY)
-}
-
 GenshinOpeningAssets(aStandaloneWindows64Path, byref aFile1, byref aFile2, byref aFile3) {
 	vFile1 = %aStandaloneWindows64Path%\MDAQ001_OPNew_Part1.usm
 	vFile2 = %aStandaloneWindows64Path%\MDAQ001_OPNew_Part2_PlayerBoy.usm
@@ -215,27 +211,33 @@ Ingame_SeenDragon := 0, Register_CanSubmit := 0, Login_SeenButton := 0, Register
 vOpeningBypassRevoked := 0, Register_CodeSent := 0
 ; End of Zero value variables
 
+; used for verifying email address (6 digit code, or similar)
+RegisterApplyVerifyCode(aCurrWndHnd, aWX, aWY, byref aVar1, byref aVar2) {
+	FocusWindow(aCurrWndHnd)
+	Sleep 100 ; Delay needed for window to properly show
+	ClickEnterText2(Clipboard, aCurrWndHnd, 552, 352, aWX, aWY, Delay:=2, Delay:=99)
+	aVar1:=1, aVar2:=2
+}
 Loop {
 	EmptyMem()
 	vPMatch.match()
-	; GenshinOpeningBypass(vStandaloneWindows64Path)
-	; GenshinOpeningBypassRevoke(vStandaloneWindows64Path)
-	; EmitMouseLMB(vCurrWndHnd, 668, 276, WX, WY)
-	; EmitMouseLMB2(vCurrWndHnd, 668, 276, WX, WY, 1, aDelay=0)
-	; sendinput %vHaystack%
+	; GenshinOpeningBypass(aStandaloneWindows64Path)
+	; GenshinOpeningBypassRevoke(aStandaloneWindows64Path)
+	; EmitMouseLMB(aCurrWndHnd, 668, 276, WX, WY)
+	; EmitMouseLMB2(aCurrWndHnd, 668, 276, WX, WY, 1, aDelay=0)
 	; ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, aMouseMove=1, aDelay=4, aDelay2=0)
 	; ClickEnterText2(aText, aWinID, aX, aY, aWinX, aWinY, aDelay=4, aDelay2=0)
-	
 	; vSettings[PlayerName, Password, SW64P]
 	
 	; Reminder: CODE ORDER MATTERS (unless you add more logic)
 
-	; === LOGIN FORM ===    [Login_Detect, Login_TBoxEmail, Login_TBoxPass]
+	; === LOGIN FORM ===
 	vLoginDetect := vPMatch["Login_Detect"]
 	vLoginTBoxPass := vPMatch["Login_TBoxPass"]
 	vLoginTBoxEmail := vPMatch["Login_TBoxEmail"]
 	; Reset Register_CanSubmit to 0 once register is done
 	if vLoginDetect {
+		; debugmsg
 		Register_CanSubmit:=0
 	}
 	; Fill password textbox if empty
@@ -260,9 +262,8 @@ Loop {
 	; Handle Terms of Service Agreement
 	if vPMatch["Login_TOSDetect"] {
 		; debugmsg
-		; Click 3x Checkbox
-		EmitMouseLMB2(vCurrWndHnd, 404, 434, WX, WY, 1, Delay:=32)
-		Sleep 250
+		; Click "all" Checkbox
+		EmitMouseLMB2(vCurrWndHnd, 404, 434, WX, WY, 1, Delay:=32+333)
 		; Click Accept
 		EmitMouseLMB2(vCurrWndHnd, 785, 686, WX, WY, 1, Delay:=250)
 	}
@@ -275,8 +276,7 @@ Loop {
 	}
 	if vPMatch["Register_CBoxTOSPP"] { ; Check/click the unchecked checkbox
 		; debugmsg
-		EmitMouseLMB(vCurrWndHnd, 526, 517, WX, WY)
-		Sleep 32 ; 24ms seems to work too
+		EmitMouseLMB2(vCurrWndHnd, 526, 517, WX, WY, 1, 32)
 	}
 	if vPMatch["Register_TBoxPass"] { ; Fill both password fields
 		FocusWindow(vCurrWndHnd)
@@ -304,21 +304,23 @@ Loop {
 		FocusWindow(vCurrWndHnd)
 		Sleep 100
 		EmitMouseLMB2(vCurrWndHnd, 841, 351, WX, WY, 1, 120)
-		EmitMouseLMB2(vCurrWndHnd, 841, 351, WX, WY, 1, 120)
-		Sleep 2400
+		EmitMouseLMB2(vCurrWndHnd, 841, 351, WX, WY, 1, 120+2400)
 		Register_CodeSent:=1
 	}
-	; Clipboard Checking for verify code fails - Uses While loop instead
-	while (Register_CodeSent && Register_CodeSent != 2) {
+	; Clipboard Checking for verify code fails at times
+	; Someone else to fix this (doesn't happen in new script)
+	vCBL := StrLen(Clipboard)
+	if (6 == vCBL && !Register_UIGone && 2 != Register_CodeSent) {
+		; it'll allocate 2 variables (last 2 func args)
+		RegisterApplyVerifyCode(vCurrWndHnd, WX, WY, Register_CanSubmit, Register_CodeSent)
+	}
+	while (Register_CodeSent && 2 != Register_CodeSent) {
 		vCBL := StrLen(Clipboard)
 		if (!Register_CanSubmit && 6 == vCBL) {
-			FocusWindow(vCurrWndHnd)
-			sleep 100
-			ClickEnterText2(Clipboard, vCurrWndHnd, 552, 352, WX, WY, Delay:=2, Delay:=99)
-			Register_CanSubmit:=1
-			Register_CodeSent:=2
+			; it'll allocate 2 variables (last 2 func args)
+			RegisterApplyVerifyCode(vCurrWndHnd, WX, WY, Register_CanSubmit, Register_CodeSent)
 		}
-		sleep 100
+		Sleep 100
 	}
 	; ===/ REGISTRATION FORM ===
 
@@ -369,7 +371,7 @@ Loop {
 	if vPMatch["Ingame_PaimonGuardsDoor"] {
 		; debugmsg
 		SendLMB(vCurrWndHnd, 1) ; First we kill him
-		Sleep 16 ; We wait...
+		Sleep 9 ; We wait...
 		Send F ; Then we press F to pay respects
 	}
 	; Detect Dialogue Option(s) and handle them
@@ -392,11 +394,12 @@ Loop {
 	if vPMatch["Ingame_RedGirl2BowAcquired"] {
 		; debugmsg
 		; Then try to exit and select her and aim
-		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=550)
-		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=550)
-		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=500)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=1500)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=320)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=320)
+		EmitMouseLMB2(vCurrWndHnd, 292, 495, WX, WY, 1, Delay:=320)
 		Send 2
-		Sleep 320
+		Sleep 360
 		Send r
 	}
 	; Detect conversation, spam during conversation
@@ -432,33 +435,15 @@ Loop {
 		vAttackingEpoch := utcnow()
 		while (utcnow()-vAttackingEpoch < vTimeToKill) {
 			SendLMB(vCurrWndHnd, 5)
-			SendLMB(vCurrWndHnd, 2)
+			SendLMB(vCurrWndHnd, 3)
 		}
 	}
 	; ===/ INGAME ===
-	; Detect if Dragon found
-	if vHasDragon {
-		; debugmsg
-		; Likely Dragon, uses "No delay"
-		Sleep 9
-	} else {
-		; Script delay should exist
-		; DON'T set above 30FPS, may break script, 23 default recommended
-		Sleep 1000/23
-	}
 	
+	; Script delay should exist
+	; DON'T set above 24FPS, may break script(default: 23)
+	Sleep 1000/23
 }
-/*
-	UPDATE [24-Nov-2021]
-		- Codebase cleaning
-		- Removed "IsSimilarColor"
-		- [For DEVs]
-			Improved PixelMatcher usage
-			- Now can use: PixelMatcher[Name]
-			- Alias "Set" for "AddColors"
-
-*/
-
 ; ahk sucks, here's the polyfill for: get unix timestamp 
 gettime(aYear=1970, aMonth=1, aDay=1, aHour=0, aMinute=0, aSeconds=0, aMilli=0) {
 	; this is correct way to calculate timestamp, noobs
@@ -493,12 +478,10 @@ Join(strArray) { ; This function has no literal purpose, debugging?
 }
 ;----------------------------------------------------------------------------
 F1::
-	MouseGetPos, OutputVarX, OutputVarY ; Get the coordinates of the mouse, assign the X coordinate of the mouse to the variable OutputVarX, and the same OutputVarY
-	PixelGetColor, OutputVar, %OutputVarX%, %OutputVarY%, RGB ; Call the PixelGetColor function to get the RGB value of the coordinates of the mouse and assign it to OutputVar
-	StringRight, OutputVar, OutputVar, 8 ; Intercepts the 8 characters to the right of OutputVar (the second OutputVar) because the value obtained is this: 0x000000. Assign the intercepted value to OutputVar (the first OutputVar).
-	Clipboard = [%OutputVarX%, %OutputVarY%, "%OutputVar%"]
-	; Send the value of OutputVarX OutputVarY OutputVar to the clipboard
-	ToolTip, Coordinates: %OutputVarX% %OutputVarY% `nHexColor: %OutputVar% ; Tooltip OutputVarX OutputVarY OutputVar
+	vColorHex := PixelColor(vMouseX, vMouseY, 1)
+	Clipboard = [%vMouseX%, %vMouseY%, %vColorHex%]
+	; Send the value of OutputVarX vMouseY OutputVar to the clipboard
+	ToolTip, Pixel info: %vMouseX%; %vMouseY%; %vColorHex%
 	SetTimer, RemoveToolTip, -5000 ; Let the tooltip disappear after a while
 Return
 ;----------------------------------------------------------------------------
@@ -506,7 +489,6 @@ RemoveToolTip:
 	ToolTip
 Return
 ;----------------------------------------------------------------------------
-
 class PixelMatcher {
 	__New(aWndId) {
 		this.gWID := aWndId
@@ -546,7 +528,7 @@ class PixelMatcher {
 	}
 	Match() {
 		hWND := this.gWID
-		if 0 == hWND
+		if !hWND
 			return 0
 		pc_hDC := DllCall("GetDC", "UInt", hWND)
 		WinGetPos, , , pc_w, pc_h, ahk_id %hWND%
@@ -576,37 +558,6 @@ class PixelMatcher {
 	}
 }
 ;----------------------------------------------------------------------------
-
-PixelColor(pc_x, pc_y, pc_wID) {
-	If pc_wID
-	{
-		pc_hDC := DllCall("GetDC", "UInt", pc_wID)
-		WinGetPos, , , pc_w, pc_h, ahk_id %pc_wID%
-		pc_hCDC := DllCall("CreateCompatibleDC", "UInt", pc_hDC)
-		pc_hBmp := DllCall("CreateCompatibleBitmap", "UInt", pc_hDC, "Int", pc_w, "Int", pc_h)
-		pc_hObj := DllCall("SelectObject", "UInt", pc_hCDC, "UInt", pc_hBmp)
-		DllCall("PrintWindow", "UInt", pc_wID, "UInt", pc_hCDC, "UInt", 0)
-		pc_fmtI := A_FormatInteger
-		SetFormat, IntegerFast, Hex
-		pc_c := DllCall("GetPixel", "UInt", pc_hCDC, "Int", pc_x, "Int", pc_y, "UInt")
-		pc_c := pc_c >> 16 & 0xff | pc_c & 0xff00 | (pc_c & 0xff) << 16
-		pc_c .= ""
-		SetFormat, IntegerFast, %pc_fmtI%
-		DllCall("DeleteObject", "UInt", pc_hBmp)
-		DllCall("DeleteDC", "UInt", pc_hCDC)
-		DllCall("ReleaseDC", "UInt", pc_wID, "UInt", pc_hDC)
-		;msgbox %pc_c%, %pc_x%x
-		Return pc_c
-	}
-}
-;----------------------------------------------------------------------------
-EmptyMem() {
-	Return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
-}
-Return
-;----------------------------------------------------------------------------
-
-
 /*
 	for starting beach dash simulation attempt, readmemory would be great with it and improvements added to it
 	if (3 == animationType) {
