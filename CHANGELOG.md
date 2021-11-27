@@ -14,7 +14,7 @@ NOTE: **retrier2.ahk is slowly approaching phase EOL (End of Life), support by a
   - Polished most of codebase, even though promised not to
   - Made easier for editing the Script!
   - No features added
-  - Removed `IsSimilarColor`
+  - Removed `IsSimilarColor`, added few functions from v3.1 code
 #### [Game: **v2.2**]
 - [**13-Oct-2021**]
   - Added hooks for
