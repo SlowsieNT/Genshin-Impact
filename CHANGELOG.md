@@ -5,9 +5,9 @@
 NOTE: retrier2.ahk is based on Legacy code, never intended to ever be polished but adjusted to work properly.<br>
 NOTE: **retrier2.ahk is slowly approaching phase EOL (End of Life), support by author will cease in due time *(Summer 2022?)***<br>
 #### [Game: **v2.3**]
-- [**24-Nov-2021**]
+- [**27-Nov-2021**]
   - Polishing
-    - Removed 49 lines of useless code
+    - Removed 49+ lines of useless code
       - Added some comments as well
 - [**24-Nov-2021**]
   - Polished most of codebase, even though promised not to
