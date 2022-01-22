@@ -1,6 +1,8 @@
 # Genshin Impact Script(s)
 ### License: The Unlicense (No Trademark condition)
 
+__Retrier3__ is now available at GitHub!<br>
+(Not a bot, it is Helper for questing)<br>
 __retrier2.ahk__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
 __genshin-checkin-redeem.js__ is now available at GitHub!<br>
@@ -8,7 +10,12 @@ __genshin-checkin-redeem.js__ is now available at GitHub!<br>
 __quickfmg.js__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
-## retrier2.ahk SETUP
+## Retrier3 (alpha phase)
+Supports only 1920x1080 during alpha.
+The day has finally come, v3 is quite stable unlike v2 itself.<br>
+Although is no easy to download like v2, but the code is more readable!<br> 
+
+## retrier2.ahk SETUP, same for v3
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
 How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
 
