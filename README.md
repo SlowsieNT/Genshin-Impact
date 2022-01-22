@@ -11,7 +11,7 @@ __quickfmg.js__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## Retrier3 (alpha phase)
-Supports only 1920x1080 during alpha.
+Supports only 1920x1080 during alpha, it is time consuming to support multiple resolutions.<br>
 The day has finally come, v3 is quite stable unlike v2 itself.<br>
 Although is no easy to download like v2, but the code is more readable!<br> 
 
