@@ -22,6 +22,7 @@ Once **Retrier3** reaches beta phase, (old) retrier2 will no longer receive upda
 #### Retrier3 is superior to v2
 - More stable
 - More code/"complex"
+- "Easier" to maintain
 
 ## retrier2.ahk SETUP, same for v3 (except maintaining)
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
