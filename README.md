@@ -10,6 +10,9 @@ __genshin-checkin-redeem.js__ is now available at GitHub!<br>
 __quickfmg.js__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
+## NOTE:
+Once **Retrier3** reaches beta phase, (old) retrier2 will no longer receive updates.
+
 ## Retrier3 (alpha phase)
 Supports only 1920x1080 during alpha, it is time consuming to support multiple resolutions.<br>
 The day has finally come, v3 is quite stable unlike v2 itself.<br>
