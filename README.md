@@ -1,7 +1,7 @@
 # Genshin Impact Script(s)
 ### License: The Unlicense (No Trademark condition)
 
-__[Retrier3](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
+__[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
 __[retrier2.ahk](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier2-Legacy/retrier2.ahk)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
