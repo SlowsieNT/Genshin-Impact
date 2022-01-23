@@ -13,10 +13,15 @@ __quickfmg.js__ is now available at GitHub!<br>
 ## NOTE:
 Once **Retrier3** reaches beta phase, (old) retrier2 will no longer receive updates.
 
-## Retrier3 (alpha phase)
-Supports only 1920x1080 during alpha, it is time consuming to support multiple resolutions.<br>
-The day has finally come, v3 is quite stable unlike v2 itself.<br>
-Although is no easy to download like v2, but the code is more readable!<br> 
+## Retrier3 (alpha)
+#### Less features
+- Likely to be brought back at later date.
+#### Supports 1920x1080 (fullscreen)
+- 1440p will be supported at later date.
+- No other resolutions are planned.<br>
+#### Retrier3 is superior to v2
+- More stable
+- More code/"complex"
 
 ## retrier2.ahk SETUP, same for v3
 FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
