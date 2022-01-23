@@ -3,7 +3,7 @@
 
 ## Plans?
 Retrier3 will receive 1440p support from retrier2, no updates for retrier2<br>
-Retrier3 MAY support user-defined screen resolutions?<br>
+Retrier3 MAY support user-defined pixel search from ini?<br>
 
 ## Available scripts:
 
