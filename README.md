@@ -2,13 +2,13 @@
 ### This is free and unencumbered software released into the public domain.
 
 
-__[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
+🔗 __[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
-__[retrier2.ahk](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier2-Legacy/retrier2.ahk)__ is now available at GitHub!<br>
+🔗 __[retrier2.ahk](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier2-Legacy/retrier2.ahk)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
-__[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
+🔗 __[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
-__[quickfmg.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js)__ is now available at GitHub!<br>
+🔗 __[quickfmg.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js)__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## NOTE:
