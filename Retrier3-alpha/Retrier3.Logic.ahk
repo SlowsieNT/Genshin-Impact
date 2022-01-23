@@ -127,8 +127,11 @@ if (vPixelette["UIIGWideHPBar"]) {
 	vTimeToKill := 8+18
 	vAttackingEpoch := utcnow()
 	while (utcnow()-vAttackingEpoch < vTimeToKill)
-		Loop, 8
+		Loop, 8 {
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 2)
+		}
 }
 if (vPixelette["UIIGPaimonGatekeeper"]) {
 	ELClick2(vWinID, 1295, 721, vWinX, vWinY, 32)
