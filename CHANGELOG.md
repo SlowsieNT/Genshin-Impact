@@ -6,7 +6,7 @@ NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.4**]
-- Initital **Retrier3** release
+- Initial **Retrier3** release
 
 
 
