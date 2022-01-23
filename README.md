@@ -1,6 +1,11 @@
 # Genshin Impact Script(s)
 ### This is free and unencumbered software released into the public domain.
 
+## Plans?
+Retrier3 will receive 1440p support from retrier2, no updates for retrier2<br>
+Retrier3 MAY support user-defined screen resolutions?<br>
+
+## Available scripts:
 
 🔗 __[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
