@@ -82,8 +82,6 @@ if (vPixelette["UIAGameStart_FS1920"]) {
 if (vPixelette["UIACTB_FS1920"]) {
 	GenshinOpeningBypass(vStandalone64Path)
 	LClick2(vWinID, 222, 222)
-	Sleep 20000
-	GenshinOpeningBypassRevoke(vStandalone64Path)
 }
 ; Checkbox agree all
 if (vPixelette["UIAAgreement_FS1920"])
