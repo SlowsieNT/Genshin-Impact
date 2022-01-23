@@ -1,5 +1,6 @@
 # Genshin Impact Script(s)
-### License: The Unlicense (No Trademark condition)
+### This is free and unencumbered software released into the public domain.
+
 
 __[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
