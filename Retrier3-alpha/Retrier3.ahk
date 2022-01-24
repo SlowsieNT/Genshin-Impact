@@ -29,10 +29,14 @@ F2::
 ; add globals here:
 vPlayerFemale := 1
 vNickname := "Lumine"
-vPassword := "$Pw!61-6754001^"
+vPassword := "$P+w!614$28754!14001^" ; old: $Pw!61-6754001^
+vResolutionPostfix := "FS1920"
 vStandalone64Path := "D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64"
-; do not edit:
-vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0
+; edit only if you know how to maintain script:
+vResIdx := {"FS1920":1, "WM1440":2}
+; do not edit anything below unless you are dev:
+vRID := vResIdx[vResolutionPostfix]
+vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0, vScriptFinished := 0
 vAttackedWideHPBar := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
