@@ -2,8 +2,8 @@
 ### This is free and unencumbered software released into the public domain.
 
 ## Plans?
-Retrier3 will receive 1440p support from retrier2, no updates for retrier2<br>
-Retrier3 MAY support user-defined pixel search from ini?<br>
+Bring back minor features of retrier2.<br>
+Introduce new features?<br>
 
 ## Available scripts:
 
