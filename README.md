@@ -20,10 +20,17 @@ Introduce new features?<br>
 Once **Retrier3** reaches beta phase, (old) retrier2 will no longer receive updates.
 
 ## Retrier3 (alpha)
-#### Less features
-- Likely to be brought back at later date.
-#### Supports 1920x1080 (fullscreen)
-- 1440p will be supported at later date.
+#### Change variables in Retrier3.ahk!
+- Like changing `vStandalone64Path` to skip long opening cutscene!
+  - It will rename files, will NOT remove!
+- Like changing `vPlayerFemale` to `0` for boy!
+- Like changing `vNickname` to whatever name you wish!
+- Like changing `vResolutionPostfix` to suit your screen resolution!
+  - Pick between `WM1440`, and `FS1920`!!!
+ 
+#### Supported Screen resolutions
+- 1920x1080 (Fullscreen Mode)
+- 1440x900 (Windowed Mode)
 - No other resolutions are planned.<br>
 #### Retrier3 is superior to v2
 - More stable
