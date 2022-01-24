@@ -1,6 +1,4 @@
-
 ; ahk sucks, now we patch
-
 SplitStr(aString, aDelimiter) {
 	vR := [], vBuf := "", vL := StrLen(aString), vDL := StrLen(aDelimiter)
 	loop, %vL% {
