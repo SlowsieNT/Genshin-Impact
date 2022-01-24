@@ -1,11 +1,19 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
 
-## Retrier3 (23-jan-2022)
+## Retrier3 (Latest: 24-jan-2022)
 NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
-#### [Game: **v2.4**]
+#### [Game: **v2.4**] (24-jan-2022)
+- Support Boy selection, Girl is by default
+  - Required to change `vPlayerFemale` to `0` if Boy needed!
+- Changed `vPassword`, old is provided next to it
+- Support Windowed Mode 1440x900
+  - Required to change `vResolutionPostfix` to `"WM1440"` !!!
+- Support Fullscreen Mode 1920x1080
+  - Required to change `vResolutionPostfix` to `"FS1920"` !!!
+#### [Game: **v2.4**] (23-jan-2022)
 - Initial **Retrier3** release
 
 
