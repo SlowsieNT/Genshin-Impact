@@ -3,7 +3,7 @@
 
 ## Plans?
 May add Support for 1280x720 windowed mode or smaller<br>
-*(Into consideration, the last screen resolution!)*
+*(Into consideration, the last screen resolution!)*<br>
 Bring back minor features of retrier2.<br>
 Introduce new features?<br>
 
