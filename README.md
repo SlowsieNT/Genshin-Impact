@@ -2,6 +2,8 @@
 ### This is free and unencumbered software released into the public domain.
 
 ## Plans?
+May add Support for 1280x720 windowed mode or smaller<br>
+*(Into consideration, the last screen resolution!)*
 Bring back minor features of retrier2.<br>
 Introduce new features?<br>
 
