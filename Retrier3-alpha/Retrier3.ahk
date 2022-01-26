@@ -36,7 +36,7 @@ vStandalone64Path := "D:\Program Files\Genshin Impact\Genshin Impact game\Genshi
 vResIdx := {"FS1920":1, "WM1440":2}
 ; do not edit anything below unless you are dev:
 vRID := vResIdx[vResolutionPostfix]
-vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0, vScriptFinished := 0
+vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0
 vAttackedWideHPBar := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
@@ -51,8 +51,6 @@ Loop {
 	; free RAM
 	EmptyWorkingSet()
 	; burn RAM, CPU
-	if vScriptFinished
-		break
 	SetTimer, AnalyzeScreen, 1
 }
 Return
