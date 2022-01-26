@@ -40,7 +40,7 @@ if (0) {
 		Clipboard = %vAX%, %vAY%, %vA%|%vBX%, %vBY%, %vB%|%vCX%, %vCY%, %vC%
 		msgbox %vAX%, %vAY%, %vA%|%vBX%, %vBY%, %vB%|%vCX%, %vCY%, %vC%
 	}
-	vScriptFinished:=1
+	reload
 	return
 }
 ; vRID is resolution id
@@ -221,10 +221,11 @@ if (vPixelette["UIIGWideHPBar"]) {
 	vAttackingEpoch := utcnow()
 	while (utcnow()-vAttackingEpoch < vTimeToKill)
 		Loop, 8 {
-			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
-			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 		}
 }
 if (vPixelette["UIIGPaimonGatekeeper"]) {
@@ -235,28 +236,30 @@ if (vPixelette["UIIGPaimonGatekeeper"]) {
 	SendKey(vWinID, "f")
 }
 if (vPixelette["UIIGTeleportBtn"]) {
-	if (vAttackedWideHPBar) {
-		vScriptFinished := 1
-	}
 	if (1 == vRID)
 		ELClick2(vWinID, 1539, 1003, vWinX, vWinY, 32)
 	if (2 == vRID)
 		ELClick2(vWinID, 1187, 873, vWinX, vWinY, 32)
 	; Assuming reroll is complete
-	
+	if (vAttackedWideHPBar) {
+		Reload
+		sleep 777
+	}
 }
-
-; debug
-if (0) {
-vXd := vPixelette.NFound
-if (vXd.MaxIndex() > 0) {
-	vLine = `n
-	vStr := JoinStr(vXd, "|")
-	clipboard = %vStr%
-	msgbox %vStr%
+if (vAttackedWideHPBar && vPixelette["UIIGRedeemExists"] && vPixelette["UIIGRedeemExists"]) {
+	if (1 == vRID) {
+		ClickEnterText2("genshingift", vWinID, 941, 519, vWinX, vWinY, 4, Delay:=111)
+		ELClick2(vWinID, 1063, 733, vWinX, vWinY, 32)
+	}
+	if (2 == vRID) {
+		ClickEnterText2("genshingift", vWinID, 672, 451, vWinX, vWinY, 4, Delay:=111)
+		ELClick2(vWinID, 824, 613, vWinX, vWinY, 32)
+	}
+	sleep 250
+	SendKey(vWinID, "{escape}")
+	sleep 250
+	SendKey(vWinID, "{escape}")
 }
-}
-
 ; -------------------------------------------------------------------
 ; FRAME DELAY (less than 30fps recommended)
 sleep 1000/24
