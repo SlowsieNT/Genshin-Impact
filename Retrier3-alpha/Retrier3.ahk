@@ -20,18 +20,27 @@ Menu, Tray, Icon, Shell32.dll, 172
 EmptyWorkingSet() {
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
-GetScriptIniFN() {
-	vX = %A_ScriptFullPath%.ini
+GetScriptIniFN(aExt=".ini") {
+	vX = %A_ScriptFullPath%%aExt%
 	return vX
+}
+TNN(aA, aB){
+	if (Trim(aA))
+		return aA
+	return aB
 }
 ;----------------------------------------------------------------------------
 F2::
-; add globals here:
-vPlayerFemale := 1
-vNickname := "Lumine"
-vPassword := "$P+w!614$28754!14001^" ; old: $Pw!61-6754001^
-vResolutionPostfix := "FS1920"
-vStandalone64Path := "D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64"
+; inf
+vInf := INIParseFile(GetScriptIniFN(".inf"))
+; retrieve values from inf, no edits required here
+vPlayerFemale := "1" == vInf.Get("Player;Female;1")
+vNickname := vInf.Get("Player;Name;Lumine")
+vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
+vResolutionPostfix := vInf.Get("Screen;Resolution;FS1920")
+vStandalone64Path := vInf.Get("Game;SAVASW64", "D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64")
+vLogMailAllow := "1" == vInf.Get("LoggingMail;Allow;1")
+vLogMailFileName := vInf.Get("LoggingMail;FileName", "mails.log")
 ; edit only if you know how to maintain script:
 vResIdx := {"FS1920":1, "WM1440":2}
 ; do not edit anything below unless you are dev:
@@ -46,6 +55,14 @@ vIni := INIParseFile(GetScriptIniFN())
 vPixelette := new Pixelette(vWinID)
 ; import from ini
 vPixelette.ParseIniStruct(vIni)
+;---------------------------------------------------------------------------
+; LOG MAIL IF ALLOWED
+if (vLogMailAllow && InStr(clipboard, "@")) {
+	FileRead, vBuffer, %vLogMailFileName%
+	if (!InStr(vBuffer, clipboard))
+		FileAppend, %clipboard%`r`n, %vLogMailFileName%
+}
+;---------------------------------------------------------------------------
 ; MAIN LOOP xd
 Loop {
 	; free RAM
