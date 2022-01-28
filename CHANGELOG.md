@@ -5,6 +5,8 @@
 NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.4**] (28-jan-2022)
+- Retrier3 unofficially enters beta phase, is stable enough.
 #### [Game: **v2.4**] (26-jan-2022)
 - After first teleport (after fend off dragon)
   - Upon teleport confirmation, it will reload (stop) script (feature from retrier2)
