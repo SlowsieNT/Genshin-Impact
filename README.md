@@ -2,7 +2,7 @@
 ### This is free and unencumbered software released into the public domain.
 
 ## Plans?
-None for now, it varies.
+None, for now, it varies.
 
 ## Available scripts:
 
