@@ -38,6 +38,15 @@ class IniStruct {
 		}
 		return -1
 	}
+	Get(aMagick, aDefault="") {
+		vParts := SplitStr(aMagick, ";")
+		vValue := this.GetValue(vParts[2], vParts[1])
+		if (Trim(vValue))
+			return vValue
+		if (aDefault)
+			return aDefault
+		return vParts[3]
+	}
 	GetValue(aName, aSection="") {
 		vKI := this.FindKeyIndex(aName, aSection)
 		if (vKI > -1) {
