@@ -18,7 +18,7 @@ Introduce new features?<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## NOTE:
-**retrier2** (old) will no longer be updated.
+**retrier2** (old) will no longer be updated.<br>
 *retrier2, you have fought well my friend; Requiescat in pace.*
 
 ## Retrier3 (alpha)
