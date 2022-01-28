@@ -19,6 +19,7 @@ Introduce new features?<br>
 
 ## NOTE:
 **retrier2** (old) will no longer be updated.
+*retrier2, you have fought well my friend; Requiescat in pace.*
 
 ## Retrier3 (alpha)
 #### Change variables in Retrier3.ahk!
