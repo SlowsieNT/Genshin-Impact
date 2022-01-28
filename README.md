@@ -1,6 +1,11 @@
 # Genshin Impact Script(s)
 ### This is free and unencumbered software released into the public domain.
 
+## Reroll time?
+Using this formula:<br>
+`register_start2 - register_start = 17min, 55sec` (average reroll)<br>
+Note it is based on registration date! Not only gameplay!<br>
+
 ## Plans?
 None, for now, it varies.
 
