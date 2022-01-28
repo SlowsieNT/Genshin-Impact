@@ -1,0 +1,16 @@
+[Player]
+Female=1
+Name=Lumine
+
+[Account]
+Password=$P+w!614$28754!14001^
+
+[Screen]
+Resolution=FS1920
+
+[Game]
+SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
+
+[LoggingMail]
+Allow=1
+FileName=mails.log
