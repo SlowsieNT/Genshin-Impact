@@ -1,4 +1,4 @@
-[Player]
+[Player]; 1=yes, 0=no
 Female=1
 Name=Lumine
 
@@ -6,11 +6,13 @@ Name=Lumine
 Password=$P+w!614$28754!14001^
 
 [Screen]
+; WM1440=1440x900 WINDOWED MODE
+; FS1920=1920x1080 FULL SCREEN
 Resolution=FS1920
 
 [Game]
 SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
 
-[LoggingMail]
+[LoggingMail]; 1=yes, 0=no
 Allow=1
 FileName=mails.log
