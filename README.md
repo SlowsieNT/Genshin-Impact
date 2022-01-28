@@ -6,7 +6,7 @@ None, for now, it varies.
 
 ## Available scripts:
 
-🔗 __[Retrier3-alpha](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-alpha)__ is now available at GitHub!<br>
+🔗 __[Retrier3-Stable](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Stable)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
 🔗 __[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
@@ -50,7 +50,7 @@ NOTE:
 ### FAQ
 Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
-A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/center-of-cursor.png)<br><br>
+A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/Visuals/center-of-cursor.png)<br><br>
 Q: Will the script be updated in the future?<br>
 A: Yes - to keep it alive, until 2022
 
