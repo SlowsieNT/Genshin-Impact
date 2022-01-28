@@ -18,7 +18,7 @@ Introduce new features?<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## NOTE:
-Once **Retrier3** reaches beta phase, (old) retrier2 will no longer receive updates.
+**retrier2** (old) will no longer be updated.
 
 ## Retrier3 (alpha)
 #### Change variables in Retrier3.ahk!
