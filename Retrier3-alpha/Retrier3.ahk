@@ -24,11 +24,6 @@ GetScriptIniFN(aExt=".ini") {
 	vX = %A_ScriptFullPath%%aExt%
 	return vX
 }
-TNN(aA, aB){
-	if (Trim(aA))
-		return aA
-	return aB
-}
 ;----------------------------------------------------------------------------
 F2::
 ; inf
@@ -59,7 +54,7 @@ vPixelette.ParseIniStruct(vIni)
 ; LOG MAIL IF ALLOWED
 if (vLogMailAllow && InStr(clipboard, "@")) {
 	FileRead, vBuffer, %vLogMailFileName%
-	if (!InStr(vBuffer, clipboard))
+	if (!InStr(vBuffer, clipboard) && StrLen(clipboard) < 96)
 		FileAppend, %clipboard%`r`n, %vLogMailFileName%
 }
 ;---------------------------------------------------------------------------
