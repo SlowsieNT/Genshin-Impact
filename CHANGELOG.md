@@ -1,7 +1,7 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
 
-## Retrier3 (Latest: 26-jan-2022)
+## Retrier3 (Latest: 28-jan-2022)
 NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
