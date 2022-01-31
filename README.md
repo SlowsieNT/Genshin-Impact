@@ -3,8 +3,8 @@
 
 ## Reroll time?
 Using this formula:<br>
-`register_start2 - register_start = 17min, 55sec` (average reroll)<br>
-Note it is based on registration date! Not only gameplay!<br>
+`register_start2 - register_start = 17min, 35sec` (average)<br>
+Formula covers: registration, gameplay, and wishing!<br>
 
 ## Plans?
 None, for now, it varies.
