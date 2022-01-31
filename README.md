@@ -1,6 +1,9 @@
 # Genshin Impact Script(s)
 ### This is free and unencumbered software released into the public domain.
 
+## Download??
+Code > Download ZIP ([try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))
+
 ## Reroll time?
 Using this formula:<br>
 `register_start2 - register_start = 17min, 35sec` (average)<br>
