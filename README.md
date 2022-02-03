@@ -14,7 +14,7 @@ None, for now, it varies.
 
 ## Available scripts:
 
-🔗 __[Retrier3-Stable](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Stable)__ is now available at GitHub!<br>
+🔗 __[Retrier3-Live](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Live)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
 🔗 __[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
