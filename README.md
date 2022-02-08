@@ -3,7 +3,7 @@
 
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
-AutoHotkey ([Website link](https://www.autohotkey.com/))<br>
+AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
 Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/))<br>
 Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/))<br>
 
