@@ -15,6 +15,10 @@ Formula covers: registration, gameplay, and wishing!<br>
 ## Plans?
 None, for now, it varies.
 
+## License(s)
+Unlicense<br>
+0-BSD (for countries where unlicense is invalid)<br>
+
 ## Available scripts:
 
 🔗 __[Retrier3-Live](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Live)__ is now available at GitHub!<br>
