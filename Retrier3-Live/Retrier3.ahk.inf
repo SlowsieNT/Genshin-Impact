@@ -14,5 +14,9 @@ Resolution=FS1920
 SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
 
 [LoggingMail]; 1=yes, 0=no
+; Triggers only after black screen (after naming)
 Allow=1
-FileName=mails.log
+FileName=mail-history.log
+; Triggers only after "fend off"
+AfterFOTeleport=1
+AfterFOTeleport_FileName=ar5mails.log

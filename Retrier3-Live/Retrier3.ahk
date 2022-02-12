@@ -29,12 +29,16 @@ F2::
 ; inf
 vInf := INIParseFile(GetScriptIniFN(".inf"))
 ; retrieve values from inf, no edits required here
+; do not edit unless dev
+vCurrentEmail := ""
 vPlayerFemale := "1" == vInf.Get("Player;Female;1")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
 vResolutionPostfix := vInf.Get("Screen;Resolution;FS1920")
 vStandalone64Path := vInf.Get("Game;SAVASW64", "D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64")
 vLogMailAllow := "1" == vInf.Get("LoggingMail;Allow;1")
+vLogMailAfterFendOffTeleport := "1" == vInf.Get("LoggingMail;AfterFOTeleport;0")
+vLogMailAfterFOTeleport_FileName := vInf.Get("LoggingMail;AfterFOTeleport_FileName", "ar5mails.log")
 vLogMailFileName := vInf.Get("LoggingMail;FileName", "mails.log")
 ; edit only if you know how to maintain script:
 vResIdx := {"FS1920":1, "WM1440":2}
@@ -50,13 +54,6 @@ vIni := INIParseFile(GetScriptIniFN())
 vPixelette := new Pixelette(vWinID)
 ; import from ini
 vPixelette.ParseIniStruct(vIni)
-;---------------------------------------------------------------------------
-; LOG MAIL IF ALLOWED
-if (vLogMailAllow && InStr(clipboard, "@")) {
-	FileRead, vBuffer, %vLogMailFileName%
-	if (!InStr(vBuffer, clipboard) && StrLen(clipboard) < 96)
-		FileAppend, %clipboard%`r`n, %vLogMailFileName%
-}
 ;---------------------------------------------------------------------------
 ; MAIN LOOP xd
 Loop {

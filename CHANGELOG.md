@@ -5,6 +5,14 @@
 NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.4**] (12-feb-2022)
+- Features to `Retrier.ahk.inf`
+  - Readjusted logic for `LoggingMail`
+    - Mails will be logged to file after blackscreen if `Allow` is set to `1`
+  - Added `LoggingMail` section, by field `AfterFOTeleport` to allow logging
+    - Triggers if script was running during "fend off"
+  - Added `LoggingMail` section, by field `AfterFOTeleport_FileName` to write to user-defined file
+    - Triggers if script was running during "fend off"
 #### [Game: **v2.4**] (28-jan-2022)
 - Retrier3 enters beta phase, is stable enough.
 - Added `Retrier.ahk.inf` for easier setup!'

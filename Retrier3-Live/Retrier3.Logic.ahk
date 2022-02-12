@@ -25,7 +25,10 @@ vPixelette.Capture(vResolutionPostfix)
 /*  globals:
 	vWinID, vWinX, vWinY, vWinW, vWinH
 	vIni, vPixelette, vRID,
-	vNickname, vPassword 
+	vNickname, vPassword
+	vCurrentEmail
+	vLogMailAfterFendOffTeleport
+	vLogMailAfterFOTeleport_FileName 
 */
 ; -------------------------------------------------------------------
 ; REGISTER
@@ -59,6 +62,7 @@ if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@
 }
 ; Email filling
 if (vPixelette["UIREmptyMail"] && InStr(clipboard, "@")) {
+	vCurrentEmail := clipboard
 	; 550, 299, FFFFFF
 	if (1 == vRID)
 		ClickEnterText2(clipboard, vWinID, 777, 313, vWinX, vWinY, 4, Delay:=111)
@@ -169,8 +173,16 @@ if (vPixelette["UIIGBtnConfirm"]) {
 	if (2 == vRID)
 		ELClick2(vWinID, 1215, 853, vWinX, vWinY, Delay:=111)
 }
-if (vPixelette["UIIGBlackscreen"])
+if (vPixelette["UIIGBlackscreen"]) {
 	GenshinOpeningBypassRevoke(vStandalone64Path)
+	; LOG MAIL IF ALLOWED
+	if (trim(vCurrentEmail) && vLogMailAllow && InStr(vCurrentEmail, "@")) {
+		FileRead, vBuffer, %vLogMailFileName%
+		if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
+			FileAppend, %vCurrentEmail%`r`n, %vLogMailFileName%
+	}
+}
+	
 if (vPixelette["UIIGTutorialWaypoint"]) {
 	if (1 == vRID)
 		ELClick2(vWinID, 900, 600, vWinX, vWinY, Delay:=111)
@@ -242,6 +254,12 @@ if (vPixelette["UIIGTeleportBtn"]) {
 		ELClick2(vWinID, 1187, 873, vWinX, vWinY, 32)
 	; Assuming reroll is complete
 	if (vAttackedWideHPBar) {
+		; Log mail if allowed #2
+		if (vLogMailAfterFendOffTeleport && trim(vCurrentEmail) && InStr(vCurrentEmail, "@")) {
+			FileRead, vBuffer, %vLogMailAfterFOTeleport_FileName%
+			if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
+				FileAppend, %vCurrentEmail%`r`n, %vLogMailAfterFOTeleport_FileName%
+		}
 		Reload
 		sleep 777
 	}
