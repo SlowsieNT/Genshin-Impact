@@ -280,9 +280,9 @@ if (vAttackedWideHPBar && vPixelette["UIIGRedeemExists"] && vPixelette["UIIGRede
 		ClickEnterText2("genshingift", vWinID, 672, 451, vWinX, vWinY, 4, Delay:=111)
 		ELClick2(vWinID, 824, 613, vWinX, vWinY, 32)
 	}
-	sleep 250
+	sleep 300
 	SendKey(vWinID, "{escape}")
-	sleep 250
+	sleep 300
 	SendKey(vWinID, "{escape}")
 }
 ; -------------------------------------------------------------------
