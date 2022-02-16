@@ -5,6 +5,12 @@
 NOTE:
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.5**] (16-feb-2022)
+- Readjusted pixel hook(s) for `WM1440`
+- Readjusted pixel hook(s) for `FS1920`
+- Readjusted when mail is logged.
+- Readjusted when "Lv5" mail is logged.
+- Added message if "Windowed 1440x900" is NOT supported.
 #### [Game: **v2.4**] (12-feb-2022)
 - Features to `Retrier.ahk.inf`
   - Readjusted logic for `LoggingMail`

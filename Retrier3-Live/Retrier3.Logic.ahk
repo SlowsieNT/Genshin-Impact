@@ -21,6 +21,13 @@
 ; GenshinOpeningBypassRevoke(aStandaloneWindows64Path)
 ; -------------------------------------------------------------------
 AnalyzeScreen:
+Sysget, vScreenWidth, 78
+Sysget, vScreenHeight, 79
+
+if (2 == vRID && 901 > vScreenHeight && 1441 > vScreenWidth) {
+	MsgBox Windowed 1440x900 is not supported on %vScreenWidth%x%vScreenHeight%
+	ExitApp
+}
 vPixelette.Capture(vResolutionPostfix)
 /*  globals:
 	vWinID, vWinX, vWinY, vWinW, vWinH
@@ -172,9 +179,6 @@ if (vPixelette["UIIGBtnConfirm"]) {
 		ELClick2(vWinID, 1632, 980, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
 		ELClick2(vWinID, 1215, 853, vWinX, vWinY, Delay:=111)
-}
-if (vPixelette["UIIGBlackscreen"]) {
-	GenshinOpeningBypassRevoke(vStandalone64Path)
 	; LOG MAIL IF ALLOWED
 	if (trim(vCurrentEmail) && vLogMailAllow && InStr(vCurrentEmail, "@")) {
 		FileRead, vBuffer, %vLogMailFileName%
@@ -182,8 +186,11 @@ if (vPixelette["UIIGBlackscreen"]) {
 			FileAppend, %vCurrentEmail%`r`n, %vLogMailFileName%
 	}
 }
-	
+if (vPixelette["UIIGBlackscreen"])
+	GenshinOpeningBypassRevoke(vStandalone64Path)
+
 if (vPixelette["UIIGTutorialWaypoint"]) {
+	GenshinOpeningBypassRevoke(vStandalone64Path)
 	if (1 == vRID)
 		ELClick2(vWinID, 900, 600, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
@@ -239,6 +246,12 @@ if (vPixelette["UIIGWideHPBar"]) {
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 		}
+	; Log mail if allowed #2
+	if (vLogMailAfterFendOffTeleport && trim(vCurrentEmail) && InStr(vCurrentEmail, "@")) {
+		FileRead, vBuffer, %vLogMailAfterFOTeleport_FileName%
+		if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
+			FileAppend, %vCurrentEmail%`r`n, %vLogMailAfterFOTeleport_FileName%
+	}
 }
 if (vPixelette["UIIGPaimonGatekeeper"]) {
 	if (1 == vRID)
@@ -254,12 +267,6 @@ if (vPixelette["UIIGTeleportBtn"]) {
 		ELClick2(vWinID, 1187, 873, vWinX, vWinY, 32)
 	; Assuming reroll is complete
 	if (vAttackedWideHPBar) {
-		; Log mail if allowed #2
-		if (vLogMailAfterFendOffTeleport && trim(vCurrentEmail) && InStr(vCurrentEmail, "@")) {
-			FileRead, vBuffer, %vLogMailAfterFOTeleport_FileName%
-			if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
-				FileAppend, %vCurrentEmail%`r`n, %vLogMailAfterFOTeleport_FileName%
-		}
 		Reload
 		sleep 777
 	}
