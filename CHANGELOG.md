@@ -1,8 +1,13 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
 
-## Retrier3 (Latest: 28-jan-2022)
+## Retrier3 (Latest: 16-feb-2022)
 NOTE:
+Retrier3 is MARKED FOR "DEATH"!<br>
+- Contributors needed, or pre-made script won't work in the future!
+- REASON: Windows 11 will no longer allow local account.
+  - It's farewell for privacy
+  - It's farewell
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.5**] (16-feb-2022)

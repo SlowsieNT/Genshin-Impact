@@ -198,6 +198,7 @@ if (vPixelette["UIIGTutorialWaypoint"]) {
 }
 if (vPixelette["UIIGAutoplay"]) {
 	SendKey(vWinID, "f")
+	sleep 111
 	SendKey(vWinID, "f")
 }
 if (vPixelette["UIIGUndiscoveredWaypoint"])
