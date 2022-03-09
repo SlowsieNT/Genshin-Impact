@@ -1,5 +1,4 @@
 # Genshin Impact Script(s)
-### This is free and unencumbered software released into the public domain.
 
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
@@ -19,9 +18,8 @@ Retrier3 is MARKED FOR "DEATH"!<br>
   - It's farewell for privacy
   - It's farewell
 
-## License(s)
-Unlicense<br>
-0-BSD (for countries where unlicense is invalid)<br>
+## License
+0-BSD<br>
 
 ## Available scripts:
 
