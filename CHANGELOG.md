@@ -10,6 +10,10 @@ Retrier3 is MARKED FOR "DEATH"!<br>
   - It's farewell
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.6**] (30-mar-2022)
+- Readjusted register pixel hook(s)
+  - Register, InGame UI
+- Removed ONLY FEW mail domains that fail on emailfake
 #### [Game: **v2.5**] (16-feb-2022)
 - Readjusted pixel hook(s) for `WM1440`
 - Readjusted pixel hook(s) for `FS1920`
