@@ -53,7 +53,7 @@
 					"cudimex.com", "lohpcn.com", "mymailcr.com", "zipst.site",
 					"tirtalayana.com", "amazon-aws-us.com", "crtapev.com",
 					"bookf.site", "zetgets.com", "cuenmex.com",
-					"epubp.site", "notvn.com", "ermtia.com",
+					"epubp.site", "ermtia.com",
 					"domy.me", "supg.site", "login-to.online",
 					"manq.site", "dikitin.com", "partnerct.com",
 					"oanghika.com", "gmailya.com", "cggup.com",
@@ -79,7 +79,7 @@
 		};
 		_.GenerateMail2 = function () {
 			function GenerateMD(x) {
-				return (x=['gmx.fit', 'community-college.university', 'omtecha.com', 'notcuttsgifts.com', 'duniakeliling.com', 'visieonl.com', 'tivilebonza.com', 'gotcertify.com', 'bogsmail.me', 'agung001.com', 'packiu.com', 'riniiya.com', 'notvn.com', 'crossfitcoastal.com', 'techholic.in', 'lompikachi.com', '24hinbox.com', 'tunrahn.com', 'codu.site', 'eluvit.com', 'badutstore.com', 'eelrcbl.com', 'tagt.us', 'taikz.com', 'hasevo.com', 'typery.com', 'virginiaintel.com', 'uioct.com', 'ndxmails.com', 'perirh.com', 'vshgl.com', 'nicecook.top', 'gmailwe.com', 'outlook.sbs', 'jobstoknow.com', 'nongvannguyen.com', 'emlppt.com', 'gmailco.ml', 'oreple.com', 'nkgursr.com', 'eeetivsc.com', 'gmailpro.ml', 'pyhaihyrt.com', 'yt-google.com', 'devou.site', 'kecapasin.buzz', 'filevino.com', 'hieu.in'])[x.length*Math.random()>>0];
+				return (x=['gmx.fit', 'community-college.university', 'omtecha.com', 'notcuttsgifts.com', 'duniakeliling.com', 'visieonl.com', 'gotcertify.com', 'bogsmail.me', 'packiu.com', 'riniiya.com', 'crossfitcoastal.com', 'techholic.in', 'lompikachi.com', '24hinbox.com', 'tunrahn.com', 'eluvit.com', 'badutstore.com', 'eelrcbl.com', 'tagt.us', 'hasevo.com', 'typery.com', 'uioct.com', 'ndxmails.com', 'perirh.com', 'vshgl.com', 'nicecook.top', 'gmailwe.com', 'outlook.sbs', 'nongvannguyen.com', 'emlppt.com', 'oreple.com', 'nkgursr.com', 'eeetivsc.com', 'gmailpro.ml', 'pyhaihyrt.com', 'yt-google.com', 'devou.site', 'kecapasin.buzz', 'filevino.com', 'hieu.in'])[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
 					vLengthRng = 4+Math.random()*4>>0,
