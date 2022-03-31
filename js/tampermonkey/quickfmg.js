@@ -63,6 +63,10 @@
 				}
 			}
 		};
+		_.NavigateMail1 = function (aEmail) {
+			if ("string" === typeof aEmail && aEmail.trim())
+				location.href = 'https://generator.email/' + aEmail;
+		};
 		_.GenerateMail2 = function () {
 			function GenerateMD(x) {
 				// 40 mails to 225
@@ -80,6 +84,12 @@
 				}
 			}
 		};
+		_.NavigateMail2 = function (aEmail) {
+			if ("string" === typeof aEmail && aEmail.trim()) {
+				var vParts = aEmail.split("@");
+				location.href = "https://emailfake.com/" + vParts[1] + "/" + vParts[0];
+			}
+		};
 	};
 	// for: generator.email
 	function GeneratorEmail() {
@@ -89,6 +99,11 @@
 			GM_setClipboard("" + vMail);
 			// navigate to new mail
 			location.href = 'https://generator.email/' + vMail;
+		}).css("background-color", "green").attr("href", "#");
+		var vNL = $(".nav-link:nth(0)");
+		$("span:last", vNL).text("Load mail...");
+		vNL.click(function () {
+			Generator.NavigateMail1(prompt("Enter mail to load:"));
 		}).css("background-color", "green").attr("href", "#");
 		// copy mail handler:
 		var vTmrChk1 = setInterval(function () {
@@ -119,6 +134,12 @@
 			var vMail = Generator.GenerateMail2();
 			GM_setClipboard("" + vMail);
 			location.href = vMail.URL;
+		}).css("background-color", "green").attr("href", "#");
+		// prompt to load mail by raw email
+		var vNL = $(".nav-link:nth(0)");
+		$("span:last", vNL).text("Load mail...");
+		vNL.click(function () {
+			Generator.NavigateMail2(prompt("Enter mail to load:"));
 		}).css("background-color", "green").attr("href", "#");
 		// copy mail handler:
 		var vTmrChk1 = setInterval(function () {
