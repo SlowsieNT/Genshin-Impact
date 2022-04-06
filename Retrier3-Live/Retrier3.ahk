@@ -70,7 +70,7 @@ F1::
 	MouseGetPos, OutputVarX, OutputVarY ; Get the coordinates of the mouse, assign the X coordinate of the mouse to the variable OutputVarX, and the same OutputVarY
 	vColor := vScr.ColorAt(OutputVarX, OutputVarY)
 	Clipboard = %OutputVarX%, %OutputVarY%, %vColor%
-	ToolTip, Coordinates: %OutputVarX%、%OutputVarY% `nHexColor: #%vColor% ; Tooltip OutputVarX OutputVarY OutputVar
+	ToolTip, Coordinates: %OutputVarX% %OutputVarY% `nHexColor: #%vColor% ; Tooltip OutputVarX OutputVarY OutputVar
 	SetTimer, RemoveToolTip, -5000 ; Let the tooltip disappear after a while
 Return
 ;----------------------------------------------------------------------------
