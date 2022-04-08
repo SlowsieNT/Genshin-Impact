@@ -12,6 +12,7 @@
 
 (function () {
 	'use strict';
+	if(-1 !== ["localhost","127.0.0.1"].indexOf(location.hostname)) return;
 	var vScrPrefix = "scr_J202104_date", vInterval = 3 * 3600e3;
 	var vLastDate = GM_getValue(vScrPrefix);
 	var vDiff = Date.now() - vLastDate;
