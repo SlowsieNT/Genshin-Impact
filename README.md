@@ -1,5 +1,9 @@
 # Genshin Impact Script(s)
 
+## IMPORTANT
+Pre-made script will no longer be updated.<br>
+It's not hard to if someone else tried.
+
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
