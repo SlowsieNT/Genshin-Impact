@@ -2,7 +2,8 @@
 
 ## IMPORTANT
 Pre-made script will no longer be updated.<br>
-It's not hard to if someone else tried.
+It's not hard to if someone else tried.<br>
+NOTE: I will likely be back in a year, nothing to do ingame.
 
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
