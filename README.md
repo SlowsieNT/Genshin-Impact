@@ -5,6 +5,10 @@ I'm taking a long break, MAY be permanent, time will tell.<br>
 Pre-made script __WILL NO LONGER__ be UPDATED.<br>
 It's not hard to maintain, if someone else tried.<br>
 
+## Contact?
+`slowsient.es25n@aleeas.com`
+(it's an alias, you'll receive reply from yandex mail)
+
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
