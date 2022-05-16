@@ -1,6 +1,12 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
-
+## [js] checkin-redeem (Latest: 16-may-2022)
+#### (16-may-2022)
+- No more irrelevant errors in dev console, yay!
+## [js] quickfmg (Latest: 31-mar-2022)
+#### (31-mar-2022)
+- Add a lot of mails
+- Add "load mail" feature
 ## Retrier3 (Latest: 16-may-2022)
 NOTE:
 Retrier3 is MARKED FOR "DEATH"!<br>
