@@ -1,7 +1,7 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
 
-## Retrier3 (Latest: 16-feb-2022)
+## Retrier3 (Latest: 16-may-2022)
 NOTE:
 Retrier3 is MARKED FOR "DEATH"!<br>
 - Contributors needed, or pre-made script won't work in the future!
@@ -10,6 +10,9 @@ Retrier3 is MARKED FOR "DEATH"!<br>
   - It's farewell
 Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.6**] (16-may-2022)
+- Readjusted register pixel hook(s)
+  - Hook `UIIGUndiscoveredWaypoint`
 #### [Game: **v2.6**] (30-mar-2022)
 - Readjusted register pixel hook(s)
   - Register, InGame UI
