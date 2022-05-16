@@ -95,6 +95,6 @@ I have tested it on other accounts and it should be working for you as well<br>
 
 ## quickfmg.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
-Once you add this script and go to [fakemailgenerator.com](http://www.fakemailgenerator.com/), you would click on Logo that will have green background.<br>
+Once you add this script and go to [emailfake.com](http://emailfake.com/), you would click on Logo that will have green background.<br>
 Once you click on the Logo, it will copy the new generated mail automatically<br>
 IMPORTANT: It will copy verification code for genshin impact account, no worries
