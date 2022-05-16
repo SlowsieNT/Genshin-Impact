@@ -1,8 +1,8 @@
 # Genshin Impact Script(s)
 
 ## IMPORTANT
-I'm taking a long break, MAY be permanent, time will tell.<br>
-Pre-made script __WILL NO LONGER__ be UPDATED.<br>
+I no longer actively play this game.<br>
+Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
 It's not hard to maintain, if someone else tried.<br>
 
 ## Contact?
