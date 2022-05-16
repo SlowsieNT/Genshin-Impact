@@ -15,11 +15,7 @@ Supported domains:
 ## Retrier3 (Latest: 16-may-2022)
 NOTE:
 Retrier3 is MARKED FOR "DEATH"!<br>
-- Contributors needed, or pre-made script won't work in the future!
-- REASON: Windows 11 will no longer allow local account.
-  - It's farewell for privacy
-  - It's farewell
-Retrier3 is based on **retrier2.ahk**, however its code structure changed.<br>
+Meaning support may cease in the near future!<br>
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.6**] (16-may-2022)
 - Readjusted register pixel hook(s)
