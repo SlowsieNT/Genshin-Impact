@@ -22,10 +22,7 @@ Formula covers: registration, gameplay, and wishing!<br>
 
 ## Plans?
 Retrier3 is MARKED FOR "DEATH"!<br>
-- Contributors needed, or pre-made script won't work in the future!
-- REASON: Windows 11 will no longer allow local account.
-  - It's farewell for privacy
-  - It's farewell
+Basically: nothing is planned.
 
 ## License
 0-BSD<br>
