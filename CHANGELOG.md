@@ -1,5 +1,6 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
+- Still accessible at `SlowsieNT/Genshin`
 ## [js] checkin-redeem (Latest: 16-may-2022)
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
