@@ -1,5 +1,5 @@
 # Genshin Impact Script(s)
-**Date**: 16-may-2022
+**Date**: 16-may-2022 (updated/edited)
 
 ## IMPORTANT
 I no longer actively play this game.<br>
