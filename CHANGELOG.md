@@ -14,8 +14,8 @@ Supported domains:
 - Add "load mail" feature
 ## Retrier3 (Latest: 16-may-2022)
 NOTE:
-**Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
-Retrier3 is MARKED FOR "DEATH"!<br>
+- **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+- Retrier3 is MARKED FOR "DEATH"!<br>
 Meaning support may cease in the near future!<br>
 #### [Game: **v2.6**] (16-may-2022)
 - Readjusted register pixel hook(s)
