@@ -5,8 +5,8 @@
 - No more irrelevant errors in dev console, yay!
 ## [js] quickfmg (Latest: 31-mar-2022)
 Supported domains:
+- [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
-- [recommended] http://emailfake.com/
 - [not recommended] http://fakemailgenerator.com/
 #### (31-mar-2022)
 - Add a lot of mails
