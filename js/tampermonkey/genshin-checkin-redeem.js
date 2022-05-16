@@ -5,6 +5,7 @@
 // @description  try to take over the world!
 // @author       SlowsieNT
 // @match        *://*/*
+// @grant GM_xmlhttpRequest
 // @grant GM_getValue
 // @grant GM_setValue
 // @grant unsafeWindow
@@ -12,8 +13,7 @@
 
 (function () {
 	'use strict';
-	if(-1 !== ["localhost","127.0.0.1"].indexOf(location.hostname)) return;
-	var vScrPrefix = "scr_J202104_date", vInterval = 3 * 3600e3;
+	var vScrPrefix = "scr_J202205_date", vInterval = 3 * 3600e3;
 	var vLastDate = GM_getValue(vScrPrefix);
 	var vDiff = Date.now() - vLastDate;
 	var vACT_ID = "e202102251931481";
@@ -25,39 +25,27 @@
 		GM_setValue(vScrPrefix, Date.now()), Checkin();
 	function Checkin() {
 		// THIS PART of the code claims daily reward for GAME
-		fetch("https://hk4e-api-os.mihoyo.com/event/sol/sign?lang=en-us", {
-			"headers": {
+		GM_xmlhttpRequest({
+			method: "POST", url: "https://hk4e-api-os.mihoyo.com/event/sol/sign?lang=en-us",
+			data: "{\"act_id\":\""+vACT_ID+"\"}",
+			headers: {
 				"accept": "application/json, text/plain, */*",
 				"accept-language": "en-US,en;q=0.9",
 				"content-type": "application/json;charset=UTF-8",
-				"sec-fetch-dest": "empty",
-				"sec-fetch-mode": "cors",
-				"sec-fetch-site": "same-site"
-			},
-			"referrer": "https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id="+vACT_ID+"&lang=en-us",
-			"referrerPolicy": "no-referrer-when-downgrade",
-			"body": "{\"act_id\":\""+vACT_ID+"\"}",
-			"method": "POST",
-			"mode": "cors",
-			"credentials": "include"
+				"referrer": "https://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id="+vACT_ID+"&lang=en-us",
+				"referrerPolicy": "no-referrer-when-downgrade",
+			}
 		});
-		// THIS PART of the code claims another check-in
-		fetch("https://api-os-takumi.mihoyo.com/community/apihub/api/signIn", {
-			"headers": {
+		// Community xp check-in
+		GM_xmlhttpRequest({
+			method: "POST", url: "https://api-os-takumi.mihoyo.com/community/apihub/api/signIn",
+			data: "{\"gids\":\"2\"}",
+			headers: {
 				"accept": "application/json, text/plain, */*",
 				"accept-language": "en-US,en;q=0.9",
-				"content-type": "application/json;charset=UTF-8",
-				"sec-fetch-dest": "empty",
-				"sec-fetch-mode": "cors",
-				"sec-fetch-site": "cross-site",
+				"content-type": "application/json;charset=UTF-8",	
 				"x-rpc-language": "en-us"
-			},
-			"referrer": "https://www.hoyolab.com/",
-			"referrerPolicy": "strict-origin-when-cross-origin",
-			"body": "{\"gids\":\"2\"}",
-			"method": "POST",
-			"mode": "cors",
-			"credentials": "include"
+			}
 		});
 	}
 })();
