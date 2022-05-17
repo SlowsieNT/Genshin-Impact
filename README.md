@@ -41,12 +41,11 @@ None, read "important" if missed.
 *retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
 ## Retrier3
-#### Change variables in Retrier3.ahk!
-- Like changing `vStandalone64Path` to skip long opening cutscene!
-  - It will rename files, will NOT remove!
-- Like changing `vPlayerFemale` to `0` for boy!
-- Like changing `vNickname` to whatever name you wish!
-- Like changing `vResolutionPostfix` to suit your screen resolution!
+#### Change values in `Retrier3.ahk.inf`
+- Like changing `SAVASW64` partition letter to skip cutscene
+  - Only opening cutscene, nothing more than that
+- Like changing `Female` to `0` for boy main character!
+- Like changing `Resolution` to suit your screen resolution!
   - Pick between `WM1440`, and `FS1920`!!!
  
 #### Supported Screen resolutions
