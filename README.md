@@ -22,8 +22,7 @@ Using this formula:<br>
 Formula covers: registration, gameplay, and wishing!<br>
 
 ## Plans?
-Retrier3 is MARKED FOR "DEATH"!<br>
-Basically: nothing is planned.
+None, read "important" if missed.
 
 ## License
 0-BSD<br>
