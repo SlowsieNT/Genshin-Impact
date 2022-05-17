@@ -10,11 +10,14 @@
 // @icon         https://www.google.com/s2/favicons?domain=fakemailgenerator.com
 // @grant        unsafeWindow
 // @grant        GM_setClipboard
+// @grant        GM_addStyle
+// @run-at       document-start
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // ==/UserScript==
 
 (function() {
-    'use strict';
+	'use strict';
+	GM_addStyle('html{filter:invert(.9);}img,.navbar-brand,.nav-link{filter:invert(.9);}');
 	var Generator = new function () {
 		var _ = this;
 		function RandomStr(aLength) {
@@ -148,7 +151,9 @@
 				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
 		}, 255);
 	}
-	if (-1 < location.host.indexOf("fakemailgenerator.com")) FakeMailGeneratorCom();
-	if (-1 < location.host.indexOf("generator.email")) GeneratorEmail();
-	if (-1 < location.host.indexOf("emailfake.com")) EmailFake();
+	$(function(){
+		if (-1 < location.host.indexOf("fakemailgenerator.com")) FakeMailGeneratorCom();
+		if (-1 < location.host.indexOf("generator.email")) GeneratorEmail();
+		if (-1 < location.host.indexOf("emailfake.com")) EmailFake();
+	});
 })();
