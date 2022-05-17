@@ -40,7 +40,7 @@ None, read "important" if missed.
 **retrier2** (old) will no longer be updated.<br>
 *retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
-## Retrier3 (alpha)
+## Retrier3
 #### Change variables in Retrier3.ahk!
 - Like changing `vStandalone64Path` to skip long opening cutscene!
   - It will rename files, will NOT remove!
