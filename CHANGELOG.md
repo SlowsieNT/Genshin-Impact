@@ -4,11 +4,13 @@
 ## [js] checkin-redeem (Latest: 16-may-2022)
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 31-mar-2022)
+## [js] quickfmg (Latest: 16-may-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (16-may-2022)
+- Add background color invert (~90% invert)
 #### (31-mar-2022)
 - Add a lot of mails
 - Add "load mail" feature
