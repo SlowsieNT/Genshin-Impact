@@ -10,7 +10,7 @@ Supported domains:
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
 #### (16-may-2022)
-- Add background color invert (~90% invert)
+- Add invert filter to `html` (~90% invert)
 #### (31-mar-2022)
 - Add a lot of mails
 - Add "load mail" feature
