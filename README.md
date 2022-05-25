@@ -8,8 +8,8 @@ It's not hard to maintain, if someone else tried.<br>
 
 ## Contact?
 Discord: `ezio#1181` (subject to change)<br>
-E-mail: `slowsient.es25n@aleeas.com` (no change)<br>
-(it's an alias, you'll receive reply from yandex mail)
+E-mail: `slowsient.es25n@aleeas.com`<br>
+(E-mail is less likely to change)
 
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
