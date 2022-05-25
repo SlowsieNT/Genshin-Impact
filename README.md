@@ -7,7 +7,7 @@ Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
 It's not hard to maintain, if someone else tried.<br>
 
 ## Contact?
-Discord: `ezio#1181` (subject to change)<br>
+Discord: `ezio#1181` (subject to change), or id: `946169799325667328`<br>
 E-mail: `slowsient.es25n@aleeas.com`<br>
 (E-mail is less likely to change)
 
