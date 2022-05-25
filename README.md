@@ -7,8 +7,8 @@ Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
 It's not hard to maintain, if someone else tried.<br>
 
 ## Contact?
-`ezio#1181` (subject to change)<br>
-`slowsient.es25n@aleeas.com` (no change)<br>
+Discord: `ezio#1181` (subject to change)<br>
+E-mail: `slowsient.es25n@aleeas.com` (no change)<br>
 (it's an alias, you'll receive reply from yandex mail)
 
 ## Download?
