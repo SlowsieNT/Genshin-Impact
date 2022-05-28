@@ -8,7 +8,8 @@ Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
 It's not hard to maintain, if someone else tried.<br>
 
 ## Contact?
-Click [this link](https://github.com/SlowsieNT/SlowsieNT/blob/main/README.md#contact) to see where you can contact me.
+Link: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
+
 
 ## Download?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
