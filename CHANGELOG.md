@@ -21,7 +21,7 @@ NOTE:
 Meaning support may cease in the near future!<br>
 #### [Game: **v2.7**] (31-may-2022)
 - Readjusted register pixel hook(s)
-  - Hook `UIIGAutoplay`
+  - Hooks: `UIIGAutoplay`, `UIIGUndiscoveredWaypoint`, `UIIGOpenedJournal`
 - Readjusted: Pos hook diag opt
 #### [Game: **v2.6**] (16-may-2022)
 - Readjusted register pixel hook(s)
