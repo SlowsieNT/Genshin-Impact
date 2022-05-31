@@ -212,8 +212,8 @@ if (vPixelette["UIIGConversationMulti"] || vPixelette["UIIGConversationMulti2"])
 		ELClick2(vWinID, 1295, 721, vWinX, vWinY)
 	}
 	if (2 == vRID) {
-		SetCursorPos(vWinID, 981, 671-2, vWinX, vWinY)
-		ELClick2(vWinID, 981, 671, vWinX, vWinY)
+		SetCursorPos(vWinID, 993, 664-2, vWinX, vWinY)
+		ELClick2(vWinID, 993, 664, vWinX, vWinY)
 	}
 } else if (vPixelette["UIIGConversationSingle"]) {
 	if (1 == vRID)
