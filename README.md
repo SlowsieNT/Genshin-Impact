@@ -1,5 +1,6 @@
 # Genshin Impact Script(s)
 **Date**: 31-may-2022 (update not finalized)<br>
+**Status**: Being patched<br>
 **Change**: Patch hooks+repos
 
 ## IMPORTANT
