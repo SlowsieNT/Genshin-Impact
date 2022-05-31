@@ -14,12 +14,12 @@ Supported domains:
 #### (31-mar-2022)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 16-may-2022)
+## Retrier3 (Latest: 31-may-2022)
 NOTE:
 - **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 - Retrier3 is MARKED FOR "DEATH"!<br>
 Meaning support may cease in the near future!<br>
-#### [Game: **v2.7**] (16-may-2022)
+#### [Game: **v2.7**] (31-may-2022)
 - Readjusted register pixel hook(s)
   - Hook `UIIGAutoplay`
 - Readjusted: Pos hook diag opt
