@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
-**Date**: 28-may-2022<br>
-**Change**: Edit
+**Date**: 31-may-2022<br>
+**Change**: Patch hooks+repos
 
 ## IMPORTANT
 I no longer actively play this game.<br>
