@@ -3,7 +3,6 @@
 **Change**: Patch hook(s), ADD feature(s)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
-
 ## IMPORTANT
 I no longer actively play this game.<br>
 Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
