@@ -19,6 +19,12 @@ NOTE:
 - **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 - Retrier3 is MARKED FOR "DEATH"!<br>
 Meaning support may cease in the near future!<br>
+#### [Game: **v2.7**] (01-jun-2022)
+- Reimplement auto "Press 2" when prompted
+- Add feature to auto "Press W"
+- Add feature to instantly plunge on "Press Space"
+- Add feature after arriving to castle to hold W
+- Add feature after auto pressing W, continues to hold W
 #### [Game: **v2.7**] (01-Jun, 31-may-2022)
 - Readjusted register pixel hook(s)
   - Hook(s): `UIIGAutoplay`, `UIIGUndiscoveredWaypoint`, `UIIGOpenedJournal`
