@@ -4,17 +4,20 @@
 ## [js] checkin-redeem (Latest: 16-may-2022)
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 16-may-2022)
+## [js] quickfmg (Latest: 01-jun-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
-#### (16-may-2022)
-- Add invert filter to `html` (~90% invert)
-#### (31-mar-2022)
+#### (01-jun-2022)
+- Update invert filter of `html` (from 90% to 91%)
+- Remove outdated mails (uptime less than ~200d)
+- Add mails (uptime more than ~200d)
+#### (16-may, 31-mar-2022)
+- (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 31-may-2022)
+## Retrier3 (Latest: 01-jun-2022)
 NOTE:
 - **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 - Retrier3 is MARKED FOR "DEATH"!<br>
