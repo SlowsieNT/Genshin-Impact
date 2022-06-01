@@ -19,9 +19,10 @@ NOTE:
 - **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 - Retrier3 is MARKED FOR "DEATH"!<br>
 Meaning support may cease in the near future!<br>
-#### [Game: **v2.7**] (31-may-2022)
+#### [Game: **v2.7**] (01-Jun, 31-may-2022)
 - Readjusted register pixel hook(s)
-  - Hooks: `UIIGAutoplay`, `UIIGUndiscoveredWaypoint`, `UIIGOpenedJournal`
+  - Hook(s): `UIIGAutoplay`, `UIIGUndiscoveredWaypoint`, `UIIGOpenedJournal`
+  - Hook(s): `UIIGUndiscoveredWaypoint` (01-Jun)
 - Readjusted: Pos hook diag opt
 #### [Game: **v2.6**] (16-may-2022)
 - Readjusted register pixel hook(s)
