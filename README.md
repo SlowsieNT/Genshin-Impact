@@ -1,6 +1,5 @@
 # Genshin Impact Script(s)
 **Date**: 31-may-2022<br>
-**Dev Status**: Idle<br>
 **Change**: Patch hooks+repos
 
 ## IMPORTANT
