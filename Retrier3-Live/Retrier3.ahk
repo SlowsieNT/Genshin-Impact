@@ -45,7 +45,7 @@ vResIdx := {"FS1920":1, "WM1440":2}
 ; do not edit anything below unless you are dev:
 vRID := vResIdx[vResolutionPostfix]
 vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0
-vAttackedWideHPBar := 0
+vAttackedWideHPBar := 0, vSpaced := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
 ; load ini with colors
