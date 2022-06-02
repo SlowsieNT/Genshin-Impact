@@ -21,7 +21,7 @@ Supported domains:
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.7**] (01-jun-2022)
-- Reimplement auto "Press 2" when prompted (long lost Retrier3 code back in the of Retrier2)
+- Reimplement auto "Press 2" when prompted (long lost Retrier3 code; back in the days of Retrier2)
 - Add feature to auto "Press W"
 - Add feature to instantly plunge on "Press Space"
 - Add feature after arriving to castle to hold W
