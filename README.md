@@ -5,8 +5,8 @@
 
 ## IMPORTANT
 I no longer actively play this game.<br>
-Pre-made script __MAY NO LONGER__ receive UPDATES in the near future.<br>
-It's not hard to maintain, if someone else tried.<br>
+Beware: In the future updates may be delayed for months!<br>
+I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
