@@ -12,8 +12,12 @@ I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
+## Plans? Note: UNCONFIRMED
+[**???**] Make quickfmg fetch fresh mails from this repo, or safefail to offline list.<br>
+[**???**] Make Retrier3 report if new stable *release* is available.<br>
+[**???**] Return former Retrier3's ability to emulate `genshingift` + mail claim? (yes, long lost Retrier3 code was able to do that)<br>
 
-## Download?
+## Download Links?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
 Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/))<br>
@@ -23,9 +27,6 @@ Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/
 Using this formula:<br>
 `register_start2 - register_start = 17min, 30sec` (average)<br>
 Formula covers: registration, gameplay, and wishing!<br>
-
-## Plans?
-None, read "important" if missed.
 
 ## License
 0-BSD<br>
