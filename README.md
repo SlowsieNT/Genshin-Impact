@@ -21,7 +21,7 @@ Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/
 
 ## Reroll time?
 Using this formula:<br>
-`register_start2 - register_start = 17min, 35sec` (average)<br>
+`register_start2 - register_start = 17min, 30sec` (average)<br>
 Formula covers: registration, gameplay, and wishing!<br>
 
 ## Plans?
