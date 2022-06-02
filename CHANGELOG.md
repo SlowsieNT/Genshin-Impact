@@ -19,9 +19,7 @@ Supported domains:
 - Add "load mail" feature
 ## Retrier3 (Latest: 01-jun-2022)
 NOTE:
-- **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
-- Retrier3 is MARKED FOR "DEATH"!<br>
-Meaning support may cease in the near future!<br>
+**Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.7**] (01-jun-2022)
 - Reimplement auto "Press 2" when prompted
 - Add feature to auto "Press W"
@@ -83,7 +81,7 @@ Meaning support may cease in the near future!<br>
 
 ## retrier2.ahk
 NOTE: retrier2.ahk is based on Legacy code, never intended to ever be polished but adjusted to work properly.<br>
-NOTE: **retrier2.ahk is slowly approaching phase EOL (End of Life), support by author will cease in due time *(Summer 2022?)***<br>
+NOTE: **retrier2.ahk is on phase EOL (End of Life), support by author ceased<br>
 #### [Game: **v2.3**]
 - [**27-Nov-2021**]
   - Minor changes
