@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
-**Date**: 01-jun-2022<br>
-**Change**: Patch hook(s), ADD feature(s), Update `quickfmg`<br>
+**Date(s)**: 31-may, 01-jun, 02-jun-2022<br>
+**Change(s)**: Patch hook(s), ADD feature(s), Update `quickfmg`<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
