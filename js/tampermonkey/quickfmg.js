@@ -8,8 +8,8 @@
 // @match        *://*.generator.email/*
 // @match        *://*.emailfake.com/*
 // @icon         https://www.google.com/s2/favicons?domain=fakemailgenerator.com
-// @updateURL    https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
 // @downloadURL  https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
+// @updateURL    https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
 // @grant        unsafeWindow
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
