@@ -22,7 +22,7 @@
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1654245277863, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1654245277864, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
 		return (LiveLU||0) > LAST_UPDATE;
