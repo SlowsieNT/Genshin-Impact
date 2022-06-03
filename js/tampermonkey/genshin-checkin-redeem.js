@@ -5,6 +5,8 @@
 // @description  try to take over the world!
 // @author       SlowsieNT
 // @match        *://*/*
+// @connect hk4e-api-os.mihoyo.com
+// @connect api-os-takumi.mihoyo.com
 // @grant GM_xmlhttpRequest
 // @grant GM_getValue
 // @grant GM_setValue
