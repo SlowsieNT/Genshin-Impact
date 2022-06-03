@@ -28,7 +28,7 @@
 		return (LiveLU||0) > LAST_UPDATE;
 	}
 	function UpdateCheck(aFunc) {
-		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js?_"+Date.now();
+		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js";
 		GM_xmlhttpRequest({
 			url: vURL,
 			onload: function (aX) {
