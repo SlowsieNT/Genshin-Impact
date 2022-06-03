@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Quick FakeMailGen
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  try to take over the world!
 // @author       You
 // @match        *://*.fakemailgenerator.com/*
@@ -11,13 +11,41 @@
 // @grant        unsafeWindow
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
+// @grant        GM_info
+// @grant        GM_xmlhttpRequest
 // @run-at       document-start
+// @connect		 github.com
+// @connect		 raw.githubusercontent.com
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // ==/UserScript==
 
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
+	var LAST_UPDATE = 1654245277863, LiveLU, CanCheck = 0, EPType = -1,
+		ScriptName = GM_info.script.name;
+	function UpdateAvailable() {
+		return (LiveLU||0) > LAST_UPDATE;
+	}
+	function UpdateCheck() {
+		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js";
+		GM_xmlhttpRequest({
+			url: vURL,
+			onload: function (aX) {
+				if (200 == aX.status) {
+					var vVer = aX.response.split("var LAST_UPDATE =");
+					if (1 in vVer)
+						vVer = Number(vVer[1].trim().split(";")[0]);
+					else vVer = 0;
+					LiveLU = vVer;
+				}
+			}
+		});
+	}
+	if (-1 < location.hostname.indexOf("fakemailgenerator.com")) CanCheck=1,EPType=0;
+	if (-1 < location.hostname.indexOf("generator.email")) CanCheck=1,EPType=1;
+	if (-1 < location.hostname.indexOf("emailfake.com")) CanCheck=1,EPType=2;
+	CanCheck && UpdateCheck();
 	var Generator = new function () {
 		var _ = this;
 		function RandomStr(aLength) {
@@ -72,7 +100,7 @@
 		};
 		_.GenerateMail2 = function () {
 			function GenerateMD(x) {
-				// removed expired mails(225 to 164; had less than 200d uptime) 
+				// removed expired mails(225 to 164; had less than 200d uptime)
 				return (x=["bibliotekadomov.com","oreple.com","isluntvia.com","pianoxltd.com","colevillecapital.com","packiu.com","guitarsxltd.com","tubidu.com","filevino.com","emlppt.com","techholic.in","alvinneo.com","ebarg.net","bedul.net","localtank.com","soccerfit.com","email-temp.com","mailpluss.com","eatneha.com","cuedigy.com","buntatukapro.com","eelraodo.com","mefvopic.com","uhpanel.com","usbvap.com","onlinecmail.com","omdiaco.com","btcmod.com","emvil.com","roidirt.com","kimachina.com","hedvdeh.com","rmune.com","niatlsu.com","hotmail.red","goldinbox.net","newsote.com","partnerct.com","nieise.com","mochaphotograph.com","gmailvn.net","inadtia.com","wonderfish-recipe2.com","mexcool.com","emailaing.com","nproxi.com","oydtab.com","mymailcr.com","falixiao.com","plexvenet.com","emkunchi.com","hiowaht.com","yt-google.com","eeetivsc.com","otlaecc.com","esbuah.nl","shanghongs.com","riniiya.com","transmute.us","eoooodid.com","greendike.com","osmye.com","pickuplanet.com","fuadd.me","ndxmails.com","netvemovie.com","abreutravel.com","cuendita.com","muvilo.net","dinarsanjaya.com","getcashstash.com","aletar.ga","oaouemo.com","boranora.com","outlook.sbs","24hinbox.com","gkqil.com","axie.ml","lhtstci.com","sharyndoll.com","fnaul.com","manghinsu.com","skillion.org","vshgl.com","saxlift.us","lersptear.com","pyhaihyrt.com","gotcertify.com","cggup.com","cuenmex.com","crossfitcoastal.com","silnmy.com","pharmafactsforum.com","yandex.cfd","nwhsii.com","asifboot.com","capitalistdilemma.com","icnwte.com","ibnlolpla.com","dmxs8.com","esoetge.com","mumbama.com","fernet89.com","yuinhami.com","indozoom.net","ectong.xyz","anuefa.com","mamasuna.com","hacktoy.com","livegolftv.com","bomukic.com","vietkevin.com","omdlism.com","assrec.com","golviagens.com","yt2.club","picsviral.net","playfunplus.com","freeallapp.com","chantellegribbon.com","zeemails.in","neeahoniy.com","wpdork.com","bizisstance.com","nomnomca.com","omtecha.com","gltrrf.com","luddo.me","kongshuon.com","cashbackr.com","stamberg.nl","happiseektest.com","2wslhost.com","tempgmail.ga","orangdalem.org","ssrrbta.com","tcoaee.com","puanghli.com","nalsci.com","distraplo.com","playfuny.com","typery.com","perirh.com","coffeepancakewafflebacon.com","ermtia.com","rackabzar.com","antawii.com","uewodia.com","mphaotu.com","restromail.com","villastream.xyz","snehadas.tech","skipadoo.org","bringnode.xyz","noisemails.com","longaitylo.com","kenvanharen.com","renliner.cf","khoantuta.com","imnarbi.gq","hmpoeao.com","carras.ga","ffo.kr","eeuasi.com"])[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
@@ -152,8 +180,16 @@
 		}, 255);
 	}
 	$(function(){
-		if (-1 < location.host.indexOf("fakemailgenerator.com")) FakeMailGeneratorCom();
-		if (-1 < location.host.indexOf("generator.email")) GeneratorEmail();
-		if (-1 < location.host.indexOf("emailfake.com")) EmailFake();
+		if (0 === EPType) FakeMailGeneratorCom();
+		else if (1 === EPType) GeneratorEmail();
+		else if (2 === EPType) EmailFake();
+		var vOT = document.title;
+		if (UpdateAvailable()) {
+			document.title = "UPDATE UserScript: " + ScriptName;
+			setTimeout(function () { document.title = "UPDATE: " + ScriptName; }, 1500);
+			setTimeout(function () {
+				document.title = vOT;
+			}, 5e3);
+		}
 	});
 })();
