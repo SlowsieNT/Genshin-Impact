@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Quick FakeMailGen
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       You
 // @match        *://*.fakemailgenerator.com/*
@@ -24,7 +24,7 @@
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1654245277864, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1654245277865, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
 		return (LiveLU||0) > LAST_UPDATE;
