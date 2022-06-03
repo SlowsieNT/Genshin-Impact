@@ -4,11 +4,15 @@
 ## [js] checkin-redeem (Latest: 16-may-2022)
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 01-jun-2022)
+## [js] quickfmg (Latest: 03-jun-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (03-jun-2022)
+- Update check #1, title of fake mail website will show "UPDATE" if script is updated
+  - Message lasts for 5 seconds, title will reset.
+- Update check #2, it may auto update script too, not tested
 #### (01-jun-2022)
 - Update invert filter of `html` (from 90% to 91%)
 - Remove outdated mails (uptime less than ~200d)
