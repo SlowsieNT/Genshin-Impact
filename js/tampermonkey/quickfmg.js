@@ -8,6 +8,8 @@
 // @match        *://*.generator.email/*
 // @match        *://*.emailfake.com/*
 // @icon         https://www.google.com/s2/favicons?domain=fakemailgenerator.com
+// @updateURL    https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
+// @downloadURL  https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
 // @grant        unsafeWindow
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
@@ -22,7 +24,7 @@
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1654245277863, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1654245277864, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
 		return (LiveLU||0) > LAST_UPDATE;
