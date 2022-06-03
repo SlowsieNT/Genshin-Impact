@@ -25,7 +25,6 @@
 	var LAST_UPDATE = 1654245277863, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
-		console.log(LiveLU, LAST_UPDATE);
 		return (LiveLU||0) > LAST_UPDATE;
 	}
 	function UpdateCheck(aFunc) {
