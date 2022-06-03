@@ -14,8 +14,8 @@
 // @grant        GM_info
 // @grant        GM_xmlhttpRequest
 // @run-at       document-start
-// @connect		 github.com
-// @connect		 raw.githubusercontent.com
+// @connect      github.com
+// @connect      raw.githubusercontent.com
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // ==/UserScript==
 
