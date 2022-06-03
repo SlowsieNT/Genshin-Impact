@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
-**Date(s)**: 31-may to 02-jun-2022<br>
-**Change(s)**: Patch hook(s), ADD feature(s), Update `quickfmg`, edits<br>
+**Date(s)**: 31-may to 03-jun-2022<br>
+**Change(s)**: Too many; see CHANGELOG.md<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
@@ -13,7 +13,6 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
 ## Plans? Note: UNCONFIRMED
-[**???**] Make quickfmg fetch fresh mails from this repo, or safefail to offline list.<br>
 [**???**] Make Retrier3 report if new stable *release* is available.<br>
 [**???**] Return former Retrier3's ability to emulate `genshingift` + mail claim? (yes, long lost Retrier3 code was able to do that)<br>
 
