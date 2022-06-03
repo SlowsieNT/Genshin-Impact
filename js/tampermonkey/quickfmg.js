@@ -22,12 +22,13 @@
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1654245277864, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1654245277863, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
+		console.log(LiveLU, LAST_UPDATE);
 		return (LiveLU||0) > LAST_UPDATE;
 	}
-	function UpdateCheck() {
+	function UpdateCheck(aFunc) {
 		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js";
 		GM_xmlhttpRequest({
 			url: vURL,
@@ -35,9 +36,10 @@
 				if (200 == aX.status) {
 					var vVer = aX.response.split("var LAST_UPDATE =");
 					if (1 in vVer)
-						vVer = Number(vVer[1].trim().split(";")[0]);
+						vVer = vVer[1].trim().split(",")[0];
 					else vVer = 0;
 					LiveLU = vVer;
+					aFunc();
 				}
 			}
 		});
@@ -45,7 +47,18 @@
 	if (-1 < location.hostname.indexOf("fakemailgenerator.com")) CanCheck=1,EPType=0;
 	if (-1 < location.hostname.indexOf("generator.email")) CanCheck=1,EPType=1;
 	if (-1 < location.hostname.indexOf("emailfake.com")) CanCheck=1,EPType=2;
-	CanCheck && UpdateCheck();
+	CanCheck && UpdateCheck(function () {
+		$(function() {
+			var vOT = document.title;
+			if (UpdateAvailable()) {
+				document.title = "UPDATE UserScript: " + ScriptName;
+				setTimeout(function () { document.title = "UPDATE: " + ScriptName; }, 1500);
+				setTimeout(function () {
+					document.title = vOT;
+				}, 5e3);
+			}
+		});
+	});
 	var Generator = new function () {
 		var _ = this;
 		function RandomStr(aLength) {
@@ -183,13 +196,5 @@
 		if (0 === EPType) FakeMailGeneratorCom();
 		else if (1 === EPType) GeneratorEmail();
 		else if (2 === EPType) EmailFake();
-		var vOT = document.title;
-		if (UpdateAvailable()) {
-			document.title = "UPDATE UserScript: " + ScriptName;
-			setTimeout(function () { document.title = "UPDATE: " + ScriptName; }, 1500);
-			setTimeout(function () {
-				document.title = vOT;
-			}, 5e3);
-		}
 	});
 })();
