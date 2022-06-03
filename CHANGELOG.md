@@ -1,7 +1,9 @@
 ## Repository
 - Renamed from `genshin` to `Genshin-Impact`
 - Still accessible at `SlowsieNT/Genshin`
-## [js] checkin-redeem (Latest: 16-may-2022)
+## [js] checkin-redeem (Latest: 03-jun-2022)
+#### (03-jun-2022)
+- Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
 ## [js] quickfmg (Latest: 03-jun-2022)
