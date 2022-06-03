@@ -34,7 +34,7 @@
 			url: vURL,
 			onload: function (aX) {
 				if (200 == aX.status) {
-					var vVer = aX.response.split("var LAST_UPDATE =");
+					var vVer = +aX.response.split("var LAST_UPDATE =");
 					if (1 in vVer)
 						vVer = vVer[1].trim().split(",")[0];
 					else vVer = 0;
