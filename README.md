@@ -5,7 +5,7 @@
 
 ## IMPORTANT
 BEWARE: In the future updates may be delayed for months!<br>
-I have Discord, but you need to email me your `name#tag`, due privacy reasons.
+Should you require help, I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
