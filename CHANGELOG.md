@@ -12,7 +12,7 @@ Supported domains:
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
 #### (03-jun-2022)
-- Update check #1, title of fake mail website will show "UPDATE" if script is updated (pn github)
+- Update check #1, title of fake mail website will show "UPDATE" if script is updated (on github)
   - Message lasts for 5 seconds, title will reset.
 - Update check #2, it may auto update script too, not tested
 #### (01-jun-2022)
