@@ -33,15 +33,15 @@ NOTE:
 - Add feature after arriving to castle to hold W
 - Add feature after auto pressing W, continues to hold W
 #### [Game: **v2.7**] (01-Jun, 31-may-2022)
-- Readjusted register pixel hook(s)
+- Readjusted pixel hook(s)
   - Hook(s): `UIIGAutoplay`, `UIIGUndiscoveredWaypoint`, `UIIGOpenedJournal`
   - Hook(s): `UIIGUndiscoveredWaypoint` (01-Jun)
 - Readjusted: Pos hook diag opt
 #### [Game: **v2.6**] (16-may-2022)
-- Readjusted register pixel hook(s)
+- Readjusted pixel hook(s)
   - Hook `UIIGUndiscoveredWaypoint`
 #### [Game: **v2.6**] (30-mar-2022)
-- Readjusted register pixel hook(s)
+- Readjusted pixel hook(s)
   - Register, InGame UI
 - Removed ONLY FEW mail domains that fail on emailfake
 #### [Game: **v2.5**] (16-feb-2022)
