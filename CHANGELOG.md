@@ -30,7 +30,7 @@ NOTE:
 - Add feature to auto "Press 2" when prompted (long lost Retrier3 code; back in the days of Retrier2)
 - Add feature to auto "Press W"
 - Add feature to instantly plunge on "Press Space"
-- Add feature after arriving to castle to hold W
+- Add feature after arriving to *castle* to hold W
 - Add feature after auto pressing W, continues to hold W
 #### [Game: **v2.7**] (01-Jun, 31-may-2022)
 - Readjusted pixel hook(s)
