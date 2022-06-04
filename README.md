@@ -4,8 +4,7 @@
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
-I no longer actively play this game.<br>
-Beware: In the future updates may be delayed for months!<br>
+BEWARE: In the future updates may be delayed for months!<br>
 I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 
 ## Contact?
