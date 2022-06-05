@@ -12,6 +12,7 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
 ## Plans? Note: UNCONFIRMED
+Get better PC and Microphone, F2P issues, yes<br>
 [**???**] Make Retrier3 report if new stable *release* is available.<br>
 [**???**] Return former Retrier3's ability to emulate `genshingift` + mail claim? (yes, long lost Retrier3 code was able to do that)<br>
 
