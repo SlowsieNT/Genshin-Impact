@@ -18,7 +18,8 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 ## Download Links?
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
-Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/))<br>
+Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/)) or Vivaldi/Chromium...<br>
+Tampermonkey Opera ([Extension link](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)) opera exclusive link atm<br>
 Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/))<br>
 
 ## Reroll time?
