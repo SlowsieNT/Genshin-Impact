@@ -64,6 +64,11 @@ if (0 && vPixelette.Scr) {
 	return
 }
 ; vRID is resolution id
+if (vPixelette["UIREmptyVerify"] && !vLazyQMGLinkOpened) {
+	vLazyQMGLinkOpened := 1
+	clipboard = %vUsr%@%vDmn%
+	Run, %vCmd%
+}
 if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@")) {
 	if (1 == vRID) {
 		FocusWindow(vWinID)
@@ -260,7 +265,7 @@ if (vPixelette["UIIGOpenedJournal"]) {
 
 if (vPixelette["UIIGPressW"])
 	SendKey(vWinID, "{w down}")
-if (!vSpaced && vPixelette["UIIGPressSpace"]) {
+if ((!vSpaced || !vPressSpaceOnce) && vPixelette["UIIGPressSpace"]) {
 	vSpaced := 1
 	SendKey(vWinID, "{Space}")
 	sleep 50
