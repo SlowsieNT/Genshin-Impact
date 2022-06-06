@@ -40,16 +40,26 @@ vPixelette.Capture(vResolutionPostfix)
 ; -------------------------------------------------------------------
 ; REGISTER
 ; Paste verify code
-if (0) {
+DbgColorRange(aPixellete, aX, aY, aRangeY=16, aRangeX=16){
+	loop, %aRangeX% {
+		vX := aX + A_Index
+		loop, %aRangeY% {
+			vY := aY + A_Index
+			vQ := aPixellete.Scr.ColorAt(vX, vY)
+			if ("FFFFFF" != vQ) {
+				Clipboard = %vX%, %vY%, %vQ%
+				msgbox %vX%, %vY%, %vQ%
+			}
+		}
+	}
+}
+if (0 && vPixelette.Scr) {
 	if vPixelette["UIIGWideHPBar"]
 		msgbox vPixelette["UIIGWideHPBar"]
 	else {
-		vA := vPixelette.Scr.ColorAt(vAX:=587, vAY:=94)
-		vB := vPixelette.Scr.ColorAt(vBX:=575, vBY:=91)
-		vC := vPixelette.Scr.ColorAt(vCX:=539, vCY:=89)
-		Clipboard = %vAX%, %vAY%, %vA%|%vBX%, %vBY%, %vB%|%vCX%, %vCY%, %vC%
-		msgbox %vAX%, %vAY%, %vA%|%vBX%, %vBY%, %vB%|%vCX%, %vCY%, %vC%
+		DbgColorRange(vPixelette, 696, 206, 25, 25)
 	}
+	;594, 200, FFFFFF|596, 211, FFFFFF|609, 200, FFFFFF
 	reload
 	return
 }
@@ -69,6 +79,10 @@ if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@
 }
 ; Email filling
 if (vPixelette["UIREmptyMail"] && InStr(clipboard, "@")) {
+	FocusWindow(vWinID)
+	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
+	if vLazyQMGAllow
+		sleep %vLazyQMGDelay%
 	vCurrentEmail := clipboard
 	; 550, 299, FFFFFF
 	if (1 == vRID)
@@ -228,18 +242,34 @@ if (vPixelette["UIIGRedBowGirlAcquired"]) {
 	if (2 == vRID)
 		ELClick2(vWinID, 463, 524, vWinX, vWinY)
 }
-if (vPixelette["UIIGOpenJournal"])
+if (vPixelette["UIIGPress2"]) {
+	SendKey(vWinID, "2")
+	sleep 500
+	SendKey(vWinID, "r")
+}
+if (vPixelette["UIIGOpenJournal"]) {
+	SendKey(vWinID, "{w down}")
 	SendKey(vWinID, "J")
+}
 if (vPixelette["UIIGOpenedJournal"]) {
 	SendKey(vWinID, "{Escape}")
 	sleep 777
 	SendKey(vWinID, "v")
 }
+
+if (vPixelette["UIIGPressW"])
+	SendKey(vWinID, "{w down}")
+if (!vSpaced && vPixelette["UIIGPressSpace"]) {
+	vSpaced := 1
+	SendKey(vWinID, "{Space}")
+	sleep 50
+	ELClick2(vWinID, 720, 480, vWinX, vWinY, 0)
+}
 if (vPixelette["UIIGWideHPBar"]) {
 	vAttackedWideHPBar := 1
 	vTimeToKill := 8+18
-	vAttackingEpoch := utcnow()
-	while (utcnow()-vAttackingEpoch < vTimeToKill)
+	vAttackingEpoch := utcnow()/1000
+	while (utcnow()/1000-vAttackingEpoch < vTimeToKill)
 		Loop, 8 {
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
