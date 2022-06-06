@@ -1,6 +1,7 @@
 # Genshin Impact Script(s)
 **Date(s)**: 06-jun-2022<br>
 **Change(s)**: ADD Guide, Feature `LazyQMG` in .inf, adapt `quickfmg.js`<br>
+**Status**: Green (stable code)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
