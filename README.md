@@ -4,6 +4,7 @@
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
+`LazyQMG` can cause issue (`Retrier3.ahk.inf`), please configure it or disable it.<br>
 BEWARE: In the future updates may be delayed for months!<br>
 Should you require help, I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 
