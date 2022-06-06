@@ -8,7 +8,7 @@ Password=$P+w!614$28754!14001^
 [Screen]
 ; WM1440=1440x900 WINDOWED MODE
 ; FS1920=1920x1080 FULL SCREEN
-Resolution=WM1440
+Resolution=FS1920
 
 [Game]
 SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
@@ -24,9 +24,10 @@ AfterFOTeleport_FileName=ar5mails.log
 [LazyQMG]
 Allow=0
 ; Needed for window refocus (milliseconds)
-Delay=777
+; How long does it take browser to open tab?
+Delay=1500
 ; NOTE: Add quotes if path has whitespace
-BrowserPath=vivaldi.exe
+BrowserPath=chrome.exe
 ; 0=fakemailgenerator.com
 ; 1=generator.email
 ; 2=emailfake.com
