@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Quick FakeMailGen
 // @namespace    http://tampermonkey.net/
-// @version      0.1.2
+// @version      0.1.3
 // @description  try to take over the world!
 // @author       You
 // @match        *://*.fakemailgenerator.com/*
 // @match        *://*.generator.email/*
 // @match        *://*.emailfake.com/*
 // @icon         https://www.google.com/s2/favicons?domain=fakemailgenerator.com
-// @downloadURL  https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
 // @updateURL    https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
+// @downloadURL  https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js
 // @grant        unsafeWindow
 // @grant        GM_setClipboard
 // @grant        GM_addStyle
@@ -24,7 +24,7 @@
 (function() {
 	'use strict';
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1654245277865, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1654245278865, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name;
 	function UpdateAvailable() {
 		return (LiveLU||0) > LAST_UPDATE;
@@ -197,5 +197,6 @@
 		if (0 === EPType) FakeMailGeneratorCom();
 		else if (1 === EPType) GeneratorEmail();
 		else if (2 === EPType) EmailFake();
+		GM_setClipboard(($("#email_ch_text").text()||$("#cxtEmail").text()||"").trim());
 	});
 })();
