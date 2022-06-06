@@ -5,6 +5,7 @@
 #include, Libraries/lib.time.ahk
 #include, Libraries/lib.macros.ahk
 #include, Libraries/mod.cutscene.ahk
+#include, Libraries/mod.qmg.ahk
 #Include, Retrier3.Logic.ahk
 #MaxHotkeysPerInterval, 999999
 #MenuMaskKey, vk07
@@ -34,8 +35,15 @@ vCurrentEmail := ""
 vPlayerFemale := "1" == vInf.Get("Player;Female;1")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
+; LazyQMG
+vLazyQMGAllow := vInf.Get("LazyQMG;Allow;1")
+vLazyQMGType := vInf.Get("LazyQMG;MailType;2")
+vLazyQMGDelay := vInf.Get("LazyQMG;Delay;1500")
+vLazyQMGBrowser := vInf.Get("LazyQMG;BrowserPath;2")
+; etc
 vResolutionPostfix := vInf.Get("Screen;Resolution;FS1920")
 vStandalone64Path := vInf.Get("Game;SAVASW64", "D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64")
+; LogMail
 vLogMailAllow := "1" == vInf.Get("LoggingMail;Allow;1")
 vLogMailAfterFendOffTeleport := "1" == vInf.Get("LoggingMail;AfterFOTeleport;0")
 vLogMailAfterFOTeleport_FileName := vInf.Get("LoggingMail;AfterFOTeleport_FileName", "ar5mails.log")
@@ -56,6 +64,23 @@ vPixelette := new Pixelette(vWinID)
 vPixelette.ParseIniStruct(vIni)
 ;---------------------------------------------------------------------------
 ; MAIN LOOP xd
+if (vLazyQMGAllow) {
+	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
+	vUsr := QMG_Username(), vDmn := "", vCmd := ""
+	if (0 == vLazyQMGType) {
+		vLink := QMG_FMGLink(vUsr, vDmn := QMG_FakeMailGenerator())
+		vCmd = %vLazyQMGBrowser% %vLink%
+	}
+	if (1 == vLazyQMGType) {
+		vLink := QMG_GELink(vUsr, vDmn := QMG_GeneratorEmail())
+		vCmd = %vLazyQMGBrowser% %vLink%
+	}
+	if (2 == vLazyQMGType) {
+		vLink := QMG_EFLink(vUsr, vDmn := QMG_EmailFake())
+		vCmd = %vLazyQMGBrowser% %vLink%
+	}
+	Run, %vCmd%
+}
 Loop {
 	; free RAM
 	EmptyWorkingSet()
