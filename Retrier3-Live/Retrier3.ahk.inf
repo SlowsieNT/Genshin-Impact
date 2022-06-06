@@ -8,7 +8,7 @@ Password=$P+w!614$28754!14001^
 [Screen]
 ; WM1440=1440x900 WINDOWED MODE
 ; FS1920=1920x1080 FULL SCREEN
-Resolution=FS1920
+Resolution=WM1440
 
 [Game]
 SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
@@ -20,3 +20,14 @@ FileName=mail-history.log
 ; Triggers only after "fend off"
 AfterFOTeleport=1
 AfterFOTeleport_FileName=ar5mails.log
+
+[LazyQMG]
+Allow=1
+; Needed for window refocus (milliseconds)
+Delay=500
+; NOTE: Add quotes if path has whitespace
+BrowserPath=chrome.exe
+; 0=fakemailgenerator.com
+; 1=generator.email
+; 2=emailfake.com
+MailType=2
