@@ -17,7 +17,7 @@ QMG_EmailFake() {
 QMG_Username() {
 	Random, vChr, 103, 122
 	Random, vChr2, 103, 122
-	Random, vNum, 11111, 99999
+	Random, vNum, 1111, 99999
 	vStr := utcnow(), vChr := Chr(vChr), vChr2 := Chr(vChr2)
 	vStr2 = %vChr%%vStr%%vChr2%%vNum%
 	return vStr2
