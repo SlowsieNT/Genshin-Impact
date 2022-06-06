@@ -11,10 +11,11 @@ gettime(aYear=1970, aMonth=1, aDay=1, aHour=0, aMinute=0, aSeconds=0, aMilli=0) 
 	vHoursToTime := aHour * 3600
 	vMinutesToTime := aMinute * 60
 	; add all numbers together
-	vTime := vYearsToTime+vMonthsToTime+vDaysToTime+vHoursToTime+vMinutesToTime+aSeconds+aMilli/1000
-	; do -86400 for lulz' sake
-	return round(vTime - 86400, 3)
+	vTime := vYearsToTime+vMonthsToTime+vDaysToTime+vHoursToTime+vMinutesToTime+aSeconds
+	vTime = %vTime%%aMilli%
+	; do -86400000 for lulz' sake
+	return vTime-86400000
 }
 utcnow() {
-	return gettime(0 + A_YYYY, 0 + A_MM, 0 + A_DD, 0 + A_Hour, 0 + A_Min, 0 + A_Sec, 0 + A_MSec)
+	return gettime(0 + A_YYYY, 0 + A_MM, 0 + A_DD, 0 + A_Hour, 0 + A_Min, 0 + A_Sec, A_MSec)
 }
