@@ -64,7 +64,6 @@ vPixelette := new Pixelette(vWinID)
 vPixelette.ParseIniStruct(vIni)
 ;---------------------------------------------------------------------------
 ; MAIN LOOP xd
-	msgbox %vLazyQMGAllow%
 if (vLazyQMGAllow) {
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	vUsr := QMG_Username(), vDmn := "", vCmd := ""
