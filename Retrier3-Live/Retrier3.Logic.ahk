@@ -111,7 +111,7 @@ if (vPixelette["UIREmptyAgree"]) {
 		ELClick2(vWinID, 530, 522, vWinX, vWinY, Delay:=244)
 }
 ; Send code
-if (vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
+if (vCurrentEmail && vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
 	if (1 == vRID) {
 		ELClick2(vWinID, 1112, 389, vWinX, vWinY, Delay:=335)
 		ELClick2(vWinID, 1112, 389, vWinX, vWinY, Delay:=1000)
@@ -123,7 +123,6 @@ if (vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
 }
 if (vPixelette["UIRExistsCaptcha"])
 	vCaptchaRegisterShown := 1
-
 ; -------------------------------------------------------------------
 ; LOGIN REQUESTED
 vIsEmptyPw := vPixelette["UILEmptyPass"]
