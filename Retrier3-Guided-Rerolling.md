@@ -51,5 +51,9 @@ Please read all!
     - It will auto press W, Space, followed by plunge!
 12. Manually open settings go to Account then "Redeem"
     - It will auto enter code `genshingift` and confirm, and double escape!
+13. Open the map, and teleport to the waypoint near the fountain
+    - Script will auto confirm teleport
+       - Script will automatically RESET
+14. Go Claim adventure rank rewards (50 currency, and 1 wish)
 
-That's all, thanks for reading.
+The end.
