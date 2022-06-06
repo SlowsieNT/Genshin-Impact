@@ -35,6 +35,7 @@ vCurrentEmail := ""
 vPlayerFemale := "1" == vInf.Get("Player;Female;1")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
+vPressSpaceOnce := "1" == vInf.Get("HiddenSettings;PressSpaceOnce;0")
 ; LazyQMG
 vLazyQMGAllow := "1" == vInf.Get("LazyQMG;Allow;1")
 vLazyQMGType := vInf.Get("LazyQMG;MailType;2")
@@ -53,7 +54,7 @@ vResIdx := {"FS1920":1, "WM1440":2}
 ; do not edit anything below unless you are dev:
 vRID := vResIdx[vResolutionPostfix]
 vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0
-vAttackedWideHPBar := 0, vSpaced := 0
+vAttackedWideHPBar := 0, vSpaced := 0, vLazyQMGLinkOpened := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
 ; load ini with colors
@@ -79,8 +80,6 @@ if (vLazyQMGAllow) {
 		vLink := QMG_EFLink(vUsr, vDmn := QMG_EmailFake())
 		vCmd = %vLazyQMGBrowser% %vLink%
 	}
-	clipboard = %vUsr%@%vDmn%
-	Run, %vCmd%
 }
 Loop {
 	; free RAM
