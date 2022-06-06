@@ -65,6 +65,7 @@ vPixelette.ParseIniStruct(vIni)
 ;---------------------------------------------------------------------------
 ; MAIN LOOP xd
 if (vLazyQMGAllow) {
+	clipboard = ""
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	vUsr := QMG_Username(), vDmn := "", vCmd := ""
 	if (0 == vLazyQMGType) {
