@@ -2,6 +2,9 @@
 ## Welcome!
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin.guide)
 
+## Notes
+- Script must be run as Administrator
+   - Otherwise it cannot hook the window
 ## Setting the script first time
 1. Setup `Retrier3.ahk.inf`
    - Choose to play as Aether by changing section `Player` by field `Female` to `0`
