@@ -1,4 +1,5 @@
 # Genshin Impact Script(s)
+## SCRIPT IS BEING UPDATED & TESTED (06-jun-2022)
 **Date(s)**: 31-may to 03-jun-2022<br>
 **Change(s)**: Too many; see CHANGELOG.md<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
