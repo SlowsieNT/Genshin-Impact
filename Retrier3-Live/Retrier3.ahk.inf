@@ -22,11 +22,11 @@ AfterFOTeleport=1
 AfterFOTeleport_FileName=ar5mails.log
 
 [LazyQMG]
-Allow=1
+Allow=0
 ; Needed for window refocus (milliseconds)
-Delay=500
+Delay=777
 ; NOTE: Add quotes if path has whitespace
-BrowserPath=chrome.exe
+BrowserPath=vivaldi.exe
 ; 0=fakemailgenerator.com
 ; 1=generator.email
 ; 2=emailfake.com
