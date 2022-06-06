@@ -36,7 +36,7 @@ vPlayerFemale := "1" == vInf.Get("Player;Female;1")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
 ; LazyQMG
-vLazyQMGAllow := vInf.Get("LazyQMG;Allow;1")
+vLazyQMGAllow := "1" == vInf.Get("LazyQMG;Allow;1")
 vLazyQMGType := vInf.Get("LazyQMG;MailType;2")
 vLazyQMGDelay := vInf.Get("LazyQMG;Delay;1500")
 vLazyQMGBrowser := vInf.Get("LazyQMG;BrowserPath;2")
@@ -64,6 +64,7 @@ vPixelette := new Pixelette(vWinID)
 vPixelette.ParseIniStruct(vIni)
 ;---------------------------------------------------------------------------
 ; MAIN LOOP xd
+	msgbox %vLazyQMGAllow%
 if (vLazyQMGAllow) {
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	vUsr := QMG_Username(), vDmn := "", vCmd := ""
