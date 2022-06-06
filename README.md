@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
 **Date(s)**: 06-jun-2022<br>
-**Change(s)**: Add mail generator to retrier3<br>
+**Change(s)**: Feature `LazyQMG` in .inf, adapt `quickfmg.js`<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
