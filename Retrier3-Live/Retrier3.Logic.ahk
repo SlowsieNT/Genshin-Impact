@@ -83,6 +83,8 @@ if (vPixelette["UIREmptyMail"] && InStr(clipboard, "@")) {
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	if vLazyQMGAllow
 		sleep %vLazyQMGDelay%
+	FocusWindow(vWinID)
+	sleep 50
 	vCurrentEmail := clipboard
 	; 550, 299, FFFFFF
 	if (1 == vRID)
