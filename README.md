@@ -1,7 +1,6 @@
 # Genshin Impact Script(s)
-## NOW: SCRIPT IS BEING UPDATED & TESTED (06-jun-2022)
-**Date(s)**: 31-may to 03-jun-2022<br>
-**Change(s)**: Too many; see CHANGELOG.md<br>
+**Date(s)**: 06-jun-2022<br>
+**Change(s)**: Add mail generator to retrier3<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
