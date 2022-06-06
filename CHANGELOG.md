@@ -26,6 +26,9 @@ Supported domains:
 ## Retrier3 (Latest: 01-jun-2022)
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.7**] (06-jun-2022)
+- Add feature to generate mail upon pressing F2 at registration form
+  - Can be disabled in `.inf` by setting section `LazyQMG` field `Allow` to `0`
 #### [Game: **v2.7**] (01-jun-2022)
 - Add feature to auto "Press 2" when prompted (long lost Retrier3 code; back in the days of Retrier2)
 - Add feature to auto "Press W"
