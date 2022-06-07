@@ -23,9 +23,11 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 06-jun-2022)
+## Retrier3 (Latest: 08-jun-2022)
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.7**] (08-jun-2022)
+- Reduce clicks necessary to redeem code `genshingift`
 #### [Game: **v2.7**] (06-jun-2022)
 - Add feature to generate mail upon pressing F2 at registration form
   - Can be disabled in `.inf` by setting section `LazyQMG` field `Allow` to `0`
