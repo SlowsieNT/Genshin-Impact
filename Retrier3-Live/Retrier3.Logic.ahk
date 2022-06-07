@@ -308,7 +308,20 @@ if (vPixelette["UIIGTeleportBtn"]) {
 		sleep 777
 	}
 }
+if (vAttackedWideHPBar && !vCodeRedeemed && vPixelette["UIIGSettingsControls"]) {
+	if (1 == vRID)
+		ELClick2(vWinID, 181, 574, vWinX, vWinY, 32)
+	if (2 == vRID)
+		ELClick2(vWinID, 133, 456, vWinX, vWinY, 32)
+}
+if (vAttackedWideHPBar && !vCodeRedeemed && vPixelette["UIIGSettingsAccount"]) {
+	if (1 == vRID)
+		ELClick2(vWinID, 1571, 277, vWinX, vWinY, 32)
+	if (2 == vRID)
+		ELClick2(vWinID, 1181, 232, vWinX, vWinY, 32)
+}
 if (vAttackedWideHPBar && vPixelette["UIIGRedeemExists"] && vPixelette["UIIGRedeemExists"]) {
+	vCodeRedeemed := 1
 	if (1 == vRID) {
 		ClickEnterText2("genshingift", vWinID, 941, 519, vWinX, vWinY, 4, Delay:=111)
 		ELClick2(vWinID, 1063, 733, vWinX, vWinY, 32)
