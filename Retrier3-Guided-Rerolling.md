@@ -5,6 +5,7 @@
 ## Notes
 - Script must be run as Administrator
    - Otherwise it cannot hook the window
+- (Fend off dragon quest is handled by the script)
 ## Setting the script first time
 1. Setup `Retrier3.ahk.inf`
    - Choose to play as Aether by changing section `Player` by field `Female` to `0`
@@ -52,8 +53,9 @@ Please read all!
     - It will auto start holding W once all is done!
 11. Gliding tutorial is handled by the script
     - It will auto press W, Space, followed by plunge!
-12. Manually open settings go to Account then "Redeem"
-    - It will auto enter code `genshingift` and confirm, and double escape!
+12. Manually open settings
+    - It should automatically go to Account tab and click redeem
+    - Then will auto enter code `genshingift` and confirm, and double escape!
 13. Open the map, and teleport to the waypoint near the fountain
     - Script will auto confirm teleport
        - Script will automatically RESET
