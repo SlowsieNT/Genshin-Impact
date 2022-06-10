@@ -46,33 +46,12 @@ Formula covers: registration, gameplay, and wishing!<br>
 *retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
 ## Retrier3
-#### Change values in `Retrier3.ahk.inf`
-- Like changing `SAVASW64` partition letter to skip cutscene
-  - Only opening cutscene, nothing more than that
-- Like changing `Female` to `0` for boy main character!
-- Like changing `Resolution` to suit your screen resolution!
-  - Pick between `WM1440`, and `FS1920`!!!
- 
-#### Supported Screen resolutions
-- 1920x1080 (Fullscreen Mode)
-- 1440x900 (Windowed Mode)
-- No other resolutions are planned.<br>
+Setup guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)
+
 #### Retrier3 is superior to v2
 - More stable
 - More code/"complex"
 - "Easier" to maintain
-
-## retrier2.ahk SETUP, same for v3 (except maintaining)
-FOR pre-made script: <br>https://www.youtube.com/watch?v=7YDn-NKuO7A<br>
-How to maintain: <br>https://www.youtube.com/watch?v=q0eT1Qar_nY
-
-NOTE:
-- Don't press F2 like a madman during register/login, script will break
-  - Then you need to Press Home + F2
-- Script can be used at ANY QUEST
-  - BUT some MAY end up being STUCK in a loop (Venti's quest is just an example)
-- Script can break
-  - Press Home then F2 again if it escalates during Questing
 
 ### FAQ
 Q: What's center of the mouse?<br>
@@ -80,13 +59,6 @@ Q: What's center of the cursor?<br>
 A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/Visuals/center-of-cursor.png)<br><br>
 Q: Will the script be updated in the future?<br>
 A: Yes - to keep it alive, until 2022
-
-[TEXT] FOR pre-made script:<br>
-1. Go to Settings then Graphics
-2. Set Quality to: Medium
-3. Set Display Mode to: 1440x900 Windowed
-4. Go to Settings then Language
-5. Select Subtitles to: English
 
 ## genshin-checkin-redeem.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
