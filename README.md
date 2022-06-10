@@ -57,8 +57,18 @@ Setup guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/
 Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
 A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/Visuals/center-of-cursor.png)<br><br>
-Q: Will the script be updated in the future?<br>
-A: Yes - to keep it alive, until 2022
+Q: Will the script(s) be updated in the future?<br>
+A: Yes - to keep it alive, but updates may cease in Q4 of 2022, or get delayed for months.<br><br>
+Q: Can it be ported over mobile?<br>
+A: No, as of now there is no appropriate tool.<br><br>
+Q: Can it be made to do entire reroll?<br>
+A: It is very difficult to achieve such feat without dll injection, which is risky.<br><br>
+Q: Is there any risk of using this script(s)?<br>
+A: N/A. But yes if you get successfully blackmailed.<br><br>
+Q: Why is tiktοk a sруwаrе?<br>
+A: Brainwashing. Now back to the original topic.<br><br>
+Q: Is there possibility of further improving the script?<br>
+A: For now, there is.<br>
 
 ## genshin-checkin-redeem.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
