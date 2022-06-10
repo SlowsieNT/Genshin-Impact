@@ -13,8 +13,8 @@ Should you require help, I have Discord, but you need to email me your `name#tag
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
-## Plans? Note: UNCONFIRMED
-Get better PC and Microphone, F2P issues, yes<br>
+## Plans?
+None, for now.
 
 ## Links / Download?
 Short **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
