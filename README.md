@@ -46,7 +46,8 @@ Formula covers: registration, gameplay, and wishing!<br>
 *retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
 ## Retrier3
-Setup guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)
+Short guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
+*(Up-to-date guide!)*
 
 ### FAQ
 Q: What's center of the mouse?<br>
