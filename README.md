@@ -48,11 +48,6 @@ Formula covers: registration, gameplay, and wishing!<br>
 ## Retrier3
 Setup guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)
 
-#### Retrier3 is superior to v2
-- More stable
-- More code/"complex"
-- "Easier" to maintain
-
 ### FAQ
 Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
@@ -72,7 +67,7 @@ A: For now, there is.<br>
 
 ## genshin-checkin-redeem.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
-#### NOTE: Only the account that is currently logged in, I may make a script for quick multi-account in few lines(C#) in the future!<br>
+#### NOTE: Only the account that is currently logged in.<br>
 Every 3h script will try to check-in<br>
 If script asks to allow requests, click on "Always allow domain" or similar button.<br>
 __Script will trigger when you are casually watching youtube videos, or just browsing__<br>
