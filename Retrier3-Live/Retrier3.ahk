@@ -32,7 +32,7 @@ vInf := INIParseFile(GetScriptIniFN(".inf"))
 ; retrieve values from inf, no edits required here
 ; do not edit unless dev
 vCurrentEmail := ""
-vPlayerFemale := "1" == vInf.Get("Player;Female;1")
+vPlayerFemale := "1" == vInf.Get("Player;Female")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
 vPressSpaceOnce := "1" == vInf.Get("HiddenSettings;PressSpaceOnce;0")
