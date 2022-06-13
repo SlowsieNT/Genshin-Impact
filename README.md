@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
-**Date(s)**: 08-jun-2022<br>
-**Change(s)**: Reduce clicks, again<br>
+**Date(s)**: 14-jun-2022<br>
+**Change(s)**: Resolve<br>
 **Status**: Green (stable code)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
