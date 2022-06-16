@@ -5,9 +5,8 @@
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
-`LazyQMG` can cause issue (`Retrier3.ahk.inf`), please configure it or disable it.<br>
+`LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
 BEWARE: In the future updates may be delayed for months!<br>
-Should you require help, I have Discord, but you need to email me your `name#tag`, due privacy reasons.
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
@@ -27,7 +26,7 @@ Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/
 ## Reroll time?
 Using this formula:<br>
 `register_start2 - register_start = 17min, 30sec` (average)<br>
-Formula covers: registration, gameplay, and wishing!<br>
+Formula covers: registration, gameplay, and wishing! High-end PC will yield less time.<br>
 
 ## License
 0-BSD<br>
