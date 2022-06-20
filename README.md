@@ -16,7 +16,8 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 None, for now.
 
 ## Links / Download?
-Short **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
+Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
+**Please, check the guide because it will save you the trouble. Thank you.**<br>
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
 Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/)) or Vivaldi/Chromium...<br>
@@ -27,9 +28,6 @@ Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/
 Using this formula:<br>
 `register_start2 - register_start = 17min, 30sec` (average)<br>
 Formula covers: registration, gameplay, and wishing! High-end PC will yield less time.<br>
-
-## License
-0-BSD<br>
 
 ## Available scripts:
 
@@ -45,8 +43,8 @@ Formula covers: registration, gameplay, and wishing! High-end PC will yield less
 *retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
 ## Retrier3
-Short guide? [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
-*(Up-to-date guide!)*
+For Guide just [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
+*(Unlike videos, guide is up-to-date)*
 
 ### FAQ
 Q: What's center of the mouse?<br>
@@ -79,3 +77,6 @@ I have tested it on other accounts and it should be working for you as well<br>
 Once you add this script and go to [emailfake.com](http://emailfake.com/), you would click on Logo that will have green background.<br>
 Once you click on the Logo, it will copy the new generated mail automatically<br>
 IMPORTANT: It will copy verification code for genshin impact account, no worries
+
+## License
+0-BSD<br>
