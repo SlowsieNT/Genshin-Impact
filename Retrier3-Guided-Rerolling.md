@@ -6,8 +6,9 @@
 - Script must be run as Administrator
    - Otherwise it cannot hook the window
 - (Fend off dragon quest is handled by the script)
-## Setting the script first time
-1. Setup `Retrier3.ahk.inf`
+## Setting things up for the First time
+(Needs re-setup if new feature is released for `.inf`)
+1. Modify `Retrier3.ahk.inf` file
    - Choose to play as Aether by changing section `Player` by field `Female` to `0`
    - Choose different name by changing section `Player` by field `Name` to any name you want
    - Choose screen resolution by changing section `Screen` by field `Resolution`
