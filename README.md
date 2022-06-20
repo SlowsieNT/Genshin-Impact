@@ -51,7 +51,9 @@ Q: What's center of the mouse?<br>
 Q: What's center of the cursor?<br>
 A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/main/Visuals/center-of-cursor.png)<br><br>
 Q: Will the script(s) be updated in the future?<br>
-A: Yes - to keep it alive, but updates may cease in Q4 of 2022, or get delayed for months.<br><br>
+A: Yes - to keep it alive, but updates may be delayed in the future.<br><br>
+Q: When will cease support take place?<br>
+A: Approximately Q2 of 2023.<br><br>
 Q: Can it be ported over mobile?<br>
 A: No, as of now there is no appropriate tool.<br><br>
 Q: Can it be made to do entire reroll?<br>
