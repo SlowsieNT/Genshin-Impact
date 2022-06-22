@@ -14,6 +14,7 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 
 ## Plans?
 None, for now.
+Except polishing, scheduled mid July.
 
 ## Links / Download?
 Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
@@ -37,10 +38,6 @@ Formula covers: registration, gameplay, and wishing! High-end PC will yield less
 (Used for auto redeem check-in reward)<br>
 🔗 __[quickfmg.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js)__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
-
-## NOTE:
-**retrier2** (old) will no longer be updated.<br>
-*retrier2, my friend, you have served us well; **Requiescat in pace**.*
 
 ## Retrier3
 For Guide just [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
