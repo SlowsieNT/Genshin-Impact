@@ -23,9 +23,12 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 08-jun-2022)
+## Retrier3 (Latest: 01-jul-2022)
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.7**] (01-jul-2022)
+- Fix: Script preferred default value over ini defined value
+  - the `if (Trim(str))` if string were `0` ahk would assume as false value, thus caused the issue
 #### [Game: **v2.7**] (08-jun-2022)
 - Reduce clicks necessary to redeem code `genshingift`
 #### [Game: **v2.7**] (06-jun-2022)
