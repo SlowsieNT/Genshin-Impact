@@ -41,7 +41,7 @@ class IniStruct {
 	Get(aMagick, aDefault="") {
 		vParts := SplitStr(aMagick, ";")
 		vValue := this.GetValue(vParts[2], vParts[1])
-		if (Trim(vValue))
+		if (StrLen(Trim(vValue)))
 			return vValue
 		if (aDefault)
 			return aDefault
