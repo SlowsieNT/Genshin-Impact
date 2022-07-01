@@ -1,6 +1,6 @@
 # Genshin Impact Script(s)
 **Date(s)**: 01-jul-2022<br>
-**Change(s)**: Code<br>
+**Change(s)**: Improve `IniStruct`<br>
 **Status**: Green (stable code)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
