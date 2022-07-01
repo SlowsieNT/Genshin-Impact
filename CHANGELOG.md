@@ -29,7 +29,7 @@ NOTE:
 #### [Game: **v2.7**] (01-jul-2022)
 - Fix: Script preferred default value over ini defined value
   - The `if (Trim(str))` if string were `0` ahk would assume as false value, thus caused the issue
-    - Thus added `StrLen` to resolve the issue, the check is now: `if (StrLen(Trim(vValue)))`
+    - Added the right logic
 #### [Game: **v2.7**] (08-jun-2022)
 - Reduce clicks necessary to redeem code `genshingift`
 #### [Game: **v2.7**] (06-jun-2022)
