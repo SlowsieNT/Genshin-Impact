@@ -40,19 +40,18 @@ class IniStruct {
 	}
 	Get(aMagick, aDefault="") {
 		vParts := SplitStr(aMagick, ";")
-		vValue := this.GetValue(vParts[2], vParts[1])
-		if (StrLen(Trim(vValue)))
-			return vValue
-		if (aDefault)
-			return aDefault
-		return vParts[3]
+		if (2 < vParts.MaxIndex())
+			aDefault := vParts[3]
+		vValue := this.GetValue(vParts[2], vParts[1], aDefault)
+		return vValue
 	}
-	GetValue(aName, aSection="") {
+	GetValue(aName, aSection="", aDefault="") {
 		vKI := this.FindKeyIndex(aName, aSection)
 		if (vKI > -1) {
 			vValue := this.Values[vKI][3]
 			return vValue
 		}
+		return aDefault
 	}
 	AddValue(aName, aValue, aSection="") {
 		vSI := this.AddSection(aSection)
