@@ -5,6 +5,7 @@
 ## IMPORTANT
 At some point in June, opening cutscene can no longer be skipped.<br>
 At least it doesn't work for me, please contact `ezio#9142` if you found new way to remove it.<br>
+I'm not into researching why, as I don't reroll. 
 
 ## Notes
 - Script must be run as Administrator
