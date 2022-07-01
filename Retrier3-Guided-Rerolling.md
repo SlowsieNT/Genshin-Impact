@@ -2,6 +2,10 @@
 ## Welcome!
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin.guide)
 
+## IMPORTANT
+At some point in June, opening cutscene can no longer be skipped.<br>
+At least it doesn't work for me, please contact `ezio#9142` if you found new way to remove it.<br>
+
 ## Notes
 - Script must be run as Administrator
    - Otherwise it cannot hook the window
@@ -15,6 +19,7 @@
       - Value `WM1440` for Windowed Mode (NOT 1440x900 full screen)
       - Value `FS1920` for 1920x1080 fullscreen mode
    - Make sure `SAVASW64` is correct path to be able to skip opening cutscene.
+     - Currently no longer works, dm me on discord if it actually does work, for me it just doesn't
    - There are two types of mail logging
       - After naming
       - After *reaching* ar5 
