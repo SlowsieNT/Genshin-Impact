@@ -3,7 +3,7 @@
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin.guide)
 
 ## IMPORTANT
-At some point in June, opening cutscene can no longer be skipped.<br>
+At some point in June of 2022, opening cutscene can no longer be skipped.<br>
 At least it doesn't work for me, please contact `ezio#9142` if you found new way to remove it.<br>
 I'm not into researching why, as I don't reroll. 
 
