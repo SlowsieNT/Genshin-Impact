@@ -26,11 +26,6 @@ Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/
 Tampermonkey Opera ([Extension link](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)) opera requires this atm<br>
 Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/))<br>
 
-## Reroll time?
-Using this formula:<br>
-`register_start2 - register_start = 17min, 30sec` (average)<br>
-Formula covers: registration, gameplay, and wishing! High-end PC will yield less time.<br>
-
 ## Available scripts:
 
 🔗 __[Retrier3-Live](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Live)__ is now available at GitHub!<br>
