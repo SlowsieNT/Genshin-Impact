@@ -14,7 +14,9 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
 ## Plans?
-May add feature to enter domain, and handle popups; Scheduled for v2.8.<br>
+May add feature to enter domain, and handle popups (no resin, exit)
+- May be useful for weekly mission (Monstadt weapon mat domain lowest level)
+- Scheduled for v2.8.
 
 
 ## Links / Download?
