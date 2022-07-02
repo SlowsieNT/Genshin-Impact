@@ -14,8 +14,8 @@ See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
 ## Plans?
-None, for now.
-Except polishing, scheduled mid July.
+May add feature to enter domain, and handle popups; Scheduled for v2.8.<br>
+
 
 ## Links / Download?
 Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
