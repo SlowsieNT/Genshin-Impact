@@ -27,6 +27,7 @@ Supported domains:
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
 #### [Game: **v2.7**] (01-jul-2022)
+- Edit github repo logo
 - Remove expired mails from `LazyQMG`
   - Mails with less than ~221 days are removed
 - Fix: Script preferred default value over ini defined value
