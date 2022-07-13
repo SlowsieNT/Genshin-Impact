@@ -1,7 +1,7 @@
 # Genshin Impact Script(s)
 **Date(s)**: 13-jul-2022<br>
 **Change(s)**: Update hooks<br>
-**Status**: Yellow (ensuring that everything works)<br>
+**Status**: Green<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
