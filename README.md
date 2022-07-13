@@ -1,7 +1,7 @@
 # Genshin Impact Script(s)
 **Date(s)**: 01-jul-2022<br>
 **Change(s)**: Improve `IniStruct`, remove expired LazyQMG mails, edit logo<br>
-**Status**: Green (stable code)<br>
+**Status**: Awaiting<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
