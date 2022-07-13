@@ -23,9 +23,12 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 01-jul-2022)
+## Retrier3 (Latest: 13-jul-2022)
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.8**] (13-jul-2022)
+- Readjusted pixel hook(s)
+  - Too many nerfs to write
 #### [Game: **v2.7**] (01-jul-2022)
 - Edit github repo logo
 - Remove expired mails from `LazyQMG`
