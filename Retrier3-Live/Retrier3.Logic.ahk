@@ -57,7 +57,7 @@ if (0 && vPixelette.Scr) {
 	if vPixelette["UIIGWideHPBar"]
 		msgbox vPixelette["UIIGWideHPBar"]
 	else {
-		DbgColorRange(vPixelette, 696, 206, 25, 25)
+		DbgColorRange(vPixelette, 898, 508, 10, 10)
 	}
 	;594, 200, FFFFFF|596, 211, FFFFFF|609, 200, FFFFFF
 	reload
@@ -139,17 +139,18 @@ if (vIsEmptyPw) {
 	if (2 == vRID)
 		ClickEnterText2(vPassword, vWinID, 542, 465, vWinX, vWinY, 4, Delay:=111)
 }
-if (!vIsEmptyPw && !vCaptchaLoginShown && vPixelette["UILBtnStartGame"]) {
-	if (1 == vRID)
-		ELClick2(vWinID, 829, 681, vWinX, vWinY, Delay:=1000)
-	if (2 == vRID)
-		ELClick2(vWinID, 589, 590, vWinX, vWinY, Delay:=1000)
-}
 if (vPixelette["UILExistsCaptcha"])
 	vCaptchaLoginShown := 1
+if (!vIsEmptyPw && !vCaptchaLoginShown && vPixelette["UILBtnStartGame"]) {
+	if (1 == vRID)
+		ELClick2(vWinID, 851, 693, vWinX, vWinY, Delay:=111)
+	if (2 == vRID)
+		ELClick2(vWinID, 589, 590, vWinX, vWinY, Delay:=111)
+}
 ; -------------------------------------------------------------------
 ; AUTHORIZED
 if (vPixelette["UIAGameStart"]) {
+	;msgbox UIAGameStart
 	if (1 == vRID)
 		LClick2(vWinID, 222, 222)
 	if (2 == vRID)
@@ -157,7 +158,7 @@ if (vPixelette["UIAGameStart"]) {
 	Sleep 200
 }
 if (vPixelette["UIACTB"]) {
-	GenshinOpeningBypass(vStandalone64Path)
+	;GenshinOpeningBypass(vStandalone64Path)
 	LClick2(vWinID, 222, 222)
 }
 ; Checkbox agree all
@@ -165,7 +166,7 @@ if (vPixelette["UIAAgreement"]) {
 	if (1 == vRID)
 		ELClick2(vWinID, 581, 490, vWinX, vWinY, Delay:=333)
 	if (2 == vRID)
-		ELClick2(vWinID, 412, 444, vWinX, vWinY, Delay:=333)
+		ELClick2(vWinID, 437, 442, vWinX, vWinY, Delay:=333)
 }
 ; Button accept
 if (vPixelette["UIAABtnAgree"]) {
@@ -200,7 +201,7 @@ if (vPixelette["UIIGBtnConfirm"]) {
 	if (2 == vRID)
 		ELClick2(vWinID, 1215, 853, vWinX, vWinY, Delay:=111)
 	; LOG MAIL IF ALLOWED
-	if (trim(vCurrentEmail) && vLogMailAllow && InStr(vCurrentEmail, "@")) {
+	if (vLogMailAllow && InStr(vCurrentEmail, "@")) {
 		FileRead, vBuffer, %vLogMailFileName%
 		if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
 			FileAppend, %vCurrentEmail%`r`n, %vLogMailFileName%
@@ -284,7 +285,7 @@ if (vPixelette["UIIGWideHPBar"]) {
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 		}
 	; Log mail if allowed #2
-	if (vLogMailAfterFendOffTeleport && trim(vCurrentEmail) && InStr(vCurrentEmail, "@")) {
+	if (vLogMailAfterFendOffTeleport && InStr(vCurrentEmail, "@")) {
 		FileRead, vBuffer, %vLogMailAfterFOTeleport_FileName%
 		if (!InStr(vBuffer, vCurrentEmail) && StrLen(vCurrentEmail) < 96)
 			FileAppend, %vCurrentEmail%`r`n, %vLogMailAfterFOTeleport_FileName%
