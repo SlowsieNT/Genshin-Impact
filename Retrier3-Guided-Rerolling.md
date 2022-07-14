@@ -19,7 +19,7 @@ Help appreciated!
       - Value `WM1440` for Windowed Mode (NOT 1440x900 full screen)
       - Value `FS1920` for 1920x1080 fullscreen mode
    - (OBSOLETE) Make sure `SAVASW64` is correct path to be able to skip opening cutscene.
-     - Currently no longer works, dm me on discord if it actually does work, for me it just doesn't
+     - Due celestia being partially done, cutscene is no longer a video file
    - There are two types of mail logging
       - After naming
       - After *reaching* ar5 
