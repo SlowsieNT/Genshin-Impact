@@ -24,7 +24,7 @@ Help appreciated!
       - After naming
       - After *reaching* ar5 
       - Can be disabled by changing section `LoggingMail` by field `Allow` to `0`
-   - As of June 6th, user is no longer required to click logo to generate mail
+   - User is no longer required to click logo to generate mail
       - This can be disabled by changing section `LazyQMG` by field `Allow` to `0`
       - All that needs to be done is press F2 at registration form, link will open in the background
          - It is recommended to install `quickfmg.js` to avoid alt-tab
