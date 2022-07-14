@@ -18,7 +18,7 @@ Help appreciated!
    - Choose screen resolution by changing section `Screen` by field `Resolution`
       - Value `WM1440` for Windowed Mode (NOT 1440x900 full screen)
       - Value `FS1920` for 1920x1080 fullscreen mode
-   - Make sure `SAVASW64` is correct path to be able to skip opening cutscene.
+   - (OBSOLETE) Make sure `SAVASW64` is correct path to be able to skip opening cutscene.
      - Currently no longer works, dm me on discord if it actually does work, for me it just doesn't
    - There are two types of mail logging
       - After naming
