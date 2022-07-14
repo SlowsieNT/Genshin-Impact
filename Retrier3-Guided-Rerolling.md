@@ -46,8 +46,9 @@ Please read all!
 3. Solve CAPTCHA
 4. Let the script do Login, and you solve CAPTCHA, again
 5. Let the script enter Game, do not interact
-    - Script will enter the name, and screen will go black
-6. Play the game after the cutscene
+    - Script will enter the name
+    - You may click during "click to begin" after login, yes! Not required.
+6. Play the game after cutscenes are over (beach)
 7. Waypoint tutorial popup is handled by the script, need not interact
     - Keep holding W like always
 8. Dialogues are handled by the script (AR5 works flawlessly)
