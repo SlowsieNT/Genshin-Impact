@@ -65,7 +65,7 @@ Please read all!
     - Then will auto enter code `genshingift` and confirm, and double escape!
 13. Open the map, and teleport to the waypoint near the fountain
     - Script will auto confirm teleport
-       - Script will automatically RESET
+       - Script will automatically RESET ("standing by" mode)
 14. Go Claim adventure rank rewards (50 currency, and 1 wish)
 
 The end.
