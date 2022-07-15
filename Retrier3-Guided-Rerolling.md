@@ -63,9 +63,9 @@ Please read all!
 12. Manually open settings
     - It should automatically go to Account tab and click redeem
     - Then will auto enter code `genshingift` and confirm, and double escape!
-13. Open the map, and teleport to the waypoint near the fountain
+13. Optionally: Open the map, and teleport to the waypoint near the fountain
     - Script will auto confirm teleport
        - Script will automatically RESET ("standing by" mode)
-14. Go Claim adventure rank rewards (50 currency, and 1 wish)
+14. Optionally: Claim adventure rank rewards (50 currency, and 1 wish)
 
 The end.
