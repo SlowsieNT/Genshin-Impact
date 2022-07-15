@@ -68,4 +68,5 @@ Please read all!
        - Script will automatically RESET ("standing by" mode)
 14. Optionally: Claim adventure rank rewards (50 currency, and 1 wish)
 
+If step 13 is skipped, manual reset (pressing the `Home` key) is required.<br>
 The end.
