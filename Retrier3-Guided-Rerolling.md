@@ -4,7 +4,7 @@
 
 ## IMPORTANT
 Read issue: [#6](https://github.com/SlowsieNT/Genshin-Impact/issues/6)<br>
-Help appreciated!
+It also contains my discord username.
 
 ## Notes
 - Script must be run as Administrator
