@@ -2,7 +2,7 @@
 ## Welcome!
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin.guide)
 
-## IMPORTANT
+## IMPORTANT (tbh needn't read)
 Reason for leaving: "they just couldn't care less"<br>
 *"Nothing lasts forever."*<br>
 *(nothing on **physical** plane lasts forever; but on ethereal plane; one who seeks wisdom will know the meaning of this)*
