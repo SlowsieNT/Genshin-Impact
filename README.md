@@ -1,23 +1,19 @@
 # Genshin Impact Script(s)
-**Date(s)**: 13-jul-2022<br>
-**Change(s)**: Update hooks<br>
+**Date(s)**: 23-jul-2022<br>
+**Change(s)**: Readme "important"<br>
 **Status**: Green<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
 `LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
-BEWARE: In the future updates may be delayed for months!<br>
-ALSO: Read issues!<br>
+**I won't be updating until further notice!**<br>
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
 (On github profile)
 
 ## Plans?
-May add feature to enter domain, and handle popups (no resin, exit)
-- May be useful for weekly mission (Monstadt weapon mat domain lowest level)
-- No eta
-
+None.
 
 ## Links / Download?
 Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
