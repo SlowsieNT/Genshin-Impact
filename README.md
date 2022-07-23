@@ -6,7 +6,7 @@
 
 ## IMPORTANT
 `LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
-**I won't be updating until further notice!**<br>
+**I WON'T be UPDATING anything until further notice! May take very long time.**<br>
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
