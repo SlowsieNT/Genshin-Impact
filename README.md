@@ -1,12 +1,12 @@
 # Genshin Impact Script(s)
 **Date(s)**: 23-jul-2022<br>
-**Change(s)**: Readme "important"<br>
+**Change(s)**: Readme "important", FAQ<br>
 **Status**: Green<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
 `LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
-**I WON'T be UPDATING anything until further notice! May take very long time.**<br>
+**Seems like this is the end, too tired, 'maybe' I will return, who knows.**<br>
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
@@ -44,7 +44,7 @@ A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/mai
 Q: Will the script(s) be updated in the future?<br>
 A: Yes - to keep it alive, but updates may be delayed in the future.<br><br>
 Q: When will cease support take place?<br>
-A: Approximately Q2 of 2023.<br><br>
+A: Now.<br><br>
 Q: Can it be ported over mobile?<br>
 A: No, as of now there is no appropriate tool.<br><br>
 Q: Can it be made to do entire reroll?<br>
