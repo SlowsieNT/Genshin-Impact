@@ -3,8 +3,9 @@
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin.guide)
 
 ## IMPORTANT
-Read issue: [#6](https://github.com/SlowsieNT/Genshin-Impact/issues/6)<br>
-It also contains my discord username.
+Reason for leaving: "they just couldn't care less"<br>
+*"Nothing lasts forever."*<br>
+*(nothing on **physical** plane lasts forever; but on ethereal plane; one who seeks wisdom will know the meaning of this)*
 
 ## Notes
 - Script must be run as Administrator
