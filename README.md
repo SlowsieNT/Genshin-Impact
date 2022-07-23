@@ -1,7 +1,7 @@
 # Genshin Impact Script(s)
 **Date(s)**: 23-jul-2022<br>
 **Change(s)**: Readme "important", FAQ<br>
-**Status**: Green<br>
+**Status**: Green until Game v3.0<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 
 ## IMPORTANT
