@@ -1,3 +1,6 @@
+# Sunsetting the 'project'
+Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
+Thank you all for supporting this 'project', take care!!1!11<br> 
 # Genshin Impact Script(s)
 **Date(s)**: 23-jul-2022<br>
 **Change(s)**: Readme "important", FAQ<br>
@@ -10,7 +13,7 @@
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
-(On github profile)
+(On github profile, currently removed)
 
 ## Plans?
 None.
