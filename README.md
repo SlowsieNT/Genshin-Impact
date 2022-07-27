@@ -1,6 +1,9 @@
 # Sunsetting the 'project'
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
-Thank you all for supporting this 'project', take care!!1!11<br> 
+Thank you all for supporting this 'project', take care!!1!11<br>
+## Reason?
+There is a saying "Darkness is fleeting; Light is eternal."<br>
+The part "fleeting" explains that, if you care.<br>
 # Genshin Impact Script(s)
 **Date(s)**: 23-jul-2022<br>
 **Change(s)**: Readme "important", FAQ<br>
