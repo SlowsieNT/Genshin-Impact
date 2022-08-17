@@ -1,25 +1,24 @@
 # Sunsetting the 'project'
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
 Thank you all for supporting this 'project', take care!!1!11<br>
+For those who are interested in learning how to self-maintain, refer to my github profile and find contact information.<br>
 ## Reason?
 There is a saying "Darkness is fleeting; Light is eternal."<br>
-The part "fleeting" explains that, if you care.<br>
+The part "fleeting" explains that, if you care (to understand).<br>
 # Genshin Impact Script(s)
+## This is free and unencumbered software released into the public domain.
 **Date(s)**: 23-jul-2022<br>
 **Change(s)**: Readme "important", FAQ<br>
-**Status**: Green until Game v3.0<br>
+**Status**: SUNSETTING (estimated - Game v3.2)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
-
 ## IMPORTANT
 `LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
 **Seems like this is the end, too tired, 'maybe' I will return, who knows.**<br>
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
-(On github profile, currently removed)
+(On github profile)
 
-## Plans?
-None.
 
 ## Links / Download?
 Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshin-Impact/blob/main/Retrier3-Guided-Rerolling.md)<br>
@@ -50,7 +49,7 @@ A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/mai
 Q: Will the script(s) be updated in the future?<br>
 A: Yes - to keep it alive, but updates may be delayed in the future.<br><br>
 Q: When will cease support take place?<br>
-A: Now.<br><br>
+A: Starting from game v3.x onwards.<br><br>
 Q: Can it be ported over mobile?<br>
 A: No, as of now there is no appropriate tool.<br><br>
 Q: Can it be made to do entire reroll?<br>
@@ -78,4 +77,4 @@ Once you click on the Logo, it will copy the new generated mail automatically<br
 IMPORTANT: It will copy verification code for genshin impact account, no worries
 
 ## License
-0-BSD<br>
+Unlicense, no rights reserved.<br>
