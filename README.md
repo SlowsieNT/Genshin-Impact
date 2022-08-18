@@ -1,7 +1,7 @@
 # Sunsetting the 'project'
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
 Thank you all for supporting this 'project', take care!!1!11<br>
-For those who are interested in learning how to self-maintain, refer to my github profile and find contact information.<br>
+Also updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 ## Reason?
 There is a saying "Darkness is fleeting; Light is eternal."<br>
 The part "fleeting" explains that, if you care (to understand).<br>
@@ -12,8 +12,8 @@ The part "fleeting" explains that, if you care (to understand).<br>
 **Status**: SUNSETTING (estimated - Game v3.2)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
-`LazyQMG` MAY cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
-**Seems like this is the end, too tired, 'maybe' I will return, who knows.**<br>
+`LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
+Ladies and gentlemen, it's almost "My time has come" moment.
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
