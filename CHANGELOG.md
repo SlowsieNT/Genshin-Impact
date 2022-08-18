@@ -6,11 +6,14 @@
 - Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 03-jun-2022)
+## [js] quickfmg (Latest: 17-aug-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (17-aug-2022)
+- Add verify code copy for Tower of Fantasy!
+- Remove expired mails (remaining uptime less than 366days)
 #### (03-jun-2022)
 - Update check #1, title of fake mail website will show "UPDATE" if script is updated (on github)
   - Message lasts for 5 seconds, title will reset.
@@ -23,9 +26,11 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 13-jul-2022)
+## Retrier3 (Latest: 17-aug-2022)
 NOTE:
 **Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+#### [Game: **v2.8**] (17-aug-2022)
+- Remove expired mails (remaining uptime less than 366days)
 #### [Game: **v2.8**] (13-jul-2022)
 - Readjusted pixel hook(s)
   - Too many nerfs to write
