@@ -8,7 +8,7 @@ The part "fleeting" explains that, if you care (to understand).<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 17-aug-2022<br>
-**Change(s)**: Rise of ToF<br>
+**Change(s)**: "Rise of ToF"<br>
 **Status**: SUNSETTING (estimated - Game v3.2)<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
