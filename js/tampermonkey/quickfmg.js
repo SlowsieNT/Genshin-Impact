@@ -23,7 +23,7 @@
 	'use strict';
 	// remove the flashbang:
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1660775374971, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1660911631801, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name, LHost = location.hostname;
 	function UpdateAvailable() {
 		return (0||LiveLU) > LAST_UPDATE;
@@ -59,6 +59,33 @@
 			}
 		});
 	});
+	$(function(){
+		if (0 === EPType) FakeMailGeneratorCom();
+		else if (1 === EPType) GeneratorEmail();
+		else if (2 === EPType) EmailFake();
+		GM_setClipboard(($("#email_ch_text").text()||$("#cxtEmail").text()||"").trim());
+		RunVCHandlers();
+	});
+	function RunVCHandlers() {
+		var vTmrChk2 = setInterval(function () {
+			if (-1 === document.title.toLowerCase().indexOf("tower of fantasy"))
+				return;
+			// brute force the code location
+			var codes = Array.apply(0, $("#email-table *")).map(function(y, x){
+				// assume x positive, and length less than 7
+				if (+x && 7 > (x = y.innerText.trim()).length)
+					return +x;
+			}).filter(function(x){return x;});
+			if (0 in codes)
+				GM_setClipboard(codes[0]), clearInterval(vTmrChk2);
+		}, 2e2);
+		// copy mail handler:
+		var vTmrChk1 = setInterval(function () {
+			var vParagraph = $("[class*=subj_div]:contains(ifica)");
+			if (vParagraph.length)
+				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
+		}, 2e2);
+	}
 	var Generator = new function () {
 		var _ = this;
 		function RandomStr(aLength) {
@@ -153,12 +180,6 @@
 		vNL.click(function () {
 			Generator.NavigateMail1(prompt("Enter mail to load:"));
 		}).css("background-color", "green").attr("href", "#");
-		// copy mail handler:
-		var vTmrChk1 = setInterval(function () {
-			var vParagraph = $("h1:contains(ifica)");
-			if (vParagraph.length)
-				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
-		}, 255);
 	}
 	// for: fakemailgenerator.com
 	function FakeMailGeneratorCom() {
@@ -169,12 +190,6 @@
 			// navigate to new mail
 			location.href = vMail.URL;
 		}).css("background-color", "green").attr("href", "#");
-		// copy mail handler:
-		var vTmrChk1 = setInterval(function () {
-			var vParagraph = $(".left-align p:contains(ifica)");
-			if (vParagraph.length)
-				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
-		}, 255);
 	}
 	function EmailFake(){
 		// once user click on logo, it will redirect to random email link
@@ -189,31 +204,7 @@
 		vNL.click(function () {
 			Generator.NavigateMail2(prompt("Enter mail to load:"));
 		}).css("background-color", "green").attr("href", "#");
-		var vTmrChk2 = setInterval(function () {
-			if (-1 === document.title.toLowerCase().indexOf("tower of fantasy"))
-				return;
-			// brute force the code location
-			var codes = Array.apply(0, $("#email-table *")).map(function(y, x){
-				// assume x positive, and length less than 7
-				if (+x && 7 > (x = y.innerText.trim()).length)
-					return +x;
-			}).filter(function(x){return x;});
-			if (0 in codes)
-				GM_setClipboard(codes[0]), clearInterval(vTmrChk2);
-		}, 2e2);
-		// copy mail handler:
-		var vTmrChk1 = setInterval(function () {
-			var vParagraph = $("[class*=subj_div]:contains(ifica)");
-			if (vParagraph.length)
-				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
-		}, 2e2);
 	}
-	$(function(){
-		if (0 === EPType) FakeMailGeneratorCom();
-		else if (1 === EPType) GeneratorEmail();
-		else if (2 === EPType) EmailFake();
-		GM_setClipboard(($("#email_ch_text").text()||$("#cxtEmail").text()||"").trim());
-	});
 	function DbgFetchMails(aFunc, aErrFunc) {
 		$.get("/", function (aResp) {
 			var d = new DOMParser().parseFromString(aResp, "text/html");
