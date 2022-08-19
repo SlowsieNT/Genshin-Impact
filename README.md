@@ -4,7 +4,7 @@ Also updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 Estimated: Game v3.2
 ## Final words
 Thank you, including those who asked for help!<br>
-Also I may update few files just in case I ever need it.<br>
+Some IRL fact: "Only few can escape Rebirth."<br>
 FYI: I don't play games for long, not even ToF *(you did notice **quickfmg** being adjusted for ToF rerolling)*.
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
