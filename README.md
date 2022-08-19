@@ -1,14 +1,16 @@
 # Sunsetting the 'project'
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
 Also updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
+Estimated: Game v3.2
 ## Final words
 Thank you, including those who asked for help!<br>
-Also I may update few files just in case I ever need it.
+Also I may update few files just in case I ever need it.<br>
+FYI: I don't play games for long, not even ToF (you did notice **quickfmg** being adjusted for ToF rerolling).
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 17/19-aug-2022<br>
 **Change(s)**: "Rise of ToF", forgor<br>
-**Status**: SUNSETTING (estimated - Game v3.2)<br>
+**Status**: SUNSETTING<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
