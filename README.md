@@ -1,10 +1,9 @@
 # Sunsetting the 'project'
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
-Thank you all for supporting this 'project', take care!!1!11<br>
 Also updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
-## Reason?
-There is a saying "Darkness is fleeting; Light is eternal."<br>
-The part "fleeting" explains that, if you care (to understand).<br>
+## Final words
+Thank you, including those who asked for help!<br>
+Also I may update few files just in case I ever need it.
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 17/19-aug-2022<br>
@@ -77,4 +76,4 @@ Once you click on the Logo, it will copy the new generated mail automatically<br
 IMPORTANT: It will copy verification code for genshin impact account, no worries
 
 ## License
-Unlicense, no rights reserved.<br>
+All of files are **Unlicense**d. No rights are reserved.<br>
