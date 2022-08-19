@@ -6,12 +6,13 @@
 - Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 17-aug-2022)
+## [js] quickfmg (Latest: 19-aug-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
-#### (17-aug-2022)
+#### (19-aug, 17-aug-2022)
+- (19-aug) Forgor to remove irrelevant code and do polish
 - Add verify code copy for Tower of Fantasy!
 - Remove expired mails (remaining uptime less than 366days)
 #### (03-jun-2022)
