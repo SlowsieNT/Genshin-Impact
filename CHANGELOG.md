@@ -27,9 +27,10 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 17-aug-2022)
-NOTE:
-**Retrier2.ahk** (old) can finally rest in piece, or in peace, but not in peas.<br>
+## Retrier3 (Latest: 24-aug-2022)
+#### [Game: **v3.0**] (24-aug-2022)
+- Readjusted pixel hook(s)
+  - `UIIGOpenedJournal`
 #### [Game: **v2.8**] (17-aug-2022)
 - Remove expired mails (remaining uptime less than 366days)
 #### [Game: **v2.8**] (13-jul-2022)
