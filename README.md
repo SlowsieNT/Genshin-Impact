@@ -8,8 +8,8 @@ Some IRL fact: "Only few can escape Rebirth."<br>
 FYI: I don't play games for long, not even ToF *(you did notice **quickfmg** being adjusted for ToF rerolling)*.
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
-**Date(s)**: 17/19-aug-2022<br>
-**Change(s)**: "Rise of ToF", forgor<br>
+**Date(s)**:  24-aug-2022<br>
+**Change(s)**: game v3, "Rise of ToF", forgor<br>
 **Status**: SUNSETTING<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
