@@ -1,6 +1,7 @@
 # Sunsetting the 'project'
+Once the Sunset phase is complete, author will no longer provide updates unless they so desire.<br>
 Since **anniversary** is coming, only that version **MIGHT** receive update.<br>
-Also updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
+Again, updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 Estimated: Game v3.2
 ## Final words
 Thank you, including those who asked for help!<br>
