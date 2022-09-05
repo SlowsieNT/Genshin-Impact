@@ -10,8 +10,12 @@ Password=$P+w!614$28754!14001^
 ; FS1920=1920x1080 FULL SCREEN
 Resolution=FS1920
 
-[Game]
-SAVASW64=D:\Program Files\Genshin Impact\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64
+[Sounds]
+AfterCutscene=icecubes.mp3
+AfterFendoff=icecubes.mp3
+; play sound after (milliseconds):
+AfterCutsceneDelay=29000
+AfterFendoffDelay=18000
 
 [LoggingMail]; 1=yes, 0=no
 ; Triggers only after black screen (after naming)
