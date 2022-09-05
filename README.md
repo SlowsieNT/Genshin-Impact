@@ -1,5 +1,3 @@
-# Undergoing maintenance - 5th september (now)
-Patience until all is resolved.
 # Sunsetting the 'project'
 Once the Sunset phase is complete, author will no longer provide updates unless they so desire.<br>
 Again, updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
@@ -10,8 +8,8 @@ Some IRL fact: "Only few can escape Rebirth."<br>
 FYI: I don't play games for long, not even ToF *(you did notice **quickfmg** being adjusted for ToF rerolling)*.
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
-**Date(s)**:  24-aug-2022<br>
-**Change(s)**: game v3, "Rise of ToF", forgor<br>
+**Date(s)**:  05-sep-2022<br>
+**Change(s)**: too long, see changelog; "Rise of ToF"<br>
 **Status**: SUNSETTING<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
