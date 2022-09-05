@@ -17,8 +17,6 @@
 ; ClickEnterText(aText, aWinID, aX, aY, aWinX, aWinY, aMouseMove=1, aDelay=4, aDelay2=0)
 ; ClickEnterText2(aText, aWinID, aX, aY, aWinX, aWinY, aDelay=4, aDelay2=24)
 ; PixelColor(byref aX, byref aY, aAtMouseCoords=0)
-; GenshinOpeningBypass(aStandaloneWindows64Path)
-; GenshinOpeningBypassRevoke(aStandaloneWindows64Path)
 ; -------------------------------------------------------------------
 AnalyzeScreen:
 Sysget, vScreenWidth, 78
@@ -207,17 +205,30 @@ if (vPixelette["UIIGBtnConfirm"]) {
 			FileAppend, %vCurrentEmail%`r`n, %vLogMailFileName%
 	}
 }
-if (vPixelette["UIIGBlackscreen"])
-	GenshinOpeningBypassRevoke(vStandalone64Path)
-
+; vBeepOpening, vBeepAttackedWHP, AttackedWHPEpoch
+; vSoundsCutscene, vSoundsCutsceneDelay
+; vSoundsFendoff, vSoundsFendoffDelay
+if (vPixelette["UIIGBlackscreen"]) {
+	if (!vBeepOpening) {
+		vBeepOpening := 1
+		PlaySound(vSoundsCutscene, vSoundsCutsceneDelay)
+	}
+}
 if (vPixelette["UIIGTutorialWaypoint"]) {
-	GenshinOpeningBypassRevoke(vStandalone64Path)
 	if (1 == vRID)
 		ELClick2(vWinID, 900, 600, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
 		ELClick2(vWinID, 379, 457, vWinX, vWinY, Delay:=111)
 }
 if (vPixelette["UIIGAutoplay"]) {
+	if (vAttackedWideHPBar && !vBeepAttackedWHP) {
+		if (!AttackedWHPEpoch)
+			AttackedWHPEpoch := utcnow()
+		if (utcnow() - AttackedWHPEpoch > vSoundsFendoffDelay) {
+			PlaySound(vSoundsFendoff)
+			vBeepAttackedWHP := 1
+		}
+	}
 	SendKey(vWinID, "f")
 	sleep 111
 	SendKey(vWinID, "f")
@@ -274,7 +285,7 @@ if ((!vSpaced || !vPressSpaceOnce) && vPixelette["UIIGPressSpace"]) {
 }
 if (vPixelette["UIIGWideHPBar"]) {
 	vAttackedWideHPBar := 1
-	vTimeToKill := 8+18
+	vTimeToKill := 8+20
 	vAttackingEpoch := utcnow()/1000
 	while (utcnow()/1000-vAttackingEpoch < vTimeToKill)
 		Loop, 8 {
