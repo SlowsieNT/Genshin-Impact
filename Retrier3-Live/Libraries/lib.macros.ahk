@@ -41,7 +41,11 @@ SpamLMBEmit(aID, aX, aY, aWX, aWY, aTimes=5, aDelay=220) {
 		Sleep aDelay
 	}
 }
-WinActiveGets(byref aCWndID=0, byref aWX=0, byref aWY=0, byref aW=0, byref aH=0) {
+WinActiveGets(byref aCWndID=0, byref aWX=0, byref aWY=0, byref aW=0, byref aH=0, byref aProcessName="", byref aProcessPath="", byref aProcessId=0, byref aCount=0) {
+	WinGet, aCount, Count, A ; A - active window
+	WinGet, aProcessPath, ProcessPath, A ; A - active window
+	WinGet, aProcessName, ProcessName, A ; A - active window
+	WinGet, aProcessId, PID, A ; A - active window
 	WinGet, aCWndID, ID, A ; A - active window
 	WinGetPos, aWX, aWY, aW, aH, A
 }
