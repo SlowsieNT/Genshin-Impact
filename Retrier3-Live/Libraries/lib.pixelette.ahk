@@ -46,10 +46,10 @@ class Pixelette {
 		for vK, vV in this.Palette {
 			vCount := 0
 			vColors := vV.Colors, vName := vV.Name
-			vPFP := PosStr(vName, aPostfix)
-			vPFLP := strlen(aPostfix) - (strlen(vName) - vPFP)
-			if (-1 != vPFP && 1 == vPFLP)
+			postfix = _%aPostfix%
+			if (EndsWith(vName, postfix)) {
 				this.FindColors(vName, vColors)
+			}
 			else if (!aPostfix)
 				this.FindColors(vName, vColors)
 		}
