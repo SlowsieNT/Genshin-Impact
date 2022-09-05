@@ -4,7 +4,6 @@
 #Include, Libraries/lib.ini.ahk
 #include, Libraries/lib.time.ahk
 #include, Libraries/lib.macros.ahk
-#include, Libraries/mod.cutscene.ahk
 #include, Libraries/mod.qmg.ahk
 #Include, Retrier3.Logic.ahk
 #MaxHotkeysPerInterval, 999999
@@ -21,10 +20,17 @@ Menu, Tray, Icon, Shell32.dll, 172
 EmptyWorkingSet() {
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
+PlaySound(aFilename, aDelay=0, aDelay2=0) {
+	sleep %aDelay%
+	SoundPlay, %aFilename%
+	sleep %aDelay2%
+}
 GetScriptIniFN(aExt=".ini") {
 	vX = %A_ScriptFullPath%%aExt%
 	return vX
 }
+
+
 ;----------------------------------------------------------------------------
 F2::
 ; inf
@@ -36,6 +42,11 @@ vPlayerFemale := "1" == vInf.Get("Player;Female;1")
 vNickname := vInf.Get("Player;Name;Lumine")
 vPassword := vInf.Get("Account;Password", "$P+w!614$28754!14001^")
 vPressSpaceOnce := "1" == vInf.Get("HiddenSettings;PressSpaceOnce;0")
+; Sounds
+vSoundsCutscene := vInf.Get("Sounds;AfterCutscene;icecubes.mp3")
+vSoundsCutsceneDelay := vInf.Get("Sounds;AfterCutsceneDelay;1000")
+vSoundsFendoff := vInf.Get("Sounds;AfterFendoff;icecubes.mp3")
+vSoundsFendoffDelay := vInf.Get("Sounds;AfterFendoffDelay;1000")
 ; LazyQMG
 vLazyQMGAllow := "1" == vInf.Get("LazyQMG;Allow;1")
 vLazyQMGType := vInf.Get("LazyQMG;MailType;2")
@@ -55,6 +66,7 @@ vResIdx := {"FS1920":1, "WM1440":2}
 vRID := vResIdx[vResolutionPostfix]
 vCaptchaRegisterShown := 0, vCaptchaLoginShown := 0
 vAttackedWideHPBar := 0, vSpaced := 0, vLazyQMGLinkOpened := 0, vCodeRedeemed := 0
+vBeepOpening := 0, vBeepAttackedWHP := 0, AttackedWHPEpoch := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
 ; load ini with colors
