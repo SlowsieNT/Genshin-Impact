@@ -46,3 +46,10 @@ JoinStr(aArray, aDelimiter) {
 	}
 	return vR
 }
+
+EndsWith(aString, aWith) {
+	lens := strlen(aString), lenw := strlen(aWith)
+	sstr := SubStr(aString, 1 + lens - lenw)
+	flag := aWith == sstr
+	return flag
+}
