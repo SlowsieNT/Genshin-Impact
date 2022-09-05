@@ -1,3 +1,5 @@
+# Undergoing maintenance - 5th september (now)
+Patience until all is resolved.
 # Sunsetting the 'project'
 Once the Sunset phase is complete, author will no longer provide updates unless they so desire.<br>
 Again, updated: [/SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
