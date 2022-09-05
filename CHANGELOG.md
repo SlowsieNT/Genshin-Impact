@@ -6,11 +6,14 @@
 - Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 19-aug-2022)
+## [js] quickfmg (Latest: 05-sep-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (05-sep-2022)
+- Remove expired mails (remaining uptime less than 420days)
+- Add new mails
 #### (19-aug, 17-aug-2022)
 - (19-aug) Forgor to remove irrelevant code and do polish
 - Add verify code copy for Tower of Fantasy!
@@ -27,7 +30,15 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 24-aug-2022)
+## Retrier3 (Latest: 05-sep-2022)
+#### [Game: **v3.0**] (05-sep-2022)
+- Yeet `mod.cutscene.ahk` as it is useless!
+- Readjusted pixel hooks
+- Added feature `Sounds` for `.inf`!
+- Added `icecubes.mp3` for `Sounds` feature for people that reroll in pitch black room, so they can close eyes and wait for sound notification.
+  - Finally we can reroll during nighttime with less eyedamage!
+- Remove expired mails from `LazyQMG` (remaining uptime less than 420days)
+- Add new mails to `LazyQMG`
 #### [Game: **v3.0**] (24-aug-2022)
 - Readjusted pixel hook(s)
   - `UIIGOpenedJournal`
