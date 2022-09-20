@@ -1,7 +1,7 @@
 # No longer under active development
-The Sunset phase is complete.
-There may be one more update or so, we'll see.
-Again, thank you for your support and engagement.
+The Sunset phase is complete.<br>
+There may be one more update or so, we'll see.<br>
+Again, thank you for your support and engagement.<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 05-sep-2022<br>
