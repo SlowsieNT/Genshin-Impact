@@ -1,5 +1,4 @@
 # No longer under active development
-The Sunset phase is complete.<br>
 There may be one more update or so, we'll see.<br>
 Again, thank you for your support and engagement.<br>
 May we meet again!<br>
