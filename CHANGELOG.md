@@ -31,6 +31,8 @@ Supported domains:
 - Add a lot of mails
 - Add "load mail" feature
 ## Retrier3 (Latest: 05-sep-2022)
+#### [Game: **v3.0**] (sep-2022)
+- End of active support.
 #### [Game: **v3.0**] (05-sep-2022)
 - Yeet `mod.cutscene.ahk` as it is useless!
 - Readjusted pixel hooks
