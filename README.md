@@ -2,10 +2,11 @@
 The Sunset phase is complete.<br>
 There may be one more update or so, we'll see.<br>
 Again, thank you for your support and engagement.<br>
+May we meet again!<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 05-sep-2022<br>
-**Change(s)**: too long, see changelog; "Rise of ToF"<br>
+**Change(s)**: See changelog; "Rise of ToF"<br>
 **Status**: End of Life<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
