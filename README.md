@@ -1,5 +1,5 @@
 # No longer under active development
-*Confirmed that v3.1 works.*<br>
+*Confirmed that v3.1 works, see changelog.*<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
