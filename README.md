@@ -1,6 +1,6 @@
 # No longer under active development
-There may be one more update or so, we'll see.<br>
-Again, thank you for your support and engagement.<br>
+*Confirmed that v3.1 works.*<br>
+Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
