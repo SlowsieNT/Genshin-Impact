@@ -1,5 +1,5 @@
 # No longer under active development
-*Game v3.3 is now supported, for x-mas (unintended update).*<br>
+***Game v3.3 is now supported, for x-mas (unintended update).***<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
@@ -56,7 +56,7 @@ A: N/A. But yes if you get successfully blackmailed.<br><br>
 Q: Why is tiktοk a sруwаrе?<br>
 A: Brainwashing. Now back to the original topic.<br><br>
 Q: Is there possibility of further improving the script?<br>
-A: For now, there is.<br>
+A: For now, there is none.<br>
 
 ## genshin-checkin-redeem.js
 (requires Tampermonkey/Greasemonkey Opera/Chrome/Firefox extension)<br>
