@@ -23,10 +23,13 @@
 	'use strict';
 	// remove the flashbang:
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1662404282673, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1670506049140, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name, LHost = location.hostname;
 	function UpdateAvailable() {
 		return (0||LiveLU) > LAST_UPDATE;
+	}
+	function RandomUpdateTime() {
+		return Date.now() + Math.random()*300e3 + 60e3;
 	}
 	function UpdateCheck(aFunc) {
 		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js";
@@ -122,8 +125,8 @@
 			function GenerateMD(x) {
 				// 143 to 128 (removed mails with <200d uptime)
 				return (x=[
-					"khoantuta.com","pradabakery.com","gmailvn.net","cudimex.com","enhanceronly.com","wpdork.com","alvinneo.com","colevillecapital.com","transmute.us","plexvenet.com","manghinsu.com","pickuplanet.com","orangdalem.org","kongshuon.com","o0i.es","ebarg.net","btcmod.com","umtutuka.com","nproxi.com","mexcool.com","pianoxltd.com","filevino.com","skipadoo.org","kimachina.com","cupremplus.com","thekangsua.com","typery.com","bedul.net","vietkevin.com","bibliotekadomov.com","posthectomie.info","24hinbox.com","playfuny.com","bizimalem-support.de","asifboot.com","ma2limited.com","mitakian.com","lompikachi.com","shurkou.com","bizisstance.com","boranora.com","maoaokachima.com","email-temp.com","cuenmex.com","packiu.com","mamasuna.com","hotmail.red","cuendita.com","nudinar.net","googl.win","crossfitcoastal.com","greendike.com","mymailcr.com","tubidu.com","emvil.com","hacktoy.com","pow-pows.com","cuedigy.com","onlyu.link","digimexplus.com","mphaotu.com","lompaochi.com","mailpluss.com","aenikaufa.com","dmxs8.com","chantellegribbon.com","capitalistdilemma.com","thecirchotelhollywood.com","stinkypoopoo.com","hallo.singles","rackabzar.com","omtecha.com","guitarsxltd.com","netveplay.com","nx1.us","ffo.kr","onlinecmail.com","saxophonexltd.com","goliszek.net","noisemails.com","arss.me","yt-google.com","degar.xyz","emkunchi.com","usbvap.com","vireonidae.com","816qs.com","playfunplus.com","hoangticusa.com","cggup.com","soccerfit.com","omdiaco.com","speeddataanalytics.com","indozoom.net","skillion.org","falixiao.com","getcashstash.com"
-                ])[x.length*Math.random()>>0];
+					"khoantuta.com","gmailvn.net","enhanceronly.com","alvinneo.com","colevillecapital.com","plexvenet.com","manghinsu.com","pickuplanet.com","kongshuon.com","o0i.es","ebarg.net","btcmod.com","umtutuka.com","pianoxltd.com","filevino.com","kimachina.com","thekangsua.com","vietkevin.com","posthectomie.info","24hinbox.com","bizimalem-support.de","asifboot.com","ma2limited.com","mitakian.com","lompikachi.com","shurkou.com","bizisstance.com","boranora.com","maoaokachima.com","email-temp.com","packiu.com","mamasuna.com","hotmail.red","nudinar.net","googl.win","crossfitcoastal.com","greendike.com","mymailcr.com","tubidu.com","emvil.com","pow-pows.com","onlyu.link","mphaotu.com","lompaochi.com","dmxs8.com","chantellegribbon.com","stinkypoopoo.com","rackabzar.com","omtecha.com","guitarsxltd.com","netveplay.com","nx1.us","ffo.kr","onlinecmail.com","saxophonexltd.com","goliszek.net","noisemails.com","arss.me","yt-google.com","degar.xyz","emkunchi.com","816qs.com","hoangticusa.com","cggup.com","omdiaco.com","speeddataanalytics.com","skillion.org","falixiao.com","getcashstash.com"
+				])[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
 					vLengthRng = 4+Math.random()*4>>0,
@@ -144,7 +147,7 @@
 			function GenerateMD(x) {
 				// removed expired mails
 				return (x=[
-					"24hinbox.com","chantellegribbon.com","wpdork.com","alvinneo.com","freeallapp.com","masjoco.com","packiu.com","emvil.com","bomukic.com","goldinbox.net","colevillecapital.com","kenvanharen.com","luddo.me","manghinsu.com","bizisstance.com","thekangsua.com","boranora.com","nproxi.com","hotmail.red","omdiaco.com","rackabzar.com","dmxs8.com","24mail.top","cudimex.com","bibliotekadomov.com","pickuplanet.com","oanghika.com","nudinar.net","soccerfit.com","transmute.us","filevino.com","playfunplus.com","mexcool.com","partnerct.com","greendike.com","cuendita.com","bedul.net","getcashstash.com","gmailvn.net","asifboot.com","tubidu.com","lompikachi.com","plexvenet.com","usbvap.com","stinkypoopoo.com","devfiltr.com","mailpluss.com","googl.win","happiseektest.com","mamasuna.com","enhanceronly.com","cupremplus.com","omtecha.com","hacktoy.com","skillion.org","asistx.net","mphaotu.com","posthectomie.info","noisemails.com","umtutuka.com","papakiung.com","typery.com","kimsangung.com","pianoxltd.com","guitarsxltd.com","ebarg.net","localtank.com","email-temp.com","cuedigy.com","onlinecmail.com","btcmod.com","kimachina.com","wonderfish-recipe2.com","mymailcr.com","falixiao.com","emkunchi.com","yt-google.com","shanghongs.com","fuadd.me","muvilo.net","saxlift.us","cggup.com","cuenmex.com","crossfitcoastal.com","pharmafactsforum.com","capitalistdilemma.com","yuinhami.com","indozoom.net","livegolftv.com","vietkevin.com","kongshuon.com","cashbackr.com","stamberg.nl","2wslhost.com","orangdalem.org","playfuny.com","coffeepancakewafflebacon.com","skipadoo.org","longaitylo.com","khoantuta.com","ffo.kr"
+					"24hinbox.com","chantellegribbon.com","alvinneo.com","freeallapp.com","masjoco.com","packiu.com","emvil.com","bomukic.com","goldinbox.net","colevillecapital.com","kenvanharen.com","luddo.me","manghinsu.com","bizisstance.com","thekangsua.com","boranora.com","hotmail.red","omdiaco.com","rackabzar.com","dmxs8.com","24mail.top","pickuplanet.com","oanghika.com","nudinar.net","filevino.com","greendike.com","getcashstash.com","gmailvn.net","asifboot.com","tubidu.com","lompikachi.com","plexvenet.com","stinkypoopoo.com","googl.win","happiseektest.com","mamasuna.com","enhanceronly.com","omtecha.com","skillion.org","asistx.net","mphaotu.com","posthectomie.info","noisemails.com","umtutuka.com","papakiung.com","kimsangung.com","pianoxltd.com","guitarsxltd.com","ebarg.net","email-temp.com","onlinecmail.com","btcmod.com","kimachina.com","mymailcr.com","falixiao.com","emkunchi.com","yt-google.com","shanghongs.com","fuadd.me","muvilo.net","saxlift.us","cggup.com","crossfitcoastal.com","yuinhami.com","livegolftv.com","vietkevin.com","kongshuon.com","cashbackr.com","stamberg.nl","coffeepancakewafflebacon.com","longaitylo.com","khoantuta.com","ffo.kr"
 				])[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
@@ -244,6 +247,9 @@
 				setTimeout(Next, 255, ++aIndex);
 		})(0);
 	}
-    //unsafeWindow.DbgFetchMails=DbgFetchMails;
-    //unsafeWindow.DbgBulkValidate=DbgBulkValidate;
+	if ("#dbg" == location.hash) {
+		unsafeWindow.DbgFetchMails=DbgFetchMails;
+    	unsafeWindow.DbgBulkValidate=DbgBulkValidate;
+		console.log(RandomUpdateTime());
+	}
 })();
