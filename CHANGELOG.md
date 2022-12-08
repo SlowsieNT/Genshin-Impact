@@ -6,11 +6,14 @@
 - Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 05-sep-2022)
+## [js] quickfmg (Latest: 08-dec-2022)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (08-dec-2022)
+- Remove expired mails (remaining uptime less than 420days)
+- Enables dbg functions if `location.hash` equals `#dbg`
 #### (05-sep-2022)
 - Remove expired mails (remaining uptime less than 420days)
 - Add new mails
@@ -30,7 +33,13 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 05-sep-2022)
+## Retrier3 (Latest: 08-dec-2022)
+#### [Game: **v3.3**] (08-dec-2022)
+- X-mas update (unscheduled).
+- Readjusted pixel hooks
+- Remove expired mails from `LazyQMG` (remaining uptime less than 420days)
+#### [Game: **v3.2**]
+- No updates were issued.
 #### [Game: **v3.1**] (sep-2022)
 - "They still don't care." (anniversary)
 #### [Game: **v3.0**] (sep-2022)
