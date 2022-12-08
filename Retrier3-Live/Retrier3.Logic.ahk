@@ -52,8 +52,8 @@ DbgColorRange(aPixellete, aX, aY, aRangeY=16, aRangeX=16){
 	}
 }
 if (0 && vPixelette.Scr) {
-	if vPixelette["UIIGWideHPBar"]
-		msgbox vPixelette["UIIGWideHPBar"]
+	if vPixelette["UILExists"]
+		msgbox vPixelette["UILExists"]
 	else {
 		DbgColorRange(vPixelette, 898, 508, 10, 10)
 	}
@@ -75,13 +75,13 @@ if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@
 		ELClick2(vWinID, 1006, 673, vWinX, vWinY, Delay:=200)
 	}
 	if (2 == vRID) {
-		ClickEnterText2(clipboard, vWinID, 547, 363, vWinX, vWinY, 4, Delay:=333)
-		ELClick2(vWinID, 622, 586, vWinX, vWinY, Delay:=200)
+		ClickEnterText2(clipboard, vWinID, 636, 422, vWinX, vWinY, 4, Delay:=333)
+		ELClick2(vWinID, 576, 692, vWinX, vWinY, Delay:=200)
 	}
 	
 }
 ; Email filling
-if (vPixelette["UIREmptyMail"] && InStr(clipboard, "@")) {
+if (vPixelette["UIREmptyMail"] && 6 != StrLen(clipboard) && InStr(clipboard, "@")) {
 	FocusWindow(vWinID)
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	if vLazyQMGAllow
@@ -93,37 +93,37 @@ if (vPixelette["UIREmptyMail"] && InStr(clipboard, "@")) {
 	if (1 == vRID)
 		ClickEnterText2(clipboard, vWinID, 777, 313, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
-		ClickEnterText2(clipboard, vWinID, 550, 299, vWinX, vWinY, 4, Delay:=111)
+		ClickEnterText2(clipboard, vWinID, 565, 338, vWinX, vWinY, 4, Delay:=111)
 }
 ; Password filling
 if (vPixelette["UIREmptyPass"]) {
 	if (1 == vRID)
 		ClickEnterText2(vPassword, vWinID, 750, 482, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
-		ClickEnterText2(vPassword, vWinID, 541, 429, vWinX, vWinY, 4, Delay:=111)
+		ClickEnterText2(vPassword, vWinID, 618, 498, vWinX, vWinY, 4, Delay:=111)
 }
 if (vPixelette["UIREmptyCPass"]) {
 	if (1 == vRID)
 		ClickEnterText2(vPassword, vWinID, 748, 557, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
-		ClickEnterText2(vPassword, vWinID, 548, 490, vWinX, vWinY, 4, Delay:=111)
+		ClickEnterText2(vPassword, vWinID, 641, 570, vWinX, vWinY, 4, Delay:=111)
 }
 ; Check agree checkbox
 if (vPixelette["UIREmptyAgree"]) {
 	if (1 == vRID)
 		ELClick2(vWinID, 727, 594, vWinX, vWinY, Delay:=244)
 	if (2 == vRID)
-		ELClick2(vWinID, 530, 522, vWinX, vWinY, Delay:=244)
+		ELClick2(vWinID, 491, 619, vWinX, vWinY, Delay:=244)
 }
 ; Send code
 if (vCurrentEmail && vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
 	if (1 == vRID) {
-		ELClick2(vWinID, 1112, 389, vWinX, vWinY, Delay:=335)
-		ELClick2(vWinID, 1112, 389, vWinX, vWinY, Delay:=1000)
+		ELClick2(vWinID, 1148, 391, vWinX, vWinY, Delay:=335)
+		ELClick2(vWinID, 1148, 391, vWinX, vWinY, Delay:=1000)
 	}
 	if (2 == vRID) {
-		ELClick2(vWinID, 847, 353, vWinX, vWinY, Delay:=335)
-		ELClick2(vWinID, 847, 353, vWinX, vWinY, Delay:=1000)
+		ELClick2(vWinID, 911, 418, vWinX, vWinY, Delay:=335)
+		ELClick2(vWinID, 911, 418, vWinX, vWinY, Delay:=1000)
 	}
 }
 if (vPixelette["UIRExistsCaptcha"])
@@ -164,14 +164,14 @@ if (vPixelette["UIAAgreement"]) {
 	if (1 == vRID)
 		ELClick2(vWinID, 581, 490, vWinX, vWinY, Delay:=333)
 	if (2 == vRID)
-		ELClick2(vWinID, 437, 442, vWinX, vWinY, Delay:=333)
+		ELClick2(vWinID, 403, 434, vWinX, vWinY, Delay:=333)
 }
 ; Button accept
 if (vPixelette["UIAABtnAgree"]) {
 	if (1 == vRID)
 		ELClick2(vWinID, 1078, 783, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
-		ELClick2(vWinID, 808, 685, vWinX, vWinY, Delay:=111)
+		ELClick2(vWinID, 788, 679, vWinX, vWinY, Delay:=111)
 }
 ; -------------------------------------------------------------------
 ; INGAME
