@@ -4,9 +4,9 @@ Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
-**Date(s)**: 05-sep-2022<br>
+**Date(s)**: 08-dec-2022<br>
 **Change(s)**: See changelog; "Rise of ToF"<br>
-**Status**: End of Life<br>
+**Status**: End of active Support<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
