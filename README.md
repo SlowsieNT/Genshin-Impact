@@ -1,5 +1,5 @@
 # No longer under active development
-*Confirmed that v3.1 works, see changelog.*<br>
+*Game v3.3 is now supported, for x-mas (unintended update).*<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
