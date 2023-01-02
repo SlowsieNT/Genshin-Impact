@@ -60,8 +60,13 @@ class IniStruct {
 			this.Values.Push([vSI, aName, aValue])
 	}
 }
-INIParseFile(aFilename) {
-	FileRead, vBuffer, %aFilename%
+INIParseFile(aFilename, aIsBuffer=0) {
+	vBuffer := ""
+	if (aIsBuffer) {
+		vBuffer := aFilename
+	} else {
+		FileRead, vBuffer, %aFilename%
+	}
 	vLineF = `n
 	vCurrentSection := "", vLines := SplitStr(vBuffer, vLineF), vIniStruct := new IniStruct()
 	; we don't do regex, it is evil
