@@ -1,4 +1,5 @@
 # No longer under active development
+# Script is currently being updated, please wait.
 ***Game v3.3 is now supported, for x-mas (unintended update).***<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
