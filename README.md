@@ -1,12 +1,11 @@
 # No longer under active development
-# Script is currently being updated, please wait.
-***Game v3.3 is now supported, for x-mas (unintended update).***<br>
+***Game v3.3 is now supported, new update: 02-jan-2023.***<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
-**Date(s)**: 08-dec-2022<br>
-**Change(s)**: See changelog; "Rise of ToF"<br>
+**Date(s)**: 02-jan-2023<br>
+**Change(s)**: See changelog<br>
 **Status**: End of active Support<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
