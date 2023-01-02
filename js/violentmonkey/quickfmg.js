@@ -23,7 +23,7 @@
 	'use strict';
 	// remove the flashbang:
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1670506049140, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1672685548, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name, LHost = location.hostname;
 	function UpdateAvailable() {
 		return (0||LiveLU) > LAST_UPDATE;
@@ -31,15 +31,34 @@
 	function RandomUpdateTime() {
 		return Date.now() + Math.random()*300e3 + 60e3;
 	}
+	function GetDHMS(aTime) {
+		var d = 0|aTime/86400,
+			h = 0|aTime/3600%24,
+			m = 0|aTime/60%60,
+			s = 0|aTime%60,
+			ms = 0|aTime%1*1000;
+		if (d < 10) d = "0" + d;
+		if (h < 10) h = "0" + h;
+		if (m < 10) m = "0" + m;
+		if (s < 10) s = "0" + s;
+		return d + ":" + h + ":" + m + ":" + s + "." + ms;
+	}
+	function RRStopwatch() {
+		// -6e3 because it usually takes ~6sec for verify code to arrive
+		var epoch = Date.now() - 6e3;
+		setInterval(function () {
+			document.title = GetDHMS(  ((Date.now()-epoch)/1e3).toFixed(3)  );
+		}, 1000/60);
+	}
 	function UpdateCheck(aFunc) {
-		var vURL = "https://github.com/SlowsieNT/Genshin-Impact/raw/main/js/tampermonkey/quickfmg.js";
+		var vURL = "https://raw.githubusercontent.com/SlowsieNT/Genshin-Impact/main/Retrier3-Live/Etc.Updates.ini";
 		GM_xmlhttpRequest({
 			url: vURL,
 			onload: function (aX) {
 				if (200 == aX.status) {
-					var vVer = aX.response.split("var LAST_UPDATE =");
+					var vVer = aX.response.split(/date=(.+)[\r|\n]+/g).filter(Boolean);
 					if (1 in vVer)
-						vVer = +vVer[1].trim().split(",")[0];
+						vVer = +vVer[1];
 					else vVer = 0;
 					LiveLU = vVer;
 					aFunc();
@@ -86,7 +105,7 @@
 		var vTmrChk1 = setInterval(function () {
 			var vParagraph = $("[class*=subj_div]:contains(ifica)");
 			if (vParagraph.length)
-				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1);
+				GM_setClipboard(vParagraph.text().split(" ")[0]), clearInterval(vTmrChk1),RRStopwatch();
 		}, 2e2);
 	}
 	var Generator = new function () {
@@ -123,10 +142,10 @@
 		};
 		_.GenerateMail1 = function () {
 			function GenerateMD(x) {
-				// 143 to 128 (removed mails with <200d uptime)
-				return (x=[
-					"khoantuta.com","gmailvn.net","enhanceronly.com","alvinneo.com","colevillecapital.com","plexvenet.com","manghinsu.com","pickuplanet.com","kongshuon.com","o0i.es","ebarg.net","btcmod.com","umtutuka.com","pianoxltd.com","filevino.com","kimachina.com","thekangsua.com","vietkevin.com","posthectomie.info","24hinbox.com","bizimalem-support.de","asifboot.com","ma2limited.com","mitakian.com","lompikachi.com","shurkou.com","bizisstance.com","boranora.com","maoaokachima.com","email-temp.com","packiu.com","mamasuna.com","hotmail.red","nudinar.net","googl.win","crossfitcoastal.com","greendike.com","mymailcr.com","tubidu.com","emvil.com","pow-pows.com","onlyu.link","mphaotu.com","lompaochi.com","dmxs8.com","chantellegribbon.com","stinkypoopoo.com","rackabzar.com","omtecha.com","guitarsxltd.com","netveplay.com","nx1.us","ffo.kr","onlinecmail.com","saxophonexltd.com","goliszek.net","noisemails.com","arss.me","yt-google.com","degar.xyz","emkunchi.com","816qs.com","hoangticusa.com","cggup.com","omdiaco.com","speeddataanalytics.com","skillion.org","falixiao.com","getcashstash.com"
-				])[x.length*Math.random()>>0];
+				// removed expired mails
+				return (
+					x=["khoantuta.com","gmailvn.net","enhanceronly.com","alvinneo.com","colevillecapital.com","plexvenet.com","manghinsu.com","pickuplanet.com","kongshuon.com","o0i.es","ebarg.net","btcmod.com","umtutuka.com","pianoxltd.com","filevino.com","thekangsua.com","vietkevin.com","posthectomie.info","24hinbox.com","bizimalem-support.de","asifboot.com","ma2limited.com","mitakian.com","lompikachi.com","shurkou.com","bizisstance.com","boranora.com","maoaokachima.com","email-temp.com","packiu.com","mamasuna.com","hotmail.red","nudinar.net","googl.win","crossfitcoastal.com","greendike.com","mymailcr.com","tubidu.com","emvil.com","pow-pows.com","onlyu.link","mphaotu.com","lompaochi.com","dmxs8.com","chantellegribbon.com","stinkypoopoo.com","rackabzar.com","omtecha.com","guitarsxltd.com","netveplay.com","nx1.us","ffo.kr","onlinecmail.com","saxophonexltd.com","goliszek.net","arss.me","yt-google.com","degar.xyz","816qs.com","cggup.com","omdiaco.com","speeddataanalytics.com","skillion.org","falixiao.com","getcashstash.com"]
+				)[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
 					vLengthRng = 4+Math.random()*4>>0,
@@ -146,9 +165,9 @@
 		_.GenerateMail2 = function () {
 			function GenerateMD(x) {
 				// removed expired mails
-				return (x=[
-					"24hinbox.com","chantellegribbon.com","alvinneo.com","freeallapp.com","masjoco.com","packiu.com","emvil.com","bomukic.com","goldinbox.net","colevillecapital.com","kenvanharen.com","luddo.me","manghinsu.com","bizisstance.com","thekangsua.com","boranora.com","hotmail.red","omdiaco.com","rackabzar.com","dmxs8.com","24mail.top","pickuplanet.com","oanghika.com","nudinar.net","filevino.com","greendike.com","getcashstash.com","gmailvn.net","asifboot.com","tubidu.com","lompikachi.com","plexvenet.com","stinkypoopoo.com","googl.win","happiseektest.com","mamasuna.com","enhanceronly.com","omtecha.com","skillion.org","asistx.net","mphaotu.com","posthectomie.info","noisemails.com","umtutuka.com","papakiung.com","kimsangung.com","pianoxltd.com","guitarsxltd.com","ebarg.net","email-temp.com","onlinecmail.com","btcmod.com","kimachina.com","mymailcr.com","falixiao.com","emkunchi.com","yt-google.com","shanghongs.com","fuadd.me","muvilo.net","saxlift.us","cggup.com","crossfitcoastal.com","yuinhami.com","livegolftv.com","vietkevin.com","kongshuon.com","cashbackr.com","stamberg.nl","coffeepancakewafflebacon.com","longaitylo.com","khoantuta.com","ffo.kr"
-				])[x.length*Math.random()>>0];
+				return (
+					x=["chantellegribbon.com","24hinbox.com","alvinneo.com","freeallapp.com","masjoco.com","packiu.com","emvil.com","goldinbox.net","colevillecapital.com","kenvanharen.com","luddo.me","manghinsu.com","bizisstance.com","thekangsua.com","boranora.com","hotmail.red","omdiaco.com","rackabzar.com","dmxs8.com","pickuplanet.com","24mail.top","oanghika.com","nudinar.net","filevino.com","greendike.com","getcashstash.com","gmailvn.net","asifboot.com","tubidu.com","lompikachi.com","plexvenet.com","stinkypoopoo.com","googl.win","happiseektest.com","mamasuna.com","enhanceronly.com","omtecha.com","skillion.org","asistx.net","mphaotu.com","posthectomie.info","umtutuka.com","papakiung.com","kimsangung.com","pianoxltd.com","guitarsxltd.com","ebarg.net","email-temp.com","onlinecmail.com","btcmod.com","mymailcr.com","falixiao.com","yt-google.com","shanghongs.com","fuadd.me","muvilo.net","saxlift.us","cggup.com","crossfitcoastal.com","yuinhami.com","livegolftv.com","vietkevin.com","kongshuon.com","cashbackr.com","stamberg.nl","coffeepancakewafflebacon.com","longaitylo.com","khoantuta.com","ffo.kr"]
+				)[x.length*Math.random()>>0];
 			}
 			var vDomain = GenerateMD(),
 					vLengthRng = 4+Math.random()*4>>0,
