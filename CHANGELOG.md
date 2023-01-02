@@ -33,7 +33,10 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 08-dec-2022)
+## Retrier3 (Latest: 02-jan-2023)
+#### [Game: **v3.3**] (02-jan-2023)
+- Readjusted pixel hooks for Register form.
+- Add update checker for Retrier3.ahk
 #### [Game: **v3.3**] (08-dec-2022)
 - X-mas update (unscheduled).
 - Readjusted pixel hooks
