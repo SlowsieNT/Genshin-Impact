@@ -22,17 +22,16 @@ Accurate **GUIDE** for Retrier3 [Click here](https://github.com/SlowsieNT/Genshi
 **Please, check the guide because it will save you the trouble. Thank you.**<br>
 Code > Download ZIP ([Try this link](https://github.com/SlowsieNT/Genshin-Impact/archive/refs/heads/main.zip))<br>
 AutoHotkey v1.x ([Website link](https://www.autohotkey.com/))<br>
-Tampermonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo/)) or Vivaldi/Chromium...<br>
-Tampermonkey Opera ([Extension link](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)) opera requires this atm<br>
-Tampermonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/))<br>
+Violentmonkey Chrome ([Extension link](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)) or Vivaldi/Chromium...<br>
+Violentmonkey Firefox ([Extension link](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/))<br>
 
 ## Available scripts:
 
 🔗 __[Retrier3-Live](https://github.com/SlowsieNT/Genshin-Impact/tree/main/Retrier3-Live)__ is now available at GitHub!<br>
 (Not a bot, it is Helper for questing)<br>
-🔗 __[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
+🔗 __[genshin-checkin-redeem.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/violentmonkey/genshin-checkin-redeem.js)__ is now available at GitHub!<br>
 (Used for auto redeem check-in reward)<br>
-🔗 __[quickfmg.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/tampermonkey/quickfmg.js)__ is now available at GitHub!<br>
+🔗 __[quickfmg.js](https://github.com/SlowsieNT/Genshin-Impact/blob/main/js/violentmonkey/quickfmg.js)__ is now available at GitHub!<br>
 (Used for auto generate random mail & copy it, and then copy verification code for mihoyo account)
 
 ## Retrier3
