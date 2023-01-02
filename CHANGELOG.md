@@ -11,8 +11,8 @@ Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
-#### (02-jan-2022)
-- Add stopwatch
+#### (02-jan-2023)
+- Add Stopwatch (starts from 6sec due taking 5-6sec for mail to arrive).
 - Remove expired mails (remaining uptime less than 420days)
 #### (08-dec-2022)
 - Remove expired mails (remaining uptime less than 420days)
