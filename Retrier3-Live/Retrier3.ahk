@@ -25,14 +25,32 @@ PlaySound(aFilename, aDelay=0, aDelay2=0) {
 	SoundPlay, %aFilename%
 	sleep %aDelay2%
 }
+GetScrPath(aAdd) {
+	s = %A_ScriptDir%/%aAdd%
+	return s
+}
 GetScriptIniFN(aExt=".ini") {
 	vX = %A_ScriptFullPath%%aExt%
 	return vX
 }
-
+GetRequest(aURL){
+	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+	whr.Open("GET", aURL, true)
+	;whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+	whr.Send()
+	whr.WaitForResponse()
+	return whr.ResponseText
+}
 
 ;----------------------------------------------------------------------------
 F2::
+infOnline := GetRequest("https://raw.githubusercontent.com/SlowsieNT/Genshin-Impact/main/Retrier3-Live/Etc.Updates.ini")
+infOnline := INIParseFile(infOnline, 1)
+infOld := INIParseFile(GetScrPath("Etc.Updates.ini"))
+dateOld := infOld.Get("Retrier3;date;0")
+dateNew := infOnline.Get("Retrier3;date;0")
+if (dateNew > dateOld)
+	MsgBox Updates available:`r`nhttps://github.com/SlowsieNT/Genshin-Impact
 ; inf
 vInf := INIParseFile(GetScriptIniFN(".inf"))
 ; retrieve values from inf, no edits required here
