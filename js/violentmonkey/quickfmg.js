@@ -23,7 +23,7 @@
 	'use strict';
 	// remove the flashbang:
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1672685548, LiveLU, CanCheck = 0, EPType = -1,
+	var LAST_UPDATE = 1674073357, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name, LHost = location.hostname;
 	function UpdateAvailable() {
 		return (0||LiveLU) > LAST_UPDATE;
