@@ -1,12 +1,14 @@
 # No longer under active development
 ***Game v3.4 is now supported.***<br>
+Warning: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
+
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: 18-jan-2023<br>
 **Change(s)**: See changelog<br>
-**Status**: End of active Support<br>
+**Status**: End of active Development<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
@@ -45,7 +47,7 @@ A: Look at [this picture (*LINK*)](https://github.com/SlowsieNT/genshin/blob/mai
 Q: Will the script(s) be updated in the future?<br>
 A: Yes - to keep it alive, but updates may be delayed in the future.<br><br>
 Q: When will cease support take place?<br>
-A: Starting from game v3.x onwards.<br><br>
+A: Anytime now.<br><br>
 Q: Can it be ported over mobile?<br>
 A: No, as of now there is no appropriate tool.<br><br>
 Q: Can it be made to do entire reroll?<br>
