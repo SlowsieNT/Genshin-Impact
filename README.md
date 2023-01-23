@@ -1,6 +1,6 @@
 # No longer under active development
 ***Game v3.4 is now supported.***<br>
-Warning: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
+**Warning**: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
 
