@@ -23,7 +23,8 @@
 	'use strict';
 	// remove the flashbang:
 	GM_addStyle('html{filter:invert(.91);}img,.navbar-brand,.nav-link{filter:invert(.91);}');
-	var LAST_UPDATE = 1674073357, LiveLU, CanCheck = 0, EPType = -1,
+	// do not edit below unless dev:
+	var LAST_UPDATE = 1677678402, LiveLU, CanCheck = 0, EPType = -1,
 		ScriptName = GM_info.script.name, LHost = location.hostname;
 	function UpdateAvailable() {
 		return (0||LiveLU) > LAST_UPDATE;
@@ -243,30 +244,51 @@
 		}).error(aErrFunc);
 	}
 	// imagine i added a function useful only to devs
-	function DbgValidate(aFunc, aErrFunc, aUsr, aDmn) {
+	function DbgValidate(aFunc, aErrFunc, aUsr, aDmn, aDays) {
 		$.post("/check_adres_validation3.php", "usr="+encodeURIComponent(aUsr)+"&dmn="+encodeURIComponent(aDmn)).done(function (aResp) {
 			var jo = JSON.parse(aResp);
-			aFunc(jo.uptime > 420, jo);
+			aFunc(jo.uptime > (aDays||420), jo);
 		}).error(function () {
 			aErrFunc.apply(this, arguments);
 		});
 	}
 	// IMAGINE... REAL SHET
-	function DbgBulkValidate(aFunc, aItems) {
+	function DbgBulkValidate(aFunc, aItems, aIniIndex, aDays) {
+		// use aIni=1 and aIndex bigger than 0 then aItems is ini string of
+		// MailType0=... MailType1=... and MailType2=...
+		var oItems = aItems,
+			hasII = -1 < aIniIndex,
+			isStr = "string" === typeof aItems;
+		if (isStr && hasII)
+			aItems = aItems.split(",");
+		else if (isStr && hasII)
+			aItems = aItems.split("MailType"+aIniIndex+"=")[1].split(/\n|\r/)[0].trim().split(",");
 		var ret = [], cd = 0, elen = aItems.length;
 		// 'elen, my beloved where r u?
 		// elen's bitch, ahem, expected length
+		function doneFn(ret) {
+			if (hasII) {
+				var t, lines = oItems.split(/\r\n|\r|\n/);
+				console.log("[dbg] aIniIndex =", aIniIndex);
+				for (var i in lines)
+					if (lines[i].trim().startsWith(t = "MailType" + aIniIndex))
+						lines[i] = t + "=" + ret;
+				console.log("[dbg] new lines =", lines);
+				return aFunc(lines.join("\n"));
+			}
+			return aFunc(ret);
+		}
 		(function Next(aIndex) {
 			var item = aItems[aIndex];
-			DbgValidate(function (isok) {
-				if (isok)
+			if (item) DbgValidate(function (isok) {
+				if (isok && -1 === ret.indexOf(item))
 					ret.push(item);
 				if (++cd >= elen)
-					aFunc(ret);
+					doneFn(ret);
 			}, function () {
 				if (++cd >= elen)
-					aFunc(ret);
-			}, "a", item);
+					doneFn(ret);
+			}, "a", item, aDays);
 			// stack em async XHRs
 			if (item)
 				setTimeout(Next, 255, ++aIndex);
