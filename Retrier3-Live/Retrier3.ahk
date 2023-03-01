@@ -44,6 +44,7 @@ GetRequest(aURL){
 
 ;----------------------------------------------------------------------------
 F2::
+dbgSentClicks := 0, dbgSentKeystrokes := 0
 infOnline := GetRequest("https://raw.githubusercontent.com/SlowsieNT/Genshin-Impact/main/Retrier3-Live/Etc.Updates.ini")
 infOnline := INIParseFile(infOnline, 1)
 infOld := INIParseFile(GetScrPath("Etc.Updates.ini"))
@@ -53,6 +54,8 @@ if (dateNew > dateOld)
 	MsgBox Updates available:`r`nhttps://github.com/SlowsieNT/Genshin-Impact
 ; inf
 vInf := INIParseFile(GetScriptIniFN(".inf"))
+; load ini with colors
+vIni := INIParseFile(GetScriptIniFN())
 ; retrieve values from inf, no edits required here
 ; do not edit unless dev
 vCurrentEmail := ""
@@ -78,6 +81,10 @@ vLogMailAllow := "1" == vInf.Get("LoggingMail;Allow;1")
 vLogMailAfterFendOffTeleport := "1" == vInf.Get("LoggingMail;AfterFOTeleport;0")
 vLogMailAfterFOTeleport_FileName := vInf.Get("LoggingMail;AfterFOTeleport_FileName", "ar5mails.log")
 vLogMailFileName := vInf.Get("LoggingMail;FileName", "mails.log")
+; Now allocate array of chosen mail type
+QMGMagick = ModsQMG;MailType%vLazyQMGType%
+QMGStr := vIni.Get(QMGMagick)
+QMGArray := SplitStr(QMGStr, ",")
 ; edit only if you know how to maintain script:
 vResIdx := {"FS1920":1, "WM1440":2}
 ; do not edit anything below unless you are dev:
@@ -87,8 +94,6 @@ vAttackedWideHPBar := 0, vSpaced := 0, vLazyQMGLinkOpened := 0, vCodeRedeemed :=
 vBeepOpening := 0, vBeepAttackedWHP := 0, AttackedWHPEpoch := 0
 ; allocate variables
 WinActiveGets(vWinID, vWinX, vWinY, vWinW, vWinH)
-; load ini with colors
-vIni := INIParseFile(GetScriptIniFN())
 ; create Pixelette instance
 vPixelette := new Pixelette(vWinID)
 ; import from ini
@@ -99,15 +104,15 @@ if (vLazyQMGAllow) {
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	vUsr := QMG_Username(), vDmn := "", vCmd := ""
 	if (0 == vLazyQMGType) {
-		vLink := QMG_FMGLink(vUsr, vDmn := QMG_FakeMailGenerator())
+		vLink := QMG_FMGLink(vUsr, vDmn := RChoice(QMGArray))
 		vCmd = %vLazyQMGBrowser% %vLink%
 	}
 	if (1 == vLazyQMGType) {
-		vLink := QMG_GELink(vUsr, vDmn := QMG_GeneratorEmail())
+		vLink := QMG_GELink(vUsr, vDmn := RChoice(QMGArray))
 		vCmd = %vLazyQMGBrowser% %vLink%
 	}
 	if (2 == vLazyQMGType) {
-		vLink := QMG_EFLink(vUsr, vDmn := QMG_EmailFake())
+		vLink := QMG_EFLink(vUsr, vDmn := RChoice(QMGArray))
 		vCmd = %vLazyQMGBrowser% %vLink%
 	}
 }
@@ -119,7 +124,7 @@ Loop {
 }
 Return
 ;----------------------------------------------------------------------------
-F1::
+F4::
 	WinGet, vCWndID, ID, A ; A - active window
 	vScr := new PrintWindow(vCWndID)
 	MouseGetPos, OutputVarX, OutputVarY ; Get the coordinates of the mouse, assign the X coordinate of the mouse to the variable OutputVarX, and the same OutputVarY
