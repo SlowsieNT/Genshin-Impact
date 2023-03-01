@@ -6,11 +6,15 @@
 - Add `@connect` to avoid "allow" popup.
 #### (16-may-2022)
 - No more irrelevant errors in dev console, yay!
-## [js] quickfmg (Latest: 18-jan-2023)
+## [js] quickfmg (Latest: 01-mar-2023)
 Supported domains:
 - [highly recommended] http://emailfake.com/
 - [recommended] http://generator.email
 - [not recommended] http://fakemailgenerator.com/
+#### (01-mar-2023)
+- Maintaining is now easier, again
+- Debug function `DbgBulkValidate` now accepts ini string containing `MailTypeN` where `N` is index
+- Remove expired mails
 #### (18-jan, 02-jan-2023)
 - (18-jan) Remove expired mails (remaining uptime less than 420days)
 - (18-jan) Polish, allow easier debugging
@@ -38,7 +42,11 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 18-jan-2023)
+## Retrier3 (Latest: 01-mar-2023)
+#### [Game: **v3.5**] (01-mar-2023)
+- Maintaining is now easier.
+  - `LazyQMG` mails are now moved to `.ini` file.
+- Remove expired mails from `LazyQMG`
 #### [Game: **v3.4**] (18-jan-2023)
 - Readjust pixel hooks.
 - Again, remove expired mails from `LazyQMG` (remaining uptime less than 420days)
