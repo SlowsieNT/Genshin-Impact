@@ -33,7 +33,8 @@ vPixelette.Capture(vResolutionPostfix)
 	vNickname, vPassword
 	vCurrentEmail
 	vLogMailAfterFendOffTeleport
-	vLogMailAfterFOTeleport_FileName 
+	vLogMailAfterFOTeleport_FileName
+	dbgSentClicks := 0, dbgSentKeystrokes := 0
 */
 ; -------------------------------------------------------------------
 ; REGISTER
@@ -68,6 +69,8 @@ if (vPixelette["UIREmptyVerify"] && !vLazyQMGLinkOpened) {
 	Run, %vCmd%
 }
 if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@")) {
+	dbgSentClicks+=1+1+4
+	dbgSentKeystrokes+=StrLen(clipboard)
 	if (1 == vRID) {
 		FocusWindow(vWinID)
 		sleep 335
@@ -78,10 +81,11 @@ if (vPixelette["UIREmptyVerify"] && 6==StrLen(clipboard) && !InStr(clipboard, "@
 		ClickEnterText2(clipboard, vWinID, 514, 399, vWinX, vWinY, 4, Delay:=333)
 		ELClick2(vWinID, 574, 640, vWinX, vWinY, Delay:=200)
 	}
-	
 }
 ; Email filling
 if (vPixelette["UIREmptyMail"] && 6 != StrLen(clipboard) && InStr(clipboard, "@")) {
+	dbgSentClicks+=4
+	dbgSentKeystrokes+=StrLen(clipboard)
 	FocusWindow(vWinID)
 	; vars: vLazyQMGAllow, vLazyQMGType, vLazyQMGBrowser, vLazyQMGDelay
 	if vLazyQMGAllow
@@ -97,12 +101,16 @@ if (vPixelette["UIREmptyMail"] && 6 != StrLen(clipboard) && InStr(clipboard, "@"
 }
 ; Password filling
 if (vPixelette["UIREmptyPass"]) {
+	dbgSentClicks+=2
+	dbgSentKeystrokes+=StrLen(vPassword)
 	if (1 == vRID)
 		ClickEnterText2(vPassword, vWinID, 980, 447, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
 		ClickEnterText2(vPassword, vWinID, 538, 463, vWinX, vWinY, 4, Delay:=111)
 }
 if (vPixelette["UIREmptyCPass"]) {
+	dbgSentClicks+=2
+	dbgSentKeystrokes+=StrLen(vPassword)
 	if (1 == vRID)
 		ClickEnterText2(vPassword, vWinID, 950, 516, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
@@ -110,6 +118,7 @@ if (vPixelette["UIREmptyCPass"]) {
 }
 ; Check agree checkbox
 if (vPixelette["UIREmptyAgree"]) {
+	dbgSentClicks+=2
 	if (1 == vRID)
 		ELClick2(vWinID, 728, 552, vWinX, vWinY, Delay:=244)
 	if (2 == vRID)
@@ -117,6 +126,7 @@ if (vPixelette["UIREmptyAgree"]) {
 }
 ; Send code
 if (vCurrentEmail && vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
+	dbgSentClicks+=2
 	if (1 == vRID) {
 		ELClick2(vWinID, 1148, 374, vWinX, vWinY, Delay:=335)
 		ELClick2(vWinID, 1148, 374, vWinX, vWinY, Delay:=1000)
@@ -132,6 +142,8 @@ if (vPixelette["UIRExistsCaptcha"])
 ; LOGIN REQUESTED
 vIsEmptyPw := vPixelette["UILEmptyPass"]
 if (vIsEmptyPw) {
+	dbgSentClicks+=3
+	dbgSentKeystrokes+=StrLen(vPassword)
 	if (1 == vRID)
 		ClickEnterText2(vPassword, vWinID, 709, 502, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
@@ -140,6 +152,7 @@ if (vIsEmptyPw) {
 if (vPixelette["UILExistsCaptcha"])
 	vCaptchaLoginShown := 1
 if (!vIsEmptyPw && !vCaptchaLoginShown && vPixelette["UILBtnStartGame"]) {
+	dbgSentClicks+=3
 	if (1 == vRID)
 		ELClick2(vWinID, 851, 693, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
@@ -148,6 +161,7 @@ if (!vIsEmptyPw && !vCaptchaLoginShown && vPixelette["UILBtnStartGame"]) {
 ; -------------------------------------------------------------------
 ; AUTHORIZED
 if (vPixelette["UIAGameStart"]) {
+	dbgSentClicks+=3
 	;msgbox UIAGameStart
 	if (1 == vRID)
 		LClick2(vWinID, 222, 222)
@@ -156,11 +170,12 @@ if (vPixelette["UIAGameStart"]) {
 	Sleep 200
 }
 if (vPixelette["UIACTB"]) {
-	;GenshinOpeningBypass(vStandalone64Path)
+	dbgSentClicks+=3
 	LClick2(vWinID, 222, 222)
 }
 ; Checkbox agree all
 if (vPixelette["UIAAgreement"]) {
+	dbgSentClicks+=2
 	if (1 == vRID)
 		ELClick2(vWinID, 581, 490, vWinX, vWinY, Delay:=333)
 	if (2 == vRID)
@@ -168,6 +183,7 @@ if (vPixelette["UIAAgreement"]) {
 }
 ; Button accept
 if (vPixelette["UIAABtnAgree"]) {
+	dbgSentClicks+=2
 	if (1 == vRID)
 		ELClick2(vWinID, 1078, 783, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
@@ -176,6 +192,7 @@ if (vPixelette["UIAABtnAgree"]) {
 ; -------------------------------------------------------------------
 ; INGAME
 if (vPixelette["UIIGTwinSelect"]) {
+	dbgSentClicks+=1
 	if (1 == vRID) {
 		if (vPlayerFemale)
 			ELClick2(vWinID, 419, 613, vWinX, vWinY, Delay:=111)
@@ -188,12 +205,15 @@ if (vPixelette["UIIGTwinSelect"]) {
 	}
 }
 if (vPixelette["UIIGTwinEmptyName"]) {
+	dbgSentClicks+=2
+	dbgSentKeystrokes+=StrLen(vNickname)
 	if (1 == vRID)
 		ClickEnterText2(vNickname, vWinID, 832, 987, vWinX, vWinY, 4, Delay:=111)
 	if (2 == vRID)
 		ClickEnterText2(vNickname, vWinID, 620, 848, vWinX, vWinY, 4, Delay:=111)
 }
 if (vPixelette["UIIGBtnConfirm"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 1632, 980, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
@@ -215,6 +235,7 @@ if (vPixelette["UIIGBlackscreen"]) {
 	}
 }
 if (vPixelette["UIIGTutorialWaypoint"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 900, 600, vWinX, vWinY, Delay:=111)
 	if (2 == vRID)
@@ -229,16 +250,20 @@ if (vPixelette["UIIGAutoplay"]) {
 			vBeepAttackedWHP := 1
 		}
 	}
+	dbgSentKeystrokes+=2
 	SendKey(vWinID, "f")
 	sleep 111
 	SendKey(vWinID, "f")
 }
-if (vPixelette["UIIGUndiscoveredWaypoint"])
+if (vPixelette["UIIGUndiscoveredWaypoint"]) {
+	dbgSentKeystrokes+=4
 	SpamEscape()
+}
 if (vPixelette["UIIGConversationMulti2"])
 	MsgBox, found
 ; Now allow only one option to be clicked
 if (vPixelette["UIIGConversationMulti"] || vPixelette["UIIGConversationMulti2"]) {
+	dbgSentClicks+=1
 	if (1 == vRID) {
 		SetCursorPos(vWinID, 1295, 721-2, vWinX, vWinY)
 		ELClick2(vWinID, 1295, 721, vWinX, vWinY)
@@ -248,6 +273,7 @@ if (vPixelette["UIIGConversationMulti"] || vPixelette["UIIGConversationMulti2"])
 		ELClick2(vWinID, 993, 664, vWinX, vWinY)
 	}
 } else if (vPixelette["UIIGConversationSingle"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 1286, 794, vWinX, vWinY)
 	if (2 == vRID)
@@ -255,21 +281,25 @@ if (vPixelette["UIIGConversationMulti"] || vPixelette["UIIGConversationMulti2"])
 }
 ; End of dialogue option clickment
 if (vPixelette["UIIGRedBowGirlAcquired"]) {
+	dbgSentClicks+=.1
 	if (1 == vRID)
 		ELClick2(vWinID, 1286, 794, vWinX, vWinY)
 	if (2 == vRID)
 		ELClick2(vWinID, 463, 524, vWinX, vWinY)
 }
 if (vPixelette["UIIGPress2"]) {
+	dbgSentKeystrokes+=2
 	SendKey(vWinID, "2")
 	sleep 500
 	SendKey(vWinID, "r")
 }
 if (vPixelette["UIIGOpenJournal"]) {
+	dbgSentKeystrokes+=2
 	SendKey(vWinID, "{w down}")
 	SendKey(vWinID, "J")
 }
 if (vPixelette["UIIGOpenedJournal"]) {
+	dbgSentKeystrokes+=2
 	SendKey(vWinID, "{Escape}")
 	sleep 777
 	SendKey(vWinID, "v")
@@ -278,12 +308,15 @@ if (vPixelette["UIIGOpenedJournal"]) {
 if (vPixelette["UIIGPressW"])
 	SendKey(vWinID, "{w down}")
 if ((!vSpaced || !vPressSpaceOnce) && vPixelette["UIIGPressSpace"]) {
+	dbgSentClicks+=1
+	dbgSentKeystrokes+=2
 	vSpaced := 1
 	SendKey(vWinID, "{Space}")
 	sleep 50
 	ELClick2(vWinID, 720, 480, vWinX, vWinY, 0)
 }
 if (vPixelette["UIIGWideHPBar"]) {
+	dbgSentClicks += 55
 	vAttackedWideHPBar := 1
 	vTimeToKill := 8+20
 	vAttackingEpoch := utcnow()/1000
@@ -291,7 +324,7 @@ if (vPixelette["UIIGWideHPBar"]) {
 		Loop, 8 {
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
-			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
+			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 1)
 			ELClick2(vWinID, 1295, 721, vWinX, vWinY, 0)
 		}
@@ -303,6 +336,8 @@ if (vPixelette["UIIGWideHPBar"]) {
 	}
 }
 if (vPixelette["UIIGPaimonGatekeeper"]) {
+	dbgSentClicks+=1
+	dbgSentKeystrokes+=2
 	if (1 == vRID)
 		ELClick2(vWinID, 1295, 721, vWinX, vWinY, 32)
 	if (2 == vRID)
@@ -310,29 +345,35 @@ if (vPixelette["UIIGPaimonGatekeeper"]) {
 	SendKey(vWinID, "f")
 }
 if (vPixelette["UIIGTeleportBtn"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 1539, 1003, vWinX, vWinY, 32)
 	if (2 == vRID)
 		ELClick2(vWinID, 1187, 873, vWinX, vWinY, 32)
 	; Assuming reroll is complete
 	if (vAttackedWideHPBar) {
+		FileAppend, clicks:%dbgSentClicks%`r`nkeystrokes:%dbgSentKeystrokes%`r`n, "clicks.log"
 		Reload
 		sleep 777
 	}
 }
 if (vAttackedWideHPBar && !vCodeRedeemed && vPixelette["UIIGSettingsControls"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 181, 574, vWinX, vWinY, 32)
 	if (2 == vRID)
 		ELClick2(vWinID, 133, 456, vWinX, vWinY, 32)
 }
 if (vAttackedWideHPBar && !vCodeRedeemed && vPixelette["UIIGSettingsAccount"]) {
+	dbgSentClicks+=1
 	if (1 == vRID)
 		ELClick2(vWinID, 1571, 277, vWinX, vWinY, 32)
 	if (2 == vRID)
 		ELClick2(vWinID, 1181, 232, vWinX, vWinY, 32)
 }
 if (vAttackedWideHPBar && vPixelette["UIIGRedeemExists"] && vPixelette["UIIGRedeemExists"]) {
+	dbgSentClicks+=2
+	dbgSentKeystrokes+=StrLen("genshingift")+2+1
 	vCodeRedeemed := 1
 	if (1 == vRID) {
 		ClickEnterText2("genshingift", vWinID, 941, 519, vWinX, vWinY, 4, Delay:=111)
