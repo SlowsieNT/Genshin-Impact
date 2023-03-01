@@ -44,6 +44,7 @@ Supported domains:
 - Add "load mail" feature
 ## Retrier3 (Latest: 01-mar-2023)
 #### [Game: **v3.5**] (01-mar-2023)
+- Readjust pixel hooks.
 - Maintaining is now easier.
   - `LazyQMG` mails are now moved to `.ini` file.
 - Remove expired mails from `LazyQMG`
