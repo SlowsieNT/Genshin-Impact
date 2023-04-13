@@ -47,7 +47,7 @@ DbgColorRange(aPixellete, aX, aY, aRangeY=16, aRangeX=16){
 			vQ := aPixellete.Scr.ColorAt(vX, vY)
 			if ("FFFFFF" != vQ) {
 				Clipboard = %vX%, %vY%, %vQ%
-				msgbox %vX%, %vY%, %vQ%
+				msgbox x=%vX%, y=%vY%, %vQ%
 			}
 		}
 	}
@@ -56,7 +56,7 @@ if (0 && vPixelette.Scr) {
 	if vPixelette["UILExists"]
 		msgbox vPixelette["UILExists"]
 	else {
-		DbgColorRange(vPixelette, 898, 508, 10, 10)
+		DbgColorRange(vPixelette, 812, 210, 32, 10)
 	}
 	;594, 200, FFFFFF|596, 211, FFFFFF|609, 200, FFFFFF
 	reload
@@ -305,7 +305,7 @@ if (vPixelette["UIIGOpenedJournal"]) {
 	SendKey(vWinID, "v")
 }
 
-if (vPixelette["UIIGPressW"])
+if (vPixelette["UIIGPressW"] || vPixelette["UIIGPressWASD"])
 	SendKey(vWinID, "{w down}")
 if ((!vSpaced || !vPressSpaceOnce) && vPixelette["UIIGPressSpace"]) {
 	dbgSentClicks+=1
