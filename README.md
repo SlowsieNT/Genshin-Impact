@@ -1,5 +1,5 @@
 # No longer under active development
-***Game v3.6 is partially supported (fullscreen only).***<br>
+***Game v3.6 is partially supported (`FS1920` only).***<br>
 **Warning**: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
 Thank you for your support and engagement.<br>
 May we meet again!<br>
