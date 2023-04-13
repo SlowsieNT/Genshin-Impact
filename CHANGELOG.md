@@ -42,7 +42,10 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 01-mar-2023)
+## Retrier3 (Latest: 13-apr-2023)
+#### [Game: **v3.6**] (13-apr-2023)
+- Readjust pixel hooks for `FS1920`, for now.
+- Should fix `WM1440` at a later date, or at v3.7, no promises.
 #### [Game: **v3.5**] (01-mar-2023)
 - Readjust pixel hooks.
 - Maintaining is now easier.
