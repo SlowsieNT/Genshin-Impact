@@ -1,8 +1,7 @@
 # No longer under active development
 ***Game v3.6 is partially supported (`FS1920` only).***<br>
 **Warning**: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
-Thank you for your support and engagement.<br>
-May we meet again!<br>
+Retrier3 may end its support soon.<br>
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
