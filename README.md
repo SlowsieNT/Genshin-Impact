@@ -1,13 +1,11 @@
 # No longer under active development
-***Game v3.6 is partially supported (`FS1920` only).***<br>
-**Warning**: ahk script is nearing end of its lifespan (MAX: ~2 years).<br>
-Retrier3 support will end by next game version(s), may find a way to update it but no promises.<br>
+**No support is intended for future game versions, time to say goodbye, *finally*.**
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
-**Date(s)**: 13-apr-2023<br>
+**Date(s)**: N/A<br>
 **Change(s)**: See changelog<br>
-**Status**: End of active Development<br>
+**Status**: N/A<br>
 ![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
