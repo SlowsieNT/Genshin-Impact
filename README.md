@@ -1,5 +1,5 @@
 # Development and support ended
-**If there is any oppurtunity to update, it will be done, so thank you, farewell.**<br>
+**If there is any oppurtunity to update, it will be done, so thank you, and farewell!**<br>
 For any questions, please contact me. [SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 [Departure song](https://www.youtube.com/watch?v=MbiJ-VToYEg)<br>
 
