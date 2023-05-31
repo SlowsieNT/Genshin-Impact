@@ -6,7 +6,7 @@ For any questions, please contact me. [SlowsieNT#contact](https://github.com/Slo
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: N/A<br>
-**Change(s)**: See changelog<br>
+**Change(s)**: EoL notice<br>
 **Status**: N/A<br>
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
