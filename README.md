@@ -1,13 +1,13 @@
 # No longer under active development
 **Also, no support is intended for future game versions, time to say goodbye, *finally*.**<br>
 For any questions, please contact me. [SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
+[Departure song](https://www.youtube.com/watch?v=MbiJ-VToYEg)<br>
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: N/A<br>
 **Change(s)**: See changelog<br>
 **Status**: N/A<br>
-![Visitor count](https://shields-io-visitor-counter.herokuapp.com/badge?page=slowsient.genshin)
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
 Ladies and gentlemen, it's "My time has come" moment.
