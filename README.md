@@ -3,7 +3,7 @@
 For any questions, please contact me. [SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 [Departure song](https://www.youtube.com/watch?v=MbiJ-VToYEg)<br>
 
-## Why EoL?
+## Why end?
 Related to error: "network environment may be unsafe."<br>
 Found a way around it? Contact me.<br>
 
