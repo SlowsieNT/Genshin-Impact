@@ -6,7 +6,7 @@ For any questions, please contact me. [SlowsieNT#contact](https://github.com/Slo
 ## Why EoL?
 As of last update, game began showing error "network environment may be unsafe."<br>
 Seems that's related to email, please if you found any way to bypass it, contact me.<br>
-Otherwise this script will not receive any updates.<br>
+Otherwise scripts may no longer receive updates.<br>
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
