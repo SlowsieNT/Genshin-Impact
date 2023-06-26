@@ -5,7 +5,7 @@ For any questions, please contact me. [SlowsieNT#contact](https://github.com/Slo
 
 ## Why end?
 Related to error: "network environment may be unsafe."<br>
-Found a way around it? Contact me.<br>
+If you know way around it? Contact me.<br>
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
