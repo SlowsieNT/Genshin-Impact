@@ -43,6 +43,9 @@ Supported domains:
 - Add a lot of mails
 - Add "load mail" feature
 ## Retrier3 (Latest: 13-apr-2023)
+#### [Game: **v3.8**] (08-jul-2023)
+- Readjust pixel hooks
+- `LazyQMG` is disabled by default, also can use custom mail on register, at least `WM1440` is seen to work.
 #### [Game: **v3.6**] (13-apr-2023)
 - Readjust pixel hooks for `FS1920`, for now.
 - Should fix `WM1440` at a later date, or at v3.7, no promises.
