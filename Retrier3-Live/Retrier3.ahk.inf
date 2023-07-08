@@ -26,7 +26,7 @@ AfterFOTeleport=1
 AfterFOTeleport_FileName=ar5mails.log
 
 [LazyQMG]
-Allow=1
+Allow=0
 ; Needed for window refocus (milliseconds)
 ; How long does it take browser to open tab?
 Delay=1500
