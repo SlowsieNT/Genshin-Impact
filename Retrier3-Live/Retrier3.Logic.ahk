@@ -56,7 +56,8 @@ if (0 && vPixelette.Scr) {
 	if vPixelette["UILExists"]
 		msgbox vPixelette["UILExists"]
 	else {
-		DbgColorRange(vPixelette, 812, 210, 32, 10)
+		;45, 66, ECE5D8
+		DbgColorRange(vPixelette, 590, 198, 32, 10)
 	}
 	;594, 200, FFFFFF|596, 211, FFFFFF|609, 200, FFFFFF
 	reload
@@ -125,7 +126,7 @@ if (vPixelette["UIREmptyAgree"]) {
 		ELClick2(vWinID, 490, 579, vWinX, vWinY, Delay:=244)
 }
 ; Send code
-if (vCurrentEmail && vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
+if (vPixelette["UIREmptySendVerify"] && !vCaptchaRegisterShown) {
 	dbgSentClicks+=2
 	if (1 == vRID) {
 		ELClick2(vWinID, 1148, 374, vWinX, vWinY, Delay:=335)
