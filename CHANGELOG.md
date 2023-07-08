@@ -42,7 +42,7 @@ Supported domains:
 - (16-may) Add invert filter to `html` (~90% invert)
 - Add a lot of mails
 - Add "load mail" feature
-## Retrier3 (Latest: 13-apr-2023)
+## Retrier3 (Latest: 08-jul-2023)
 #### [Game: **v3.8**] (08-jul-2023)
 - Readjust pixel hooks
 - `LazyQMG` is disabled by default, also can use custom mail on register, at least `WM1440` is seen to work.
