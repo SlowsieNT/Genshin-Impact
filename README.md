@@ -3,10 +3,6 @@
 For any questions, please contact me. [SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
 [Departure song](https://www.youtube.com/watch?v=MbiJ-VToYEg)<br>
 
-## Why end?
-Related to error: "network environment may be unsafe."<br>
-If you know way around it? Contact me.<br>
-
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
 **Date(s)**: N/A<br>
@@ -15,6 +11,9 @@ If you know way around it? Contact me.<br>
 ## IMPORTANT
 `LazyQMG` WILL cause issues (`Retrier3.ahk.inf`), please configure it, or disable it.<br>
 Ladies and gentlemen, it's "My time has come" moment.
+
+## Stat
+<img src="https://api.visitorbadge.io/api/visitors?path=slowsient.genshin&countColor=%2337d67a&style=flat-square&labelStyle=upper">
 
 ## Contact?
 See: [github.com/SlowsieNT#contact](https://github.com/SlowsieNT#contact)
