@@ -1,8 +1,5 @@
 # Development and support ended
-## Game v3.8 seems to work, no LazyQMG/fakeMail support.
-**If there is any oppurtunity to update, it will be done, so thank you, and farewell!**<br>
-For any questions, please contact me. [SlowsieNT#contact](https://github.com/SlowsieNT#contact)<br>
-[Departure song](https://www.youtube.com/watch?v=MbiJ-VToYEg)<br>
+## September 28, 2023 is the EoL date, since 2FA will be required at that time.
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
