@@ -1,5 +1,5 @@
-# Development and support ended
-## September 28, 2023 is the EoL date, since 2FA will be required at that time.
+# Development and support ended!
+## Sep-28-2023 is the end of life date for my account/repositories, since 2FA will be required at that time.
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
