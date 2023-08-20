@@ -1,5 +1,6 @@
 # Development and support ended!
-## Sep-28-2023 is the end of life date for my account/repositories, since 2FA will be required at that time.
+## Sep-28-2023 is the end of life date for my account/repositories.
+This is related to 2FA requirement.
 
 # Genshin Impact Script(s)
 ## This is free and unencumbered software released into the public domain.
